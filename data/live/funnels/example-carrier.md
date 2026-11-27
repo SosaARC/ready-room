@@ -65,11 +65,12 @@ Checked **1061** opportunities: **4** apply now, **5** prepare for, **1052** ski
 
 | Reason | Count |
 | --- | ---: |
-| Only for | 695 |
+| Only for | 704 |
 | Nonprofits or governments only | 212 |
-| No match to your focus areas | 110 |
-| Closed | 20 |
+| No match to your focus areas | 96 |
+| Closed | 19 |
 | Outside your area | 6 |
+| Weak match | 6 |
 | Notice or request for information, not a funding call | 4 |
 | For Alaska only | 3 |
 | Excludes | 2 |

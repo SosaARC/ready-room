@@ -786,8 +786,7 @@
    "nonprofit"
   ],
   "focus": [
-   "education",
-   "youth-education"
+   "education"
   ],
   "amount_min": 15000,
   "amount_max": 25000,
@@ -963,7 +962,7 @@
    "individual"
   ],
   "focus": [
-   "youth-education"
+   "other"
   ],
   "amount_min": 5000,
   "amount_max": 20000,
@@ -1482,7 +1481,8 @@
   "deadline": "2025-10-05",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -1530,7 +1530,8 @@
   "deadline": "2025-10-05",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -1679,7 +1680,8 @@
   "deadline": "2025-10-26",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -1690,6 +1692,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov NOT-DK-26-312. Assistance listing .",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -1972,7 +1975,8 @@
   "deadline": "2025-11-20",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -2019,7 +2023,8 @@
   "deadline": "2025-11-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -2067,7 +2072,8 @@
   "deadline": "2025-11-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -2216,7 +2222,8 @@
   "deadline": "2025-12-13",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -2227,6 +2234,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov FOR-NR-25-006. Assistance listing .",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -2608,7 +2616,8 @@
   "deadline": "2026-02-12",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -2754,7 +2763,8 @@
   "deadline": "2026-02-16",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -3426,8 +3436,7 @@
    "tribal"
   ],
   "focus": [
-   "health",
-   "youth-education"
+   "health"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -3435,7 +3444,8 @@
   "deadline": "2026-03-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -3631,7 +3641,8 @@
   "deadline": "2026-05-04",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -3778,7 +3789,8 @@
   "deadline": "2026-05-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -4022,7 +4034,8 @@
   "deadline": "2026-06-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -4033,6 +4046,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PA-26-004. Assistance listing . Eligibility: Other Eligible ApplicantsIndian/Native American Tribal Governments (Other than Federally Recognized);Eligible Agencies of the Federal Government;U.S. Territory or Possession;Faith-based or Community-b",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -4071,7 +4085,8 @@
   "deadline": "2026-06-05",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -4505,7 +4520,8 @@
   "deadline": "2026-06-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -4951,7 +4967,8 @@
   "deadline": "2026-08-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -4962,6 +4979,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov NOT-AA-25-012. Assistance listing .",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -5000,7 +5018,8 @@
   "deadline": "2026-08-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -5011,6 +5030,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov NOT-AA-25-013. Assistance listing .",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -5049,7 +5069,8 @@
   "deadline": "2026-08-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -5060,6 +5081,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov NOT-AA-25-014. Assistance listing .",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -5243,7 +5265,8 @@
   "deadline": "2026-09-07",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -5291,7 +5314,8 @@
   "deadline": "2026-09-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -5485,7 +5509,8 @@
   "deadline": "2026-09-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -5819,7 +5844,8 @@
   "deadline": "2026-10-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -5868,7 +5894,9 @@
   "deadline": "2026-10-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -5879,6 +5907,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-DK-27-106. Assistance listing . Eligibility: Other Eligible ApplicantsIndian/Native American Tribal Governments (Other than Federally Recognized);Eligible Agencies of the Federal Government;U.S. Territory or Possession;Faith-based or Community-b",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -5966,7 +5995,8 @@
   "deadline": "2026-10-05",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -6014,7 +6044,8 @@
   "deadline": "2026-10-05",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -6447,7 +6478,8 @@
   "deadline": "2026-10-15",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -6973,7 +7005,8 @@
   "deadline": "2026-11-06",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -7022,7 +7055,8 @@
   "deadline": "2026-11-10",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -7113,7 +7147,8 @@
   "deadline": "2026-11-11",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -7318,7 +7353,9 @@
   "url": "https://www.grants.gov/search-results-detail/363324",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov HRSA-27-084. Assistance listing . Eligibility: An eligible entity is a community-based ambulatory patient care center that operates an accredited primary care residency program, individually or through a graduate medical education (GME) consortium",
-  "must_have_any": [],
+  "must_have_any": [
+   "higher-ed"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -7438,8 +7475,7 @@
    "nonprofit"
   ],
   "focus": [
-   "community-development",
-   "youth-education"
+   "community-development"
   ],
   "amount_min": 1,
   "amount_max": 3000000,
@@ -7540,7 +7576,8 @@
   "deadline": "2026-11-30",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -7677,8 +7714,7 @@
    "tribal"
   ],
   "focus": [
-   "energy",
-   "youth-education"
+   "energy"
   ],
   "amount_min": 2000000,
   "amount_max": 20000000,
@@ -7977,7 +8013,8 @@
   "deadline": "2026-12-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -8219,6 +8256,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-OD-27-008. Assistance listing . Eligibility: Refer to Section III. Eligibility Information in the NOFO for additional information on eligibility.Foreign Organizations/International Collaborations:Non-domestic (non-U.S.) Entities (Foreign Organiz",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -8813,8 +8851,7 @@
    "tribal"
   ],
   "focus": [
-   "arts",
-   "youth-education"
+   "arts"
   ],
   "amount_min": 1,
   "amount_max": 460000,
@@ -9237,8 +9274,7 @@
    "government"
   ],
   "focus": [
-   "justice",
-   "youth-education"
+   "justice"
   ],
   "amount_min": null,
   "amount_max": 59000000,
@@ -9898,8 +9934,7 @@
    "tribal"
   ],
   "focus": [
-   "health",
-   "youth-education"
+   "health"
   ],
   "amount_min": 96750,
   "amount_max": 96750,
@@ -9997,7 +10032,8 @@
   "deadline": "2026-12-28",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -10007,7 +10043,9 @@
   "url": "https://www.grants.gov/search-results-detail/364171",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov FM-CCFP-27-001. Assistance listing .",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -10087,7 +10125,8 @@
   "deadline": "2026-12-29",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -10097,7 +10136,9 @@
   "url": "https://www.grants.gov/search-results-detail/364134",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov HHS-2027-ACF-ORR-ZU-0045. Assistance listing . Eligibility: Current RecipientsCurrent recipients in the final year of their project period must check when their project period ends. If the project period end date aligns with this funding opportunity\"s projecte",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -10548,7 +10589,8 @@
   "deadline_text": "Forecast: expected due date",
   "requirements": [
    "Active SAM.gov registration (UEI) required to apply",
-   "Cost share or match required"
+   "Cost share or match required",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -10558,7 +10600,9 @@
   "url": "https://www.grants.gov/search-results-detail/363160",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov HRSA-27-063. Assistance listing . Eligibility: You can apply if:The 50 states, the District of Columbia, Guam, the Commonwealth of Puerto Rico, and the U.S. Virgin Islands are eligible to apply for Ryan White HIV/AIDS Program Part B Base, AIDS Dru",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -10832,7 +10876,8 @@
   "deadline": "2027-01-05",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -11177,7 +11222,8 @@
   "deadline": "2027-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -11531,7 +11577,8 @@
   "deadline": "2027-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -12060,7 +12107,8 @@
   "deadline": "2027-01-11",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -12154,7 +12202,8 @@
   "deadline": "2027-01-11",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -13155,7 +13204,8 @@
   "deadline": "2027-01-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -13740,7 +13790,8 @@
   "deadline": "2027-01-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -13799,6 +13850,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PAR-24-235. Assistance listing . Eligibility: Other Eligible Applicants include the following: Indian/Native American Tribal Governments (Other than Federally Recognized); Tribally Controlled Colleges and Universities (TCCUs) ; See Funding Announ",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -13847,6 +13899,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PAR-24-236. Assistance listing . Eligibility: Other Eligible Applicants include the following: Indian/Native American Tribal Governments (Other than Federally Recognized); Tribally Controlled Colleges and Universities (TCCUs) ; See Funding Announ",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -14417,7 +14470,8 @@
   "deadline": "2027-01-28",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -14612,7 +14666,8 @@
   "deadline": "2027-01-29",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15007,7 +15062,8 @@
   "deadline": "2027-02-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15017,7 +15073,9 @@
   "url": "https://www.grants.gov/search-results-detail/363055",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-CE-27-013. Assistance listing . Eligibility: Additional Eligibility Information to be included in the NOFO",
-  "must_have_any": [],
+  "must_have_any": [
+   "research"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -15151,7 +15209,8 @@
   "deadline": "2027-02-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15162,6 +15221,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-OH-27-048. Assistance listing . Eligibility: Applicant institution must have an established registry and tissue bank with the capability of functioning as a national virtual registry and tissue bank for mesothelioma, one in which participating i",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -15295,7 +15355,8 @@
   "deadline": "2027-02-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15305,7 +15366,9 @@
   "url": "https://www.grants.gov/search-results-detail/363115",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-TS-27-018. Assistance listing . Eligibility: Additional Eligibility Information to be included in the NOFO.",
-  "must_have_any": [],
+  "must_have_any": [
+   "research"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -15342,7 +15405,8 @@
   "deadline": "2027-02-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15488,7 +15552,8 @@
   "deadline": "2027-02-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15498,7 +15563,9 @@
   "url": "https://www.grants.gov/search-results-detail/363141",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-CE-27-015. Assistance listing . Eligibility: Additional eligibility information to be included in the NOFO.",
-  "must_have_any": [],
+  "must_have_any": [
+   "research"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -15632,7 +15699,8 @@
   "deadline": "2027-02-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15682,7 +15750,8 @@
   "deadline": "2027-02-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15692,7 +15761,9 @@
   "url": "https://www.grants.gov/search-results-detail/363147",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-CE-27-016. Assistance listing . Eligibility: Additional information to be provided in the NOFO.",
-  "must_have_any": [],
+  "must_have_any": [
+   "research"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -15914,7 +15985,8 @@
   "deadline": "2027-02-02",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -15924,7 +15996,9 @@
   "url": "https://www.grants.gov/search-results-detail/363415",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov HRSA-27-068. Assistance listing . Eligibility: This competition is open to current RWHAP Part D grant recipients and new, eligible applicant organizations proposing to provide RWHAP Part D family-centered care in outpatient or ambulatory care sett",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -16006,7 +16080,8 @@
   "deadline": "2027-02-03",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -16055,7 +16130,8 @@
   "deadline": "2027-02-03",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -17447,7 +17523,8 @@
   "deadline": "2027-02-16",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -17587,7 +17664,8 @@
   "deadline": "2027-02-16",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -17737,7 +17815,8 @@
   "deadline": "2027-02-16",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -18736,8 +18815,7 @@
    "agriculture",
    "arts",
    "health",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": 1600000,
@@ -18793,7 +18871,8 @@
   "deadline": "2027-03-04",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -18841,7 +18920,8 @@
   "deadline": "2027-03-04",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -18889,7 +18969,8 @@
   "deadline": "2027-03-04",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -18937,7 +19018,8 @@
   "deadline": "2027-03-04",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -19169,7 +19251,7 @@
    "tribal"
   ],
   "focus": [
-   "youth-education"
+   "other"
   ],
   "amount_min": null,
   "amount_max": 1700000,
@@ -19187,7 +19269,9 @@
   "url": "https://www.grants.gov/search-results-detail/363985",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov P26AS00055. Assistance listing . Eligibility: In accordance with 54 USC §101702(a) [Formerly 16 U.S.C. 1g], the eligible applicants are State, local and tribal governments, other public entities, educational institutions, and private nonprofit or",
-  "must_have_any": [],
+  "must_have_any": [
+   "higher-ed"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -19224,7 +19308,8 @@
   "deadline": "2027-03-05",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -19273,7 +19358,8 @@
   "deadline": "2027-03-05",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -19611,7 +19697,8 @@
   "deadline": "2027-03-09",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -19660,7 +19747,8 @@
   "deadline": "2027-03-09",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -19708,7 +19796,8 @@
   "deadline": "2027-03-09",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -19756,7 +19845,8 @@
   "deadline": "2027-03-09",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -19851,7 +19941,8 @@
   "deadline": "2027-03-10",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -19862,6 +19953,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-DK-27-108. Assistance listing . Eligibility: Refer to Section III. Eligibility Information in the NOFO for additional information on eligibility.Foreign Organizations/International Collaborations:Non-domestic (non-U.S.) Entities (Foreign Organiz",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -20219,7 +20311,8 @@
   "deadline": "2027-03-15",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -20229,7 +20322,9 @@
   "url": "https://www.grants.gov/search-results-detail/363163",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov HRSA-27-070. Assistance listing .",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -20266,7 +20361,8 @@
   "deadline": "2027-03-16",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -21304,7 +21400,8 @@
   "deadline_text": "Forecast: expected due date",
   "requirements": [
    "Active SAM.gov registration (UEI) required to apply",
-   "Cost share or match required"
+   "Cost share or match required",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -21314,7 +21411,9 @@
   "url": "https://www.grants.gov/search-results-detail/363354",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov CDC-RFA-CE22-22050601CONT27. Assistance listing . Eligibility: Eligible applicants are community-based coalitions addressing youth substance use that have previously received a DFC grant (Year 1–5), have experienced a lapse in funding, or have concluded the first",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -21610,8 +21709,7 @@
    "tribal"
   ],
   "focus": [
-   "health",
-   "youth-education"
+   "health"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -21654,8 +21752,7 @@
    "tribal"
   ],
   "focus": [
-   "health",
-   "youth-education"
+   "health"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -21881,7 +21978,8 @@
   "deadline": "2027-04-02",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -21891,7 +21989,9 @@
   "url": "https://www.grants.gov/search-results-detail/363416",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov CDC-RFA-TO-23-00010101SUPP27. Assistance listing . Eligibility: This funding opportunity is a program supplement intended only for the 34 American Indian and Alaska Native (AI/AN) Tribes and regional AI/AN tribally designated organizations awarded funding under CD",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -22549,7 +22649,8 @@
   "deadline": "2027-04-18",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -22560,6 +22661,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PA-24-201. Assistance listing . Eligibility: Other Eligible Applicants include the following: Alaska Native and Native Hawaiian Serving Institutions; Asian American Native American Pacific Islander Serving Institutions (AANAPISISs); Eligible Age",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -23213,7 +23315,8 @@
   "deadline": "2027-04-30",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -24023,7 +24126,8 @@
   "deadline": "2027-05-08",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -24034,6 +24138,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RFA-AG-27-004. Assistance listing . Eligibility: Other Eligible ApplicantsIndian/Native American Tribal Governments (Other than Federally Recognized);Eligible Agencies of the Federal Government;U.S. Territory or Possession;Faith-based or Community-b",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -25167,7 +25272,8 @@
   "deadline": "2027-05-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -25402,8 +25508,7 @@
   ],
   "focus": [
    "health",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": 200000,
@@ -26226,7 +26331,8 @@
   "deadline": "2027-06-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -26661,7 +26767,8 @@
   "deadline": "2027-06-10",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -27575,7 +27682,8 @@
   "deadline": "2027-07-02",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -28013,7 +28121,8 @@
   "deadline": "2027-07-31",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -29268,8 +29377,7 @@
    "tribal"
   ],
   "focus": [
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -29318,8 +29426,7 @@
    "tribal"
   ],
   "focus": [
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -29375,7 +29482,8 @@
   "deadline": "2027-09-30",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -29474,7 +29582,8 @@
   "deadline": "2027-09-30",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -29484,7 +29593,9 @@
   "url": "https://www.grants.gov/search-results-detail/363993",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov DE-FOA-0003665. Assistance listing .",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -29617,7 +29728,8 @@
   "deadline": "2027-10-01",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -29627,7 +29739,9 @@
   "url": "https://www.grants.gov/search-results-detail/361822",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov HHS-2026-ACF-ORR-ZU-0019. Assistance listing . Eligibility: Current RecipientsCurrent recipients in the final year of their project period must check when their project period ends. If the project period end date aligns with this funding opportunity\"s projecte",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -29656,8 +29770,7 @@
   ],
   "focus": [
    "health",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -30386,8 +30499,7 @@
    "tribal"
   ],
   "focus": [
-   "health",
-   "youth-education"
+   "health"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -30641,7 +30753,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -30690,7 +30803,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -30739,7 +30853,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -30788,7 +30903,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -30837,7 +30953,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -30886,7 +31003,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -30935,7 +31053,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -30984,7 +31103,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -31082,7 +31202,8 @@
   "deadline": "2027-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -31131,7 +31252,8 @@
   "deadline": "2027-10-16",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -31273,7 +31395,8 @@
   "deadline": "2027-10-18",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -31322,7 +31445,8 @@
   "deadline": "2027-10-18",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -31665,7 +31789,8 @@
   "deadline": "2027-10-25",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -31715,7 +31840,8 @@
   "deadline": "2027-10-25",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -32188,7 +32314,8 @@
   "deadline": "2027-11-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -32237,7 +32364,8 @@
   "deadline": "2027-11-01",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -32332,7 +32460,8 @@
   "deadline": "2027-11-05",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -33399,7 +33528,8 @@
   "deadline": "2027-11-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -34185,7 +34315,9 @@
   "deadline": "2028-01-06",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -34196,6 +34328,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PAR-25-062. Assistance listing . Eligibility: Other Eligible Applicants include the following: Alaska Native and Native Hawaiian Serving Institutions; Asian American Native American Pacific Islander Serving Institutions (AANAPISISs); Eligible Age",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -34233,7 +34366,8 @@
   "deadline": "2028-01-06",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -34281,7 +34415,8 @@
   "deadline": "2028-01-06",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -34330,7 +34465,8 @@
   "deadline": "2028-01-06",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -34580,7 +34716,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -34875,8 +35012,7 @@
   ],
   "focus": [
    "health",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -34884,7 +35020,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -35082,7 +35219,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -35131,7 +35269,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -35280,7 +35419,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -35428,7 +35568,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -35478,7 +35619,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -35775,7 +35917,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -35874,7 +36017,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -35934,6 +36078,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PAR-25-250. Assistance listing . Eligibility: Other Eligible Applicants include the following: Alaska Native and Native Hawaiian Serving Institutions; Asian American Native American Pacific Islander Serving Institutions (AANAPISISs); Eligible Age",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -36021,7 +36166,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -36125,7 +36271,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -36177,7 +36324,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -36229,7 +36377,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -36281,7 +36430,8 @@
   "deadline": "2028-01-07",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -36957,8 +37107,7 @@
   ],
   "focus": [
    "health",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -36977,6 +37126,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PAR-28-050. Assistance listing . Eligibility: Other Eligible ApplicantsA federally-recognized AI/AN Tribe, as defined under 25 U.S.C. 1603(14); orA Tribal college or university, a Tribal health program, or a Tribal organization as defined under 2",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -37014,7 +37164,8 @@
   "deadline": "2028-01-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -37062,7 +37213,8 @@
   "deadline": "2028-01-25",
   "deadline_text": "Forecast: expected due date",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -37960,6 +38112,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PA-25-425. Assistance listing . Eligibility: Other Eligible Applicants include the following: Eligible Agencies of the Federal Government; Non-domestic (non-U.S.) Entities (Foreign Organizations) are not eligible to apply. Non-domestic (non-U.S.",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -38012,6 +38165,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PA-25-426. Assistance listing . Eligibility: Other Eligible Applicants include the following: Eligible Agencies of the Federal Government; Non-domestic (non-U.S.) Entities (Foreign Organizations) are not eligible to apply. Non-domestic (non-U.S.",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -38063,6 +38217,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PA-25-423. Assistance listing . Eligibility: Other Eligible Applicants include the following: Eligible Agencies of the Federal Government; Non-domestic (non-U.S.) Entities (Foreign Organizations).",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -38095,8 +38250,7 @@
    "environment",
    "health",
    "low-income",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -38115,6 +38269,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PA-25-422. Assistance listing . Eligibility: Other Eligible Applicants include the following: Eligible Agencies of the Federal Government; Non-domestic (non-U.S.) Entities (Foreign Organizations).",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -38165,6 +38320,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PA-25-424. Assistance listing . Eligibility: Other Eligible Applicants include the following: Eligible Agencies of the Federal Government; Non-domestic (non-U.S.) Entities (Foreign Organizations).",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -38196,8 +38352,7 @@
   "focus": [
    "environment",
    "health",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -38509,6 +38664,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PAR-28-013. Assistance listing . Eligibility: Other Eligible ApplicantsIndian/Native American Tribal Governments (Other than Federally Recognized);Eligible Agencies of the Federal Government;U.S. Territory or Possession;Faith-based or Community-b",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -38645,7 +38801,8 @@
   "deadline": "2028-06-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -38694,7 +38851,8 @@
   "deadline": "2028-06-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -38792,7 +38950,8 @@
   "deadline": "2028-06-16",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -39175,7 +39334,8 @@
   "deadline": "2028-07-20",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -39663,8 +39823,7 @@
   ],
   "focus": [
    "health",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -40256,7 +40415,8 @@
   "deadline": "2028-11-02",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -40305,7 +40465,8 @@
   "deadline": "2028-11-02",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -40354,7 +40515,8 @@
   "deadline": "2028-11-02",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -40445,8 +40607,7 @@
   "focus": [
    "health",
    "low-income",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": 400000,
@@ -40649,7 +40810,8 @@
   "deadline": "2028-11-30",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -40660,6 +40822,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov PA-26-001. Assistance listing . Eligibility: Other Eligible Applicants: Indian/Native American Tribal Governments (Other than Federally Recognized); Eligible Agencies of the Federal Government; U.S. Territory or Possession; Faith-based or Commun",
   "must_have_any": [
+   "current-grantee",
    "research"
   ],
   "excludes_any": [],
@@ -40940,7 +41103,8 @@
   "deadline": "2029-02-20",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -40989,7 +41153,8 @@
   "deadline": "2029-02-20",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -41087,7 +41252,8 @@
   "deadline": "2029-03-05",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -41229,7 +41395,8 @@
   "deadline": "2029-03-09",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -41278,7 +41445,8 @@
   "deadline": "2029-03-12",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -41468,8 +41636,7 @@
   ],
   "focus": [
    "health",
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -41477,7 +41644,8 @@
   "deadline": "2029-04-08",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -41867,7 +42035,8 @@
   "deadline": "2029-05-25",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -41916,7 +42085,8 @@
   "deadline": "2029-05-25",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -42014,7 +42184,8 @@
   "deadline": "2029-05-25",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -42355,7 +42526,8 @@
   "deadline": "2029-07-05",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -42404,7 +42576,8 @@
   "deadline": "2029-07-05",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -42709,6 +42882,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov RDK-RAD-FOA-2024. Assistance listing . Eligibility: See FOA for Eligibility",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -42793,7 +42967,8 @@
   "deadline": "2029-09-25",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -42990,7 +43165,8 @@
   "deadline": "2029-11-05",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -43136,7 +43312,8 @@
   "deadline": "2029-11-16",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -43372,7 +43549,8 @@
   "deadline": "2030-12-01",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -43512,8 +43690,7 @@
    "tribal"
   ],
   "focus": [
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -44015,7 +44192,8 @@
   "deadline": "2076-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -44261,7 +44439,8 @@
   "deadline": "2076-10-15",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -44359,7 +44538,8 @@
   "deadline": "2076-10-27",
   "deadline_text": "",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -45061,8 +45241,7 @@
    "tribal"
   ],
   "focus": [
-   "health",
-   "youth-education"
+   "health"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -45121,7 +45300,8 @@
   "deadline": null,
   "deadline_text": "Forecasted; dates not set yet",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -45318,7 +45498,8 @@
   "deadline": null,
   "deadline_text": "Forecasted; dates not set yet",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -45799,7 +45980,8 @@
   "deadline_text": "See notice",
   "requirements": [
    "Active SAM.gov registration (UEI) required to apply",
-   "Cost share or match required"
+   "Cost share or match required",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -45809,7 +45991,9 @@
   "url": "https://www.grants.gov/search-results-detail/359225",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov EDA-DISASTER-2025. Assistance listing . Eligibility: Eligible applicants under the FY25 Disaster program include a(n): District organization of an EDA-designated Economic Development District (EDD); Indian tribe or a consortium of Indian tribes; State,",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -45859,6 +46043,7 @@
   "verified_on": "2026-11-27",
   "notes": "Grants.gov NNH18ZHA002N-MUSIC. Assistance listing . Eligibility: Minority Serving Institutions (MSIs), Non-profit Organizations with missions to support MSIs",
   "must_have_any": [
+   "higher-ed",
    "research"
   ],
   "excludes_any": [],
@@ -46051,7 +46236,8 @@
   "deadline": null,
   "deadline_text": "Forecasted; dates not set yet",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -46100,7 +46286,8 @@
   "deadline_text": "See notice",
   "requirements": [
    "Active SAM.gov registration (UEI) required to apply",
-   "Cost share or match required"
+   "Cost share or match required",
+   "Only for organizations this program already funds"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -46110,7 +46297,9 @@
   "url": "https://www.grants.gov/search-results-detail/347414",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov EDA-DISASTER-2023. Assistance listing . Eligibility: District Organization; Indian Tribe or a consortium of Indian Tribes; State, county, city, or other political subdivision of a State, including a special purpose unit of a State or local government en",
-  "must_have_any": [],
+  "must_have_any": [
+   "current-grantee"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -46332,7 +46521,8 @@
   "deadline": null,
   "deadline_text": "Forecasted; dates not set yet",
   "requirements": [
-   "Active SAM.gov registration (UEI) required to apply"
+   "Active SAM.gov registration (UEI) required to apply",
+   "Research proposals: needs a research team"
   ],
   "documents_typically_needed": [
    "DUNS/UEI + SAM registration",
@@ -47200,8 +47390,7 @@
    "tribal"
   ],
   "focus": [
-   "health",
-   "youth-education"
+   "health"
   ],
   "amount_min": null,
   "amount_max": null,
@@ -47219,7 +47408,9 @@
   "url": "https://www.grants.gov/search-results-detail/363806",
   "verified_on": "2026-11-27",
   "notes": "Grants.gov TI-27-001. Assistance listing . Eligibility: Health facilities or programs operated by or in accordance with a contract or award with the Indian Health Service.",
-  "must_have_any": [],
+  "must_have_any": [
+   "higher-ed"
+  ],
   "excludes_any": [],
   "kind": "grant",
   "area_check": false,
@@ -47622,8 +47813,7 @@
    "government"
   ],
   "focus": [
-   "research",
-   "youth-education"
+   "research"
   ],
   "amount_min": null,
   "amount_max": null,

@@ -1,6 +1,6 @@
 # Funnel for Example Youth Literacy Nonprofit, 2026-11-27
 
-Checked **1061** opportunities: **24** apply now, **3** prepare for, **1034** skipped.
+Checked **1061** opportunities: **14** apply now, **3** prepare for, **1044** skipped.
 
 ## Apply now
 
@@ -57,36 +57,33 @@ Checked **1061** opportunities: **24** apply now, **3** prepare for, **1034** sk
   - Open to nonprofit applicants
   - Matches community-development, education
   - Odds: fair (Competitive national pool)
-- **Family-to-Family Health Information Centers (F2F HIC)** (Health Resources and Services Administration, grant) [grants.gov](https://www.grants.gov/search-results-detail/363413)
-  - Due in 22 days
-  - Open to nonprofit applicants
-  - Matches youth-education
-  - Odds: fair (Competitive national pool)
 - **SBA Program for Investment in Microentrepreneurs (PRIME)** (US Small Business Administration, grant) [curated](https://simpler.grants.gov/opportunity/c55857c6-55ef-453b-b9ce-37c31ba73a5b)
   - Open or rolling
   - Open to nonprofit applicants
   - Matches low-income
   - Odds: fair (Competitive national pool)
-- **CDC National Centers of Excellence in Youth Violence Prevention (YVPCs): Rigorous Evaluation of Prevention Approaches to Prevent and Reduce Youth Violence** (Centers for Disease Control and Prevention - ERA, grant) [grants.gov](https://www.grants.gov/search-results-detail/363055)
-  - Due in 66 days
+- **USDA Rural Business Development Grants** (USDA Rural Development, grant) [curated](https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants)
+  - Open or rolling
+  - Get letters of support
   - Open to nonprofit applicants
-  - Matches youth-education
+  - Matches community-development
   - Odds: fair (Competitive national pool)
-- **Preventing Suicide and Interpersonal Violence Among Youth and Young Adults** (Centers for Disease Control and Prevention - ERA, grant) [grants.gov](https://www.grants.gov/search-results-detail/363141)
-  - Due in 66 days
+- **EDA Public Works and Economic Adjustment Assistance** (US Economic Development Administration, grant) [curated](https://simpler.grants.gov/opportunity/b5365cea-b07c-4e8d-8313-e23ab0fd3766)
+  - Open or rolling
+  - Get letters of support
   - Open to nonprofit applicants
-  - Matches youth-education
+  - Matches community-development
   - Odds: fair (Competitive national pool)
-- **Ryan White HIV/AIDS Program Part D - Women, Infants, Children and Youth Grant Supplemental Funding** (Health Resources and Services Administration, grant) [grants.gov](https://www.grants.gov/search-results-detail/363415)
-  - Due in 67 days
-  - Open to nonprofit applicants
-  - Matches youth-education
-  - Odds: fair (Competitive national pool)
-- **Providers Clinical Support System – Universities** (Substance Abuse and Mental Health Services Adminis, grant) [grants.gov](https://www.grants.gov/search-results-detail/363806)
+- **Walmart Spark Good Local Grants** (Walmart Foundation / Walmart and Sam's Club stores, grant) [curated](https://walmart.org/how-we-give/program-guidelines/spark-good-local-grants-guidelines)
   - Open or rolling
   - Open to nonprofit applicants
-  - Matches youth-education
-  - Odds: fair (Competitive national pool)
+  - Matches community-development
+  - Odds: long shot (National program with many applicants per award)
+- **Lowe's Hometowns Community Impact Grants** (Lowe's, grant) [curated](https://corporate.lowes.com/newsroom/press-releases/lowes-asks-communities-nationwide-what-projects-are-your-bucket-list-02-18-26)
+  - Open or rolling
+  - Open to nonprofit applicants
+  - Matches community-development
+  - Odds: long shot (National program with many applicants per award)
 
 ## Prepare for the next round
 
@@ -112,13 +109,14 @@ Checked **1061** opportunities: **24** apply now, **3** prepare for, **1034** sk
 
 | Reason | Count |
 | --- | ---: |
-| Only for | 708 |
-| No match to your focus areas | 132 |
+| Only for | 722 |
+| No match to your focus areas | 134 |
 | Not open to nonprofits | 115 |
-| Closed | 28 |
-| Weak match | 26 |
+| Closed | 27 |
+| Weak match | 23 |
 | Outside your area | 12 |
-| Not enough time | 5 |
 | Notice or request for information, not a funding call | 4 |
 | For Alaska only | 3 |
+| Not enough time | 2 |
+| Too big for your budget | 1 |
 | For Guam only | 1 |
