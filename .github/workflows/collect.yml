@@ -47,9 +47,18 @@ jobs:
         run: |
           git config user.name "ready-room-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/live dist/index.html
+          git add data/live
           git diff --cached --quiet || git commit -m "Nightly collection: $(date -u +%F)"
-          git push
+          # Someone may have pushed while the collector ran. Rebase onto it, rebuild the app from the newest source, then push.
+          for i in 1 2 3; do
+            git checkout -- dist/index.html 2>/dev/null || true
+            git pull --rebase -q origin main
+            python3 build.py
+            git add dist/index.html
+            git diff --cached --quiet || git commit -m "Rebuild app with new data"
+            git push && break
+            sleep 10
+          done
       - name: Summary
         run: cat data/live/REPORT.md >> "$GITHUB_STEP_SUMMARY"
 

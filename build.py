@@ -19,6 +19,8 @@ def main():
     grants = json.loads((ROOT / "data" / "grants.json").read_text(encoding="utf-8"))
     not_grants_path = ROOT / "data" / "not-grants.json"
     not_grants = json.loads(not_grants_path.read_text(encoding="utf-8")) if not_grants_path.exists() else []
+    opps_p = ROOT / "data" / "opportunities.json"
+    opps = json.loads(opps_p.read_text(encoding="utf-8")) if opps_p.exists() else []
     live_p = ROOT / "data" / "live" / "opportunities.json"
     live = [g for g in json.loads(live_p.read_text(encoding="utf-8")) if g.get("type") != "program"] if live_p.exists() else []
     status_p = ROOT / "data" / "live" / "status.json"
@@ -28,6 +30,7 @@ def main():
     out = (
         src.replace("__GRANTS__", as_script_json(grants))
         .replace("__NOTGRANTS__", as_script_json(not_grants))
+        .replace("__OPPS__", as_script_json(opps))
         .replace("__LIVE__", as_script_json(live))
         .replace("__LIVESTATUS__", as_script_json({k: live_status.get(k) for k in ("run_at", "total", "new")}))
         .replace("__CATALOG_DATE__", catalog_date)
@@ -35,7 +38,7 @@ def main():
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
     (dist / "index.html").write_text(out, encoding="utf-8")
-    print(f"Built dist/index.html with {len(grants)} curated programs, {len(live)} collected opportunities and {len(not_grants)} warnings (catalog date {catalog_date}).")
+    print(f"Built dist/index.html with {len(grants)} curated programs, {len(opps)} events and programs, {len(live)} collected opportunities and {len(not_grants)} warnings (catalog date {catalog_date}).")
 
 
 if __name__ == "__main__":

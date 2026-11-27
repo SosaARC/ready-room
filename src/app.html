@@ -89,6 +89,14 @@ details>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;g
 .limit.over{color:var(--bad);font-weight:600}
 .checks .check{border-bottom:1px solid var(--line);min-height:44px}.check{min-height:44px}.bud-item{min-width:150px}.kvrow{display:grid;grid-template-columns:minmax(0,38%) minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.kvrow span{overflow-wrap:anywhere}
 @media (prefers-reduced-motion:reduce){.toast{transition:none}}
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:14px}
+.cal-month h2{font-size:18px;margin-bottom:8px}
+.cal-item{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line,#e5e2da)}
+.cal-item:first-of-type{border-top:0}
+.cal-item.in{background:linear-gradient(90deg,var(--okbg) 0 4px,transparent 4px);padding-left:10px}
+.cal-item.past{opacity:.6}
+.cal-date{flex:0 0 58px;font-weight:600;font-size:14px}
+@media print{nav.rail,.top,.no-print,.cal-item button,.cal-item .btn,details summary~*{display:none!important}.cal-grid{display:block}.cal-month{break-inside:avoid;border:0;box-shadow:none;padding:0;margin-bottom:12px}.shell{display:block}}
 @media(max-width:860px){.shell{grid-template-columns:minmax(0,1fr)}nav.rail{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:8px;scroll-snap-type:x proximity}nav.rail a{flex:none}nav.rail .sep{display:none}.g3{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.top{gap:8px}.top .bizlabel{display:none}#bizSel{flex:1 1 140px;width:auto}.brand{font-size:18px;flex:1 1 100%}.g2,.g3{grid-template-columns:1fr}.hero .num+.num{border-left:0;border-top:2px solid var(--bg)}table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:block;border:0;padding:3px 0;text-align:start}.stack td::before{content:attr(data-l);display:block;color:var(--sub);font-size:12px;font-weight:600}.stack td.num{text-align:start}.kvrow{grid-template-columns:minmax(0,1fr) auto}.kvrow .k{grid-column:1/-1;margin-bottom:-6px}.stack td:empty{display:none}}
 </style>
@@ -110,6 +118,7 @@ details>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;g
 
 <script type="application/json" id="grants-data">__GRANTS__</script>
 <script type="application/json" id="notgrants-data">__NOTGRANTS__</script>
+<script type="application/json" id="opps-data">__OPPS__</script>
 <script type="application/json" id="live-data">__LIVE__</script>
 <script type="application/json" id="live-status">__LIVESTATUS__</script>
 <script>
@@ -117,6 +126,7 @@ details>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;g
 /* ---------- reference data ---------- */
 const GRANTS = safeJSON(document.getElementById('grants-data').textContent, []);
 const NOT_GRANTS = safeJSON(document.getElementById('notgrants-data').textContent, []);
+const OPPS = safeJSON(document.getElementById('opps-data').textContent, []).filter(o=>o&&o.id&&o.name);
 const LIVE = safeJSON(document.getElementById('live-data').textContent, []).filter(g=>g&&g.type!=='program');
 const LIVE_STATUS = safeJSON(document.getElementById('live-status').textContent, {});
 const CATALOG_DATE = '__CATALOG_DATE__';
@@ -175,8 +185,8 @@ const ACTIVE = new Set(['Prospect','LOI sent','Invited','Drafting','Submitted','
 const BROKER_STATUS = ['Not started','Docs ready','Onboarding started','Pending approval','Approved','Rejected'];
 const COI_STATES = ['Not requested','Requested from agent','Received'];
 const ENTITY = [['llc','LLC','for-profit'],['corp','Corporation','for-profit'],['sole','Sole proprietor','for-profit'],['partnership','Partnership','for-profit'],['np501c3','Nonprofit, 501(c)(3)','nonprofit'],['np_pending','Nonprofit, 501(c)(3) pending or fiscally sponsored','nonprofit'],['np_other','Nonprofit, other (501(c)(4), (c)(6))','nonprofit'],['gov','Government or school','government']];
-const FOCUS_OPTS = [['minority-owned','Minority-owned'],['women-owned','Women-owned'],['veteran','Veteran or military spouse owned'],['rural','Located in a rural area'],['agriculture','Farm or agriculture'],['local-service','Local service business (trucking, trades, food, retail)'],['research','Developing a new product or technology (R&D)'],['export','Sell or plan to sell outside the US'],['transportation','Transportation / logistics'],['workforce','Workforce / job training'],['energy','Energy / efficiency'],['disability-services','Provide disability or vocational rehab services'],['diesel-fleet','Own an older diesel truck or equipment to replace'],['arts','Artist or arts organization'],['youth-education','Youth or education'],['health','Health'],['low-income','Serve low-income residents'],['economic-mobility','Economic mobility / jobs'],['community-development','Community development']];
-const VIEWS = [['today','Today'],['all','All businesses'],['sep'],['profile','Profile'],['vault','Document vault'],['brokers','Broker setups'],['sep'],['shortlist','Shortlist'],['grants','Grant finder'],['answers','Answer bank'],['pipeline','Grant applications'],['sep'],['data','Your data']];
+const FOCUS_OPTS = [['minority-owned','Minority-owned'],['women-owned','Women-owned'],['veteran','Veteran or military spouse owned'],['rural','Located in a rural area'],['agriculture','Farm or agriculture'],['local-service','Local service business (trucking, trades, food, retail)'],['research','Developing a new product or technology (R&D)'],['export','Sell or plan to sell outside the US'],['transportation','Transportation / logistics'],['workforce','Workforce / job training'],['energy','Energy / efficiency'],['disability-services','Provide disability or vocational rehab services'],['diesel-fleet','Own an older diesel truck or equipment to replace'],['arts','Artist or arts organization'],['youth-education','Youth or education'],['health','Health'],['low-income','Serve low-income residents'],['economic-mobility','Economic mobility / jobs'],['community-development','Community development'],['acquisition','Buying a business (acquisition, search fund)'],['independent-sponsor','Raising deal-by-deal capital (independent sponsor)'],['hvac','HVAC, plumbing or home services'],['real-estate-development','Real estate development or rental property'],['construction','Construction or contracting']];
+const VIEWS = [['today','Today'],['all','All businesses'],['sep'],['profile','Profile'],['vault','Document vault'],['brokers','Broker setups'],['sep'],['shortlist','Shortlist'],['grants','Grant finder'],['answers','Answer bank'],['pipeline','Grant applications'],['calendar','Calendar'],['sep'],['data','Your data']];
 const VIEW_KEYS = VIEWS.filter(v=>v[0]!=='sep').map(v=>v[0]).concat(['start']);
 
 /* ---------- helpers ---------- */
@@ -255,20 +265,21 @@ async function saveFile(filename,data,type){
 /* ---------- state + migration ---------- */
 const state = {businesses:{},activeId:null,view:'today',ui:{grantQ:'',grantLevel:'all',showLoans:false,onlyEligible:true,aiRank:{},gmail:null,gmailBusy:false,open:{}}};
 function blankProfile(name){return {name:name||'My business',ownerName:'',samRegistered:false,fundingWhen:'',legalName:'',dba:'',entityType:'llc',state:'NC',county:'',city:'',address:'',founded:'',employees:'',revenue:'',budget:'',industry:'',naics:'',usdot:'',mc:'',authorityDate:'',ein:'',email:'',phone:'',website:'',focus:[],certs:'',uei:'',fundingUse:'',fundingAmount:'',equipment:'',homeBase:'',lanes:'',eld:'',factoring:'',afterHours:'',agentName:'',agentEmail:'',agentPhone:''}}
-function blankBiz(name){return {v:2,id:uid(),created:todayStr(),profile:blankProfile(name),documents:[],brokers:[],answers:{},pipeline:[],customGrants:[]}}
+function blankBiz(name){return {v:2,id:uid(),created:todayStr(),profile:blankProfile(name),documents:[],brokers:[],answers:{},pipeline:[],customGrants:[],plan:{},calSync:{}}}
 function migrate(b){
   b.profile={...blankProfile(b.profile&&b.profile.name),...(b.profile||{})};
   if(b.profile.entityType==='nonprofit')b.profile.entityType='np501c3';
   b.documents=b.documents||[];b.answers=b.answers||{};b.customGrants=b.customGrants||[];
   b.brokers=(b.brokers||[]).map(br=>({kind:'broker',method:'',rep:'',carrierId:'',payTerms:'',minDays:'',coi:'Not requested',coiOn:'',holder:'',agreement:false,...br,required:(br.required||BROKER_DEFAULT).filter(k=>k!=='carrier_agreement'),status:(s=>BROKER_STATUS.includes(s)?s:'Not started')(({'Packet ready':'Docs ready','Sent':'Onboarding started','Pending review':'Pending approval'})[br.status]||br.status)}));
   b.pipeline=(b.pipeline||[]).map(p=>({checklist:[],budget:[],versions:[],answers:[],awarded:'',reportDue:'',docsDue:'',draftDue:'',contact:'',...p,status:STAGES.includes(p.status)?p.status:'Prospect'}));
-  b.aiRank=b.aiRank||null;b.v=3;return b;
+  b.aiRank=b.aiRank||null;b.plan=b.plan&&typeof b.plan==='object'?b.plan:{};b.calSync=b.calSync&&typeof b.calSync==='object'?b.calSync:{};b.v=3;return b;
 }
 const biz = ()=>state.businesses[state.activeId];
 function touch(){store.save(biz())}
 
 /* ---------- grants ---------- */
-function allGrants(){return GRANTS.concat(LIVE,(biz()?.customGrants)||[])}
+const OPP_APPLY=OPPS.filter(o=>o.kind==='grant'||o.kind==='accelerator').map(o=>({...o,source:'curated'}));
+function allGrants(){return GRANTS.concat(OPP_APPLY,LIVE,(biz()?.customGrants)||[])}
 function grantDocs(g){return (g.documents_typically_needed||[]).map(s=>{const key=GRANT_DOC_MAP[String(s).toLowerCase()]||null;return {label:key==='sam_uei'?'SAM.gov registration (UEI)':key==='hub_cert'?'Small business certification':s,key}})}
 function capOf(g){return g&&g.amount_max&&/up to|maximum|max\b|not to exceed|no more than|ceiling/i.test(g.amount_text||'')?g.amount_max:null}
 function readiness(g,b){const ds=grantDocs(g).filter(d=>d.key);if(!ds.length)return null;const have=ds.filter(d=>usable(haveValid(b,d.key))).length;return {have,total:ds.length}}
@@ -283,6 +294,14 @@ function profileTags(p){
   if(/software|saas|\bai\b|tech/.test(ind))mine.add('tech');
   if(mine.has('research'))mine.add('tech');
   if(mine.has('youth-education'))mine.add('education');
+  if(/hvac|heating|air condition|plumb|electric|roof|landscap|clean|pest|home service/.test(ind)){mine.add('hvac');mine.add('local-service')}
+  if(mine.has('hvac')){mine.add('home-services');mine.add('skilled-trades');mine.add('service-business')}
+  if(mine.has('local-service'))mine.add('service-business');
+  if(mine.has('independent-sponsor'))mine.add('acquisition');
+  if(mine.has('acquisition'))mine.add('search-fund');
+  if(mine.has('real-estate-development'))mine.add('housing');
+  if(mine.has('minority-owned')||mine.has('women-owned')||mine.has('veteran'))mine.add('capital-access');
+  if(entClass(p)==='nonprofit')mine.add('nonprofit-capacity');else mine.add('small-business');
   return mine;
 }
 const RECUR=/monthly|rolling|annual|twice a year|each year|quarterly|ongoing/i;
@@ -305,7 +324,7 @@ function assess(g,b){
   const hits=(g.focus||[]).filter(f=>mine.has(f)&&!['local-service','startup'].includes(f)||f==='startup'&&mine.has('startup'));if(hits.length){why.push('Matches: '+[...new Set(hits)].map(t=>((FOCUS_OPTS.find(f=>f[0]===t)||[t,t.replace(/-/g,' ')])[1]).toLowerCase()).join(', '));score+=Math.min(30,hits.length*12)}
   if((g.focus||[]).includes('general'))score+=4;
   if(g.is_loan){flags.push('This is a loan, not a grant');score-=25}
-  if(g.kind&&g.kind!=='grant')notes.push(({contract:'Reimbursement contract, not a lump-sum grant','matched-savings':'Matched savings program, not a lump-sum grant','training-reimbursement':'Reimburses training costs, not a lump-sum grant'})[g.kind]||'Not a lump-sum grant');
+  if(g.kind&&g.kind!=='grant')notes.push(({contract:'Reimbursement contract, not a lump-sum grant','matched-savings':'Matched savings program, not a lump-sum grant','training-reimbursement':'Reimburses training costs, not a lump-sum grant',accelerator:'Accelerator or training program, not a lump-sum grant'})[g.kind]||'Not a lump-sum grant');
   const dd=daysUntil(g.deadline),recur=RECUR.test(g.deadline_text||'');
   if(dd!=null){if(dd<0&&recur)notes.push('Recurring: check the next round');else if(dd<0){ok=false;flags.push('Closed '+fmtDate(g.deadline))}else if(dd<=45){why.push('Deadline in '+dd+' days');score+=5}}
   const r=readiness(g,b);if(r)score+=Math.round(r.have/r.total*15);
@@ -373,7 +392,7 @@ function render(){
   renderRail();
   if(state.view==='start'){$('#view').innerHTML=viewStart();return}
   if(!biz()){$('#view').innerHTML=viewWelcome();return}
-  const fn={shortlist:viewShortlist,today:viewToday,all:viewAll,profile:viewProfile,vault:viewVault,brokers:viewBrokers,grants:viewGrants,answers:viewAnswers,pipeline:viewPipeline,data:viewData}[state.view]||viewToday;
+  const fn={shortlist:viewShortlist,today:viewToday,all:viewAll,profile:viewProfile,vault:viewVault,brokers:viewBrokers,grants:viewGrants,answers:viewAnswers,pipeline:viewPipeline,calendar:viewCalendar,data:viewData}[state.view]||viewToday;
   $('#view').innerHTML=fn();
 }
 function viewWelcome(){return `<h1>Keep your business ready to hand over.</h1>
@@ -400,7 +419,7 @@ function attention(b){
 /* ---------- Quick start ---------- */
 const COUNTIES_NC=['Alamance','Alexander','Alleghany','Anson','Ashe','Avery','Beaufort','Bertie','Bladen','Brunswick','Buncombe','Burke','Cabarrus','Caldwell','Camden','Carteret','Caswell','Catawba','Chatham','Cherokee','Chowan','Clay','Cleveland','Columbus','Craven','Cumberland','Currituck','Dare','Davidson','Davie','Duplin','Durham','Edgecombe','Forsyth','Franklin','Gaston','Gates','Graham','Granville','Greene','Guilford','Halifax','Harnett','Haywood','Henderson','Hertford','Hoke','Hyde','Iredell','Jackson','Johnston','Jones','Lee','Lenoir','Lincoln','Macon','Madison','Martin','McDowell','Mecklenburg','Mitchell','Montgomery','Moore','Nash','New Hanover','Northampton','Onslow','Orange','Pamlico','Pasquotank','Pender','Perquimans','Person','Pitt','Polk','Randolph','Richmond','Robeson','Rockingham','Rowan','Rutherford','Sampson','Scotland','Stanly','Stokes','Surry','Swain','Transylvania','Tyrrell','Union','Vance','Wake','Warren','Washington','Watauga','Wayne','Wilkes','Wilson','Yadkin','Yancey'];
 function viewStart(){
-  const quickFocus=FOCUS_OPTS.filter(f=>['minority-owned','women-owned','veteran','rural','local-service','transportation','youth-education','health','arts','agriculture','research','community-development','workforce','low-income'].includes(f[0]));
+  const quickFocus=FOCUS_OPTS.filter(f=>['minority-owned','women-owned','veteran','rural','local-service','transportation','youth-education','health','arts','agriculture','research','community-development','workforce','low-income','acquisition','independent-sponsor','hvac','real-estate-development','construction'].includes(f[0]));
   return `<h1>Find grants you can actually win</h1><p class="lede">Answer a few questions. Ready Room checks every grant it knows about, local, North Carolina, federal and national, and shows the ones you can apply for now, the ones to prepare for, and why the rest don't fit. Your answers stay in this browser${store.mode==='cloud'?' and your private Claude account':''}.</p>
   <form id="startForm" class="grid" style="max-width:760px">
    <div class="card"><h2 style="margin-bottom:10px">1. Who you are</h2>
@@ -510,6 +529,88 @@ function icsFile(){
   const ev=allDates().map(x=>{const d=x.date.replace(/-/g,'');const [y,m,dd]=x.date.split('-').map(Number);const n=ymd(new Date(y,m-1,dd+1)).replace(/-/g,'');return ['BEGIN:VEVENT',`UID:${x.uid}@readyroom`,`DTSTAMP:${stamp}`,`DTSTART;VALUE=DATE:${d}`,`DTEND;VALUE=DATE:${n}`,`SUMMARY:${escI(x.biz+': '+x.what)}`,'BEGIN:VALARM','TRIGGER:-P7D','ACTION:DISPLAY',`DESCRIPTION:${escI(x.what)}`,'END:VALARM','END:VEVENT'].map(fold).join('\r\n')}).join('\r\n');
   return `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Ready Room//EN\r\nCALSCALE:GREGORIAN\r\n${ev}\r\nEND:VCALENDAR\r\n`;
 }
+/* ---------- Calendar: a year of opportunities ---------- */
+const OPP_KIND={grant:'Grant',accelerator:'Accelerator or program',event:'Event',capital:'Capital',resource:'Resource',contract:'Contract'};
+const KIND_CHIP={grant:'ok',accelerator:'',event:'ink',capital:'warn',resource:''};
+function oppMatch(o,b){const a=assess(o,b);const mine=profileTags(b.profile);const hits=(o.focus||[]).filter(t=>t!=='general'&&mine.has(t));
+  if(o.kind==='event'||o.kind==='resource'||o.kind==='capital'){if(o.is_loan){a.flags=a.flags.filter(f=>!f.startsWith('This is a loan'));a.score+=25}
+    if(!a.ok)return {ok:false,a,hits};if(!hits.length&&!(o.focus||[]).includes('general'))return {ok:false,a:{...a,flags:['No match to your focus areas']},hits};}
+  return {ok:a.ok,a,hits}}
+function calYear(){return state.ui.calYear||Math.max(new Date().getFullYear(),new Date().getMonth()>=9?new Date().getFullYear()+1:new Date().getFullYear())}
+function calItems(b,year){const out=[],Y=String(year),inY=d=>valid(d)&&d.slice(0,4)===Y;const plan=b.plan||{};
+  const add=(o)=>{if(plan[o.key]==='hidden'&&!state.ui.calShowHidden)return;out.push({...o,inPlan:plan[o.key]==='in'||o.locked,hidden:plan[o.key]==='hidden'})};
+  // tracked applications and documents
+  for(const x of allDates().filter(x=>x.bizId===b.id&&inY(x.date)))add({key:'t:'+x.uid,date:x.date,title:x.what,kind:x.go==='vault'?'resource':'grant',src:'tracked',locked:true,go:x.go,uid:x.uid});
+  // shortlist grants
+  const fa=funnelAll(b);
+  for(const {g,f} of fa.apply.concat(fa.prepare)){if(!inY(g.deadline))continue;const k=g.kind==='accelerator'?'accelerator':'grant';
+    const est=g.date_confidence==='estimated';add({key:'g:'+g.id,date:g.deadline,title:g.name+': '+(k==='accelerator'?'application due':'deadline'),kind:k,src:f.bucket==='apply'?'Apply now':'Prepare',url:g.url,note:[g.location,g.amount_text].filter(Boolean).join(' · '),est,uid:b.id+'-g-'+g.id,detail:g.notes,dtext:g.deadline_text});
+    if(inY(g.apply_open)&&g.apply_open<g.deadline)add({key:'g:'+g.id+':open',date:g.apply_open,title:g.name+': applications open',kind:k,url:g.url,est,uid:b.id+'-go-'+g.id,parent:'g:'+g.id});
+    if(inY(g.start_date)&&g.start_date>g.deadline)add({key:'g:'+g.id+':start',date:g.start_date,end:valid(g.end_date)?g.end_date:'',title:g.name+': program starts',kind:k,url:g.url,est,uid:b.id+'-gs-'+g.id,parent:'g:'+g.id});
+    if(f.days&&daysUntil(g.deadline)>f.days){const [y,m,d]=g.deadline.split('-').map(Number);const s=ymd(new Date(y,m-1,d-f.days));if(inY(s)&&daysUntil(s)>=0)add({key:'p:'+g.id,date:s,title:'Start preparing: '+g.name,kind:'grant',src:`About ${f.days} days of prep`,url:g.url,prep:true,uid:b.id+'-p-'+g.id,parent:'g:'+g.id})}}
+  // events, accelerators, capital, resources
+  for(const o of OPPS){if(o.kind==='grant'||o.kind==='accelerator')continue;const m=oppMatch(o,b);if(!m.ok)continue;const why=m.hits.length?'Matches: '+[...new Set(m.hits)].map(t=>((FOCUS_OPTS.find(f=>f[0]===t)||[t,t.replace(/-/g,' ')])[1]).toLowerCase()).slice(0,3).join(', '):'Open to most businesses';
+    const est=o.date_confidence==='estimated';const base={kind:o.kind||'resource',url:o.url,note:[o.location,o.amount_text].filter(Boolean).join(' · '),est,why,oppId:o.id,detail:o.notes,dtext:o.deadline_text};
+    if(inY(o.start_date))add({...base,key:'o:'+o.id,date:o.start_date,end:valid(o.end_date)?o.end_date:'',title:o.name,uid:b.id+'-o-'+o.id});
+    if(inY(o.deadline)&&o.deadline!==o.start_date)add({...base,key:'o:'+o.id+':d',date:o.deadline,title:o.name+': '+(o.kind==='event'?'register by':'apply by'),uid:b.id+'-od-'+o.id,parent:inY(o.start_date)?'o:'+o.id:''});
+    if(inY(o.apply_open)&&o.apply_open!==o.deadline)add({...base,key:'o:'+o.id+':open',date:o.apply_open,title:o.name+': applications open',uid:b.id+'-oo-'+o.id,parent:inY(o.start_date)?'o:'+o.id:inY(o.deadline)?'o:'+o.id+':d':''})}
+  // children follow their parent's plan choice
+  const byKey=Object.fromEntries(out.map(x=>[x.key,x]));for(const x of out)if(x.parent&&byKey[x.parent]&&!plan[x.key]){x.inPlan=byKey[x.parent].inPlan;x.hidden=byKey[x.parent].hidden}
+  return out.filter(x=>!x.hidden||state.ui.calShowHidden).sort((p,q)=>p.date.localeCompare(q.date)||(p.prep?1:0)-(q.prep?1:0))}
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function viewCalendar(){
+  const b=biz(),u=state.ui,year=calYear(),kf=u.calKind||'all',only=!!u.calPlanOnly;
+  let items=calItems(b,year);const counts={};for(const x of items)counts[x.kind]=(counts[x.kind]||0)+1;
+  if(kf!=='all')items=items.filter(x=>x.kind===kf);if(only)items=items.filter(x=>x.inPlan);
+  const planN=calItems(b,year).filter(x=>x.inPlan).length,synced=Object.keys(b.calSync||{}).length;
+  const months=MONTHS.map((mn,i)=>{const mm=String(i+1).padStart(2,'0');const its=items.filter(x=>x.date.slice(5,7)===mm);
+    return `<section class="card cal-month"><h2>${mn} ${year}</h2>${its.length?its.map(x=>{const n=daysUntil(x.date);const past=n!=null&&n<0;const url=safeUrl(x.url);
+      return `<div class="cal-item${x.inPlan?' in':''}${past?' past':''}"><div class="cal-date">${esc(fmtDate(x.date).replace(/, \d{4}$/,''))}${x.end&&x.end!==x.date?'<br><span class="small muted">to '+esc(fmtDate(x.end).replace(/, \d{4}$/,''))+'</span>':''}</div><div style="flex:1;min-width:0"><b>${esc(x.title)}</b>
+       <div class="row" style="gap:4px;margin:3px 0"><span class="chip ${KIND_CHIP[x.kind]||''}">${esc(OPP_KIND[x.kind]||x.kind)}</span>${x.src&&x.src!=='tracked'?`<span class="chip">${esc(x.src)}</span>`:''}${x.src==='tracked'?'<span class="chip ink">Tracked</span>':''}${x.est?'<span class="chip warn" title="Based on past years. Confirm on the official page.">Date estimated</span>':''}${x.why&&!x.prep?`<span class="chip ok">${esc(x.why)}</span>`:''}</div>
+       ${x.note?`<div class="small muted">${esc(x.note)}</div>`:''}${x.detail&&!x.parent?`<details class="small"><summary>Why it's here</summary><p style="margin:4px 0">${esc(x.detail)}</p>${x.dtext?`<p class="muted" style="margin:0">${esc(x.dtext)}</p>`:''}</details>`:''}
+       <div class="row" style="gap:6px;margin-top:4px">${x.locked?'':x.inPlan?`<button class="sm" data-act="calPlan" data-k="${esc(x.parent||x.key)}" data-v="" aria-pressed="true">In plan ✓</button>`:`<button class="sm primary" data-act="calPlan" data-k="${esc(x.parent||x.key)}" data-v="in">Add to plan</button>`}${x.locked||x.inPlan?'':`<button class="sm ghost" data-act="calPlan" data-k="${esc(x.parent||x.key)}" data-v="${x.hidden?'':'hidden'}">${x.hidden?'Show again':'Not for us'}</button>`}${url?`<a class="btn sm ghost" href="${esc(url)}" target="_blank" rel="noopener">Official page</a>`:''}${x.go?`<a class="btn sm ghost" href="#${x.go}">Open</a>`:''}</div></div></div>`}).join(''):'<p class="small muted">Nothing this month.</p>'}</section>`}).join('');
+  const kinds=[['all','Everything'],['grant','Grants'],['accelerator','Accelerators and programs'],['event','Events'],['capital','Capital'],['resource','Resources']];
+  return `<h1>${year} calendar</h1><p class="lede">Every date that matters for ${esc(b.profile.name)} this year: grant deadlines and when to start preparing, accelerator windows, events worth attending, and capital programs. Add the ones you'll pursue to the plan, then share the plan with the owner so you both work from the same dates.</p>
+  <div class="card soft no-print" style="margin-bottom:14px"><div class="grid g3"><div class="field"><label for="cy">Year</label><select id="cy" data-ui="calYear">${[new Date().getFullYear(),new Date().getFullYear()+1].map(y=>`<option ${y===year?'selected':''}>${y}</option>`).join('')}</select></div>
+   <div class="field"><label for="ck">Show</label><select id="ck" data-ui="calKind">${kinds.map(([v,l])=>`<option value="${v}" ${kf===v?'selected':''}>${l}${v!=='all'&&counts[v]?' ('+counts[v]+')':''}</option>`).join('')}</select></div>
+   <div><label class="check"><input type="checkbox" data-ui="calPlanOnly" ${only?'checked':''}> Only what's in our plan (${planN})</label><label class="check"><input type="checkbox" data-ui="calShowHidden" ${u.calShowHidden?'checked':''}> Show ones we passed on</label></div></div>
+   <div class="row"><button class="primary" data-act="calShare" ${planN?'':'disabled'}>Share the plan with ${b.profile.ownerName?esc(b.profile.ownerName.split(' ')[0]):'the owner'}</button><button data-act="calIcs" ${planN?'':'disabled'}>Download plan (.ics)</button><button class="ghost" data-act="calPrint">Print</button></div>
+   ${synced?`<p class="small muted" style="margin-bottom:0">${synced} plan date${synced>1?'s are':' is'} on Google Calendar.</p>`:''}</div>
+  ${OPPS.length?'':'<p class="note">The events and programs list has not loaded. Grant deadlines still show.</p>'}
+  <div class="cal-grid">${months}</div>
+  <p class="note">"Date estimated" means the organizer has not posted the ${year} date yet, so Ready Room used past years. Check the official page before you book travel or plan around it.</p>`;
+}
+if(/[?&]rrtest=1/.test(location.search))window.__rr={get state(){return state},biz:()=>biz(),planIcs:b=>planIcs(b),oppMatch:(o,b)=>oppMatch(o,b),tags:p=>[...profileTags(p)],OPPS};
+function planItems(b){return calItems(b,calYear()).filter(x=>x.inPlan)}
+function planIcs(b){const stamp=new Date().toISOString().replace(/[-:]/g,'').slice(0,15)+'Z';
+  const escI=t=>String(t).replace(/[\;,]/g,m=>'\\'+m).replace(/\r?\n/g,'\\n');
+  const bytes=t=>typeof TextEncoder!=='undefined'?new TextEncoder().encode(t).length:unescape(encodeURIComponent(t)).length;
+  const fold=line=>{if(bytes(line)<=75)return line;let out='',cur='';for(const ch of line){if(bytes(cur+ch)>(out?74:75)){out+=(out?'\r\n ':'')+cur;cur=ch}else cur+=ch}return out+'\r\n '+cur};
+  const next=d=>{const [y,m,dd]=d.split('-').map(Number);return ymd(new Date(y,m-1,dd+1)).replace(/-/g,'')};
+  const ev=planItems(b).map(x=>['BEGIN:VEVENT',`UID:${x.uid}@readyroom`,`DTSTAMP:${stamp}`,`DTSTART;VALUE=DATE:${x.date.replace(/-/g,'')}`,`DTEND;VALUE=DATE:${next(x.end&&x.end>x.date?x.end:x.date)}`,`SUMMARY:${escI(x.title)}`,`DESCRIPTION:${escI([OPP_KIND[x.kind]||'',x.note||'',x.est?'Date estimated from past years. Confirm before booking.':'',safeUrl(x.url)||''].filter(Boolean).join('\n'))}`,...(safeUrl(x.url)?[`URL:${safeUrl(x.url)}`]:[]),'BEGIN:VALARM','TRIGGER:-P7D','ACTION:DISPLAY',`DESCRIPTION:${escI(x.title)}`,'END:VALARM','END:VEVENT'].map(fold).join('\r\n')).join('\r\n');
+  return `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Ready Room//EN\r\nCALSCALE:GREGORIAN\r\nX-WR-CALNAME:${escI(b.profile.name+' '+calYear()+' plan')}\r\n${ev}\r\nEND:VCALENDAR\r\n`}
+function planText(b){const its=planItems(b);let out=`${b.profile.name}: ${calYear()} opportunity plan\n`;let cur='';
+  for(const x of its){const mn=MONTHS[+x.date.slice(5,7)-1];if(mn!==cur){out+=`\n${mn.toUpperCase()}\n`;cur=mn}out+=`- ${fmtDate(x.date)}${x.end&&x.end!==x.date?' to '+fmtDate(x.end):''}: ${x.title}${x.est?' (date estimated)':''}${safeUrl(x.url)?'\n  '+safeUrl(x.url):''}\n`}
+  return out+`\nDates marked "estimated" are based on past years. Check the official page before booking.\n`}
+function calShareForm(b,gcal){const its=planItems(b),owner=b.profile.email||'';
+  return `<h2 style="margin-bottom:6px">Share the ${calYear()} plan</h2><p class="small">${its.length} date${its.length>1?'s':''} in the plan. Pick how you and ${esc(b.profile.ownerName||'the owner')} will both see them.</p>
+  ${gcal?`<form id="gcalForm" class="card soft" style="margin-bottom:12px"><h3>Put it on Google Calendar</h3><p class="small" style="margin-top:4px">Ready Room adds each date to your Google Calendar as an all-day event and invites the owner, so it shows on both calendars. Google emails the owner one invite per date.</p>
+   <div class="field"><label for="gc_to">Owner's email</label><input id="gc_to" name="to" type="email" value="${esc(owner)}" placeholder="owner@example.com"></div>
+   <label class="check"><input type="checkbox" name="noInvite"> Just my calendar for now, don't invite anyone</label>
+   <div class="row" style="margin-top:8px"><button class="primary" type="submit">Add ${its.length-its.filter(x=>b.calSync[x.uid]).length} date${its.length>1?'s':''} to Google Calendar</button><span id="gcMsg" class="small muted" role="status"></span></div></form>`:''}
+  <div class="card soft" style="margin-bottom:12px"><h3>Send a calendar file</h3><p class="small" style="margin-top:4px">One .ics file with every plan date. It opens in Google Calendar, Apple Calendar and Outlook. Send it to the owner and keep a copy. Re-sending an updated file updates the same events.</p><button class="sm" data-act="calIcs">Download plan (.ics)</button></div>
+  <div class="card soft"><h3>Paste it in an email or text</h3><textarea id="planTxt" readonly style="min-height:160px;font-size:13px">${esc(planText(b))}</textarea><div class="row" style="margin-top:6px"><button class="sm" data-act="copyPlan">Copy</button></div></div>
+  <div class="row" style="margin-top:12px"><button data-act="closeDlg">Done</button></div>`}
+async function gcalPush(b,fd){const msg=$('#gcMsg');const mcp=await cap('mcp');if(!mcp){msg.textContent='Google Calendar is not connected for this page.';return}
+  const to=String(fd.get('to')||'').trim(),noInv=!!fd.get('noInvite');if(!noInv&&to&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to)){msg.textContent='That email does not look right.';return}
+  const its=planItems(b).filter(x=>!b.calSync[x.uid]);let done=0,failed=0;const btn=$('#gcalForm button[type=submit]');if(btn)btn.disabled=true;
+  for(const x of its){msg.textContent=`Adding ${done+1} of ${its.length}…`;
+    const endD=x.end&&x.end>x.date?x.end:x.date;const [y,m,d]=endD.split('-').map(Number);const endN=ymd(new Date(y,m-1,d+1));
+    const input={summary:x.title,allDay:true,startTime:x.date+'T00:00:00',endTime:endN+'T00:00:00',availability:'AVAILABILITY_FREE',description:[OPP_KIND[x.kind]||'',x.note||'',x.est?'Date estimated from past years. Confirm before booking.':'',safeUrl(x.url)||'','Added by Ready Room for '+b.profile.name].filter(Boolean).join('\n'),overrideReminders:[{method:'email',minutes:7*24*60}]};
+    if(!noInv&&to)input.attendees=[{email:to}];
+    try{const r=await mcp.callTool('Google Calendar','create_event',input);const p=r&&r.payload||{};b.calSync[x.uid]=p.id||p.eventId||true;done++;store.save(b)}catch(e){failed++;if(e&&/authz|denied|not_connected|consent/i.test(String(e.code||e.message)))break}}
+  msg.textContent=`${done} added${failed?`, ${failed} could not be added`:''}.`;if(btn)btn.disabled=false;render()}
+
 /* ---------- Profile ---------- */
 function viewProfile(){
   const p=biz().profile,ad=authorityDays(p);
@@ -969,6 +1070,11 @@ const actions={
   budDel(el){const p=P(el.dataset.id);p.budget.splice(+el.dataset.i,1);touch();render()},
   budCopy(el){const p=P(el.dataset.id);copy(p.budget.map(r=>`${r.item}\t$${Number(r.amount||0).toLocaleString()}\t${r.source}`).join('\n'))},
   exportIcs(){saveFile('ready-room-dates.ics',icsFile(),'text/calendar')},
+  calPlan(el){const b=biz(),k=el.dataset.k,v=el.dataset.v;if(v)b.plan[k]=v;else delete b.plan[k];for(const kk of Object.keys(b.plan))if(kk!==k&&kk.startsWith(k+':'))delete b.plan[kk];touch();render();toast(v==='in'?'Added to the plan':v==='hidden'?'Hidden. Turn on "Show ones we passed on" to see it.':'Removed from the plan')},
+  calIcs(){const b=biz();saveFile((b.profile.name.replace(/[^a-z0-9]+/gi,'-')||'business')+'-'+calYear()+'-plan.ics',planIcs(b),'text/calendar')},
+  async calShare(){const b=biz();const gcal=await cap('mcp');openDlg(calShareForm(b,!!gcal))},
+  copyPlan(){copy(planText(biz()))},
+  calPrint(){try{window.print()}catch(e){}},
   exportBiz(){saveFile((biz().profile.name.replace(/[^a-z0-9]+/gi,'-')||'business')+'-backup.json',JSON.stringify(biz(),null,2),'application/json')},
   copyBiz(){copy(JSON.stringify(biz(),null,2))},
   importBiz(){openDlg(`<h2 style="margin-bottom:8px">Restore from backup</h2><form id="importForm"><div class="field"><label for="imp">Paste backup JSON</label><textarea id="imp" name="json" style="min-height:220px"></textarea></div><div class="row"><button class="primary" type="submit">Restore as a new business</button><button type="button" data-act="closeDlg">Cancel</button></div></form>`)},
@@ -988,6 +1094,7 @@ document.addEventListener('submit',e=>{
   if(f.id==='grantForm'){b.customGrants.push({id:'c_'+uid(),custom:true,name:String(fd.get('name')),funder:String(fd.get('funder')||''),level:'custom',region:'',eligible_entities:String(fd.get('ent')).split(','),focus:[],must_have_any:[],excludes_any:[],amount_text:String(fd.get('amount_text')||''),deadline:String(fd.get('deadline')||'')||null,deadline_text:'',requirements:[],documents_typically_needed:[],is_loan:!!fd.get('is_loan'),kind:'grant',url:String(fd.get('url')||''),notes:String(fd.get('notes')||'')});touch();closeDlg();render();toast('Added');return}
   if(f.id==='coiAllForm'){const ids=fd.getAll('br');if(!ids.length){toast('Pick at least one broker');return}state.ui.coiIds=ids;const t=coiAllEmail(ids);const miss=biz().brokers.filter(x=>ids.includes(x.id)&&!x.holder).length;openDlg(`<h2 style="margin-bottom:6px">Email to your agent</h2>${miss?`<p class="small"><span class="chip warn">${miss} without a holder address</span> Add them to the email before you send.</p>`:''}<textarea style="min-height:280px" aria-label="Email text" id="coiText">${esc(t)}</textarea><div class="row" style="margin-top:10px"><button class="primary" data-act="coiCopy">Copy email</button><button data-act="coiMark">I sent it: mark as requested</button><button class="ghost" data-act="closeDlg">Close</button></div>`,{focus:false});return}
   if(f.id==='startForm'){startSubmit(fd);return}
+  if(f.id==='gcalForm'){gcalPush(biz(),fd);return}
   if(f.id==='intakeForm'){intakeFill(String(fd.get('t')||''));return}
   if(f.classList.contains('ckAdd')){const p=P(f.dataset.id);const l=String(fd.get('label')||'').trim();if(p&&l){p.checklist.push({label:l,key:null,done:false});state.ui.open['c'+p.id]=true;touch();render()}return}
   if(f.id==='importForm'){restoreJSON(String(fd.get('json')));return}
@@ -1016,6 +1123,9 @@ document.addEventListener('change',e=>{
   if(el.dataset.bud==='source'||el.dataset.pp==='status'){touch();render();return}
   if(el.dataset.bud==='amount'||['deadline','ask'].includes(el.dataset.pp)){touch();return}
   if(el.dataset.ui==='grantLevel'){state.ui.grantLevel=el.value;render();return}
+  if(el.dataset.ui==='calYear'){state.ui.calYear=+el.value;render();return}
+  if(el.dataset.ui==='calKind'){state.ui.calKind=el.value;render();return}
+  if(el.dataset.ui==='calPlanOnly'||el.dataset.ui==='calShowHidden'){state.ui[el.dataset.ui]=el.checked;render();return}
   if(el.dataset.ui==='onlyEligible'||el.dataset.ui==='showLoans'){state.ui[el.dataset.ui]=el.checked;render();return}
   if(el.dataset.reuse&&el.value){const k=el.dataset.reuse,src=state.businesses[el.value];if(src){const t=src.answers[k]||'';const go=()=>{b.answers[k]=t;state.ui.open['a_'+k]=true;touch();render();toast('Copied from '+src.profile.name+'. Edit the details for this business.')};if((b.answers[k]||'').trim()){state.ui.pendingReuse=go;openDlg(`<h3>Replace this section?</h3><p>Your current text will be replaced with ${esc(src.profile.name)}'s version.</p><div class="row"><button class="primary" data-act="reuseGo">Replace</button><button data-act="closeDlg">Keep mine</button></div>`)}else go()}el.value='';return}
   if(el.id==='fileIn'&&el.files[0])aiReadFile(el.files[0]);
