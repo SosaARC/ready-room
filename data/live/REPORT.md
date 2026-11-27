@@ -11,6 +11,8 @@
 
 ## Curated pages that changed (re-check these in data/grants.json)
 
+- [NC IDEA SEED Grant](https://ncidea.org/nc-idea-seed/) (`nc-idea-seed`)
+- [NC IDEA MICRO Grant](https://ncidea.org/nc-idea-micro/) (`nc-idea-micro`)
 - [Forsyth County Community Grants](https://forsyth.cc/communitygrants/) (`forsyth-community-grants`)
 
 ## Closing in the next 3 weeks
