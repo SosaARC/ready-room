@@ -1,6 +1,6 @@
 # Funnel for Example Youth Literacy Nonprofit, 2026-11-27
 
-Checked **1061** opportunities: **21** apply now, **3** prepare for, **1037** skipped.
+Checked **1061** opportunities: **24** apply now, **3** prepare for, **1034** skipped.
 
 ## Apply now
 
@@ -33,6 +33,12 @@ Checked **1061** opportunities: **21** apply now, **3** prepare for, **1037** sk
   - Open to nonprofit applicants
   - Matches community-development
   - Odds: better (Local or state pool: fewer applicants)
+- **Resident Opportunity and Self-Sufficiency Service Coordinator (ROSS-SC) Program – Fiscal Year 2026** (Department of Housing and Urban Development, grant) [grants.gov](https://www.grants.gov/search-results-detail/361994)
+  - Due in 39 days
+  - Plan your match: this program requires cost share
+  - Open to nonprofit applicants
+  - Matches community-development, education
+  - Odds: fair (Competitive national pool)
 - **Cone Health Community Grant Requests** (Cone Health, grant) [curated](https://conehealth.com/about-us/apply-for-a-grant-or-sponsorship/grant-requests)
   - Open or rolling
   - Get a W-9
@@ -45,42 +51,38 @@ Checked **1061** opportunities: **21** apply now, **3** prepare for, **1037** sk
   - Open to nonprofit applicants
   - Matches community-development
   - Only part of the area qualifies: check the address
+- **Fiscal Year (FY) 2027 AmeriCorps State and National Competitive Grants** (AmeriCorps, grant) [grants.gov](https://www.grants.gov/search-results-detail/363696)
+  - Due in 47 days
+  - Plan your match: this program requires cost share
+  - Open to nonprofit applicants
+  - Matches community-development, education
+  - Odds: fair (Competitive national pool)
+- **Family-to-Family Health Information Centers (F2F HIC)** (Health Resources and Services Administration, grant) [grants.gov](https://www.grants.gov/search-results-detail/363413)
+  - Due in 22 days
+  - Open to nonprofit applicants
+  - Matches youth-education
+  - Odds: fair (Competitive national pool)
 - **SBA Program for Investment in Microentrepreneurs (PRIME)** (US Small Business Administration, grant) [curated](https://simpler.grants.gov/opportunity/c55857c6-55ef-453b-b9ce-37c31ba73a5b)
   - Open or rolling
   - Open to nonprofit applicants
   - Matches low-income
   - Odds: fair (Competitive national pool)
 - **CDC National Centers of Excellence in Youth Violence Prevention (YVPCs): Rigorous Evaluation of Prevention Approaches to Prevent and Reduce Youth Violence** (Centers for Disease Control and Prevention - ERA, grant) [grants.gov](https://www.grants.gov/search-results-detail/363055)
-  - Open or rolling
-  - Open to nonprofit applicants
-  - Matches youth-education
-  - Odds: fair (Competitive national pool)
-- **Early Head Start Expansion and Early Head Start - Child Care Partnership Grants in Multiple States** (Administration for Children and Families - OHS, grant) [grants.gov](https://www.grants.gov/search-results-detail/363792)
-  - Open or rolling
-  - Open to nonprofit applicants
-  - Matches youth-education
-  - Odds: fair (Competitive national pool)
-- **Head Start/Early Head Grants in Multiple States** (Administration for Children and Families - OHS, grant) [grants.gov](https://www.grants.gov/search-results-detail/363791)
-  - Open or rolling
-  - Open to nonprofit applicants
-  - Matches youth-education
-  - Odds: fair (Competitive national pool)
-- **Maternal, Infant, and Early Childhood Home Visiting Program (MIECHV)** (Health Resources and Services Administration, grant) [grants.gov](https://www.grants.gov/search-results-detail/363516)
-  - Open or rolling
+  - Due in 66 days
   - Open to nonprofit applicants
   - Matches youth-education
   - Odds: fair (Competitive national pool)
 - **Preventing Suicide and Interpersonal Violence Among Youth and Young Adults** (Centers for Disease Control and Prevention - ERA, grant) [grants.gov](https://www.grants.gov/search-results-detail/363141)
-  - Open or rolling
-  - Open to nonprofit applicants
-  - Matches youth-education
-  - Odds: fair (Competitive national pool)
-- **Rigorously Evaluating Approaches to Prevent Child Sexual Abuse and Problematic Sexual Behavior among Youth** (Centers for Disease Control and Prevention - ERA, grant) [grants.gov](https://www.grants.gov/search-results-detail/363147)
-  - Open or rolling
+  - Due in 66 days
   - Open to nonprofit applicants
   - Matches youth-education
   - Odds: fair (Competitive national pool)
 - **Ryan White HIV/AIDS Program Part D - Women, Infants, Children and Youth Grant Supplemental Funding** (Health Resources and Services Administration, grant) [grants.gov](https://www.grants.gov/search-results-detail/363415)
+  - Due in 67 days
+  - Open to nonprofit applicants
+  - Matches youth-education
+  - Odds: fair (Competitive national pool)
+- **Providers Clinical Support System – Universities** (Substance Abuse and Mental Health Services Adminis, grant) [grants.gov](https://www.grants.gov/search-results-detail/363806)
   - Open or rolling
   - Open to nonprofit applicants
   - Matches youth-education
@@ -110,12 +112,13 @@ Checked **1061** opportunities: **21** apply now, **3** prepare for, **1037** sk
 
 | Reason | Count |
 | --- | ---: |
-| Only for | 703 |
-| No match to your focus areas | 179 |
-| Not open to nonprofits | 121 |
+| Only for | 708 |
+| No match to your focus areas | 132 |
+| Not open to nonprofits | 115 |
+| Closed | 28 |
+| Weak match | 26 |
 | Outside your area | 12 |
-| Weak match | 11 |
-| Notice or request for information, not a funding call | 6 |
+| Not enough time | 5 |
+| Notice or request for information, not a funding call | 4 |
 | For Alaska only | 3 |
-| Closed | 1 |
 | For Guam only | 1 |
