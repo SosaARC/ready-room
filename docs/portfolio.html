@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jordan Hairston Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: plain and specific, an operator showing work he actually uses.
+   IDEA: a case-study portfolio where the product (Ready Room) is shown working, with its build log.
+   PICTURE: real screenshots of Ready Room in a laptop frame, sample data labeled.
+   COLOUR and TYPE: black and white plus one mint field, matching the product; Space Grotesk 700 and Inter.
+   LAYOUT: full-width bands; hero split; case study, system map, build rounds, measures, community plan. */
+:root{color-scheme:light dark;--bg:light-dark(#fff,#0e0f10);--ink:light-dark(#111214,#f1f2f3);--sub:light-dark(#555a61,#a7acb3);--line:light-dark(#e3e5e8,#2a2d31);--soft:light-dark(#f5f6f7,#17191b);--mint:#b8f5d0;--mintink:#0b3b22;--dark:#111214}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4vw,44px);margin-bottom:12px}h3{font-size:19px;margin-bottom:6px}
+p{margin:.5em 0;max-width:70ch}a{color:inherit}
+.band{padding:clamp(32px,5vw,72px) max(5vw,16px)}.wrap{max-width:1180px;margin:0 auto}
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:4px 12px;border-radius:99px;background:var(--mint);color:var(--mintink);margin-bottom:12px}
+.muted{color:var(--sub)}
+.hero{background:var(--mint);color:var(--mintink)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);gap:36px;align-items:center}
+.hero h1{font-size:clamp(46px,7vw,84px);line-height:.98;color:var(--dark)}
+.hero .role{display:inline-block;margin:18px 0 10px;background:var(--dark);color:var(--mint);font-weight:600;padding:6px 14px;border-radius:99px;font-size:15px}
+.hero p{font-size:18px;color:var(--mintink)}
+.laptop{background:#1b1d20;border-radius:14px 14px 4px 4px;padding:10px 10px 14px;box-shadow:0 30px 50px -30px rgba(0,0,0,.6)}
+.laptop img{display:block;width:100%;height:auto;border-radius:5px;background:#fff}
+.base{height:14px;background:linear-gradient(#d9dcdf,#a9adb2);border-radius:0 0 14px 14px;margin:0 -4%}
+.cap{font-size:13px;margin-top:10px;color:inherit;opacity:.8}
+.intro .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start}
+.intro h2{font-size:clamp(34px,5vw,54px)}
+.intro h2 em{font-style:normal;background:var(--mint);color:var(--mintink);padding:0 8px;border-radius:6px}
+.case .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;align-items:start}
+ul,ol{padding-left:20px;margin:.4em 0}li{margin:.3em 0}
+.k{font-size:13px;font-weight:700;margin:18px 0 4px;color:var(--sub)}
+.dark{background:var(--dark);color:#f1f2f3}.dark .muted{color:#a7acb3}
+.map{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1.1fr) 40px minmax(0,1fr);gap:0;margin-top:22px;align-items:stretch}
+.node{background:#1c1f23;border:1px solid #33373d;border-radius:12px;padding:16px}
+.node h3{color:#fff}.node.core{background:var(--mint);color:var(--mintink);border-color:var(--mint)}.node.core h3{color:var(--dark)}
+.node small{display:block;font-size:12px;font-weight:600;color:#8ff0b6;margin-bottom:4px}.node.core small{color:var(--mintink)}
+.arrow{display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",Inter,sans-serif;font-size:24px;color:var(--mint)}
+.stack2{display:grid;gap:12px}
+.ai-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;margin-top:16px}
+.ai-list div{border-top:2px solid var(--ink);padding-top:10px}
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px}
+.shots figure{margin:0}.shots img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;display:block}
+.shots figcaption{font-size:14px;color:var(--sub);margin-top:6px}
+.rounds{display:grid;gap:14px;margin-top:16px}
+.round{border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px}
+.round .who{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;font-size:20px}
+.round table{width:100%;border-collapse:collapse;font-size:15px}
+.round td{padding:8px 8px 8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.round td:first-child{width:50%;color:var(--sub)}
+.round tr:last-child td{border-bottom:0}
+.measure{width:100%;border-collapse:collapse;margin-top:16px;font-size:15.5px}
+.measure th{text-align:left;font-size:13px;color:var(--sub);padding:10px;border-bottom:2px solid var(--ink)}
+.measure td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.learn{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 30px;margin-top:10px}
+.learn div{border-top:1px solid var(--line);padding-top:12px}
+.why{background:var(--soft)}
+.days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.days>div{background:var(--bg);border-radius:12px;padding:18px;border:1px solid var(--line)}
+.days b{font-family:"Space Grotesk",Inter,sans-serif;display:block;font-size:18px;margin-bottom:4px}
+.agenda{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:0;background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.agenda li{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px;padding:12px 16px;border-bottom:1px solid var(--line);margin:0}
+.agenda li:last-child{border-bottom:0}
+.agenda b{font-family:"Space Grotesk",Inter,sans-serif;white-space:nowrap}
+.end{background:var(--mint);color:var(--mintink)}
+.end h2{color:var(--dark)}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:10px;border:2px solid var(--dark);font-weight:600;text-decoration:none;color:var(--dark)}
+.btn.f{background:var(--dark);color:var(--mint)}
+.scroll{display:flex;gap:16px;overflow-x:auto;padding:10px max(5vw,16px);border-bottom:1px solid var(--line);font-size:15px;font-weight:500}
+.scroll a{flex:none;text-decoration:none;padding:8px 2px}
+.scroll a:hover{text-decoration:underline}
+@media(min-width:901px){.scroll{position:sticky;top:0;background:var(--bg);z-index:3}}
+html{scroll-padding-top:72px}
+@media(max-width:900px){.hero .wrap,.intro .wrap,.case .wrap{grid-template-columns:1fr}.map{grid-template-columns:1fr}.arrow{height:36px;transform:rotate(90deg)}.ai-list,.shots,.days,.learn{grid-template-columns:1fr}.round{grid-template-columns:1fr;gap:6px}}
+@media(max-width:600px){.measure{font-size:14px}.measure thead{display:none}.measure tr{display:grid;padding:10px 0;border-bottom:1px solid var(--line)}.measure td{border:0;padding:2px 0}.measure td:first-child{font-weight:700}.round td{display:block;width:auto!important;padding:4px 0;border:0}.round tr{display:block;padding:8px 0;border-bottom:1px solid var(--line)}.agenda li{grid-template-columns:1fr;gap:2px}}
+@media(prefers-reduced-motion:no-preference){.hero .laptop{animation:rise .7s ease-out both}@keyframes rise{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}}
+</style>
+</head>
+<body>
+
+<section class="band hero">
+ <div class="wrap">
+  <div>
+   <h1>Jordan<br>Hairston</h1>
+   <span class="role">Small business owner building AI tools</span>
+   <p>I run a box truck carrier in Winston-Salem, write grant proposals, and spent six years in clinical trial operations, most recently as CRC Lead. I build AI tools for the paperwork that slows small operators down.</p>
+  </div>
+  <figure style="margin:0">
+   <div class="laptop"><img src="img/today.jpg" width="1100" height="773" alt="Ready Room's Today screen for a sample carrier: carrier packet 3 of 5 documents, grant readiness, and a list of what needs attention"></div><div class="base"></div>
+   <figcaption class="cap">Ready Room's Today screen, with a fictional sample business.</figcaption>
+  </figure>
+ </div>
+</section>
+
+<nav class="scroll" aria-label="Sections"><a href="#about">About</a><a href="#ready-room">Ready Room</a><a href="#system">How it works</a><a href="#rounds">How I built it</a><a href="#measures">Measures</a><a href="#openworks">Community plan</a></nav>
+
+<section class="band intro" id="about">
+ <div class="wrap">
+  <h2>Hi, I'm <em>Jordan.</em> I build for my own businesses first.</h2>
+  <div>
+   <p>I grew up in Winston-Salem, and my first job was at the public library downtown, helping people find what they needed. After UNC Chapel Hill I spent six years in clinical research, from COVID vaccination and monoclonal antibody trials to coordinating head and neck and lung cancer trials at UNC Lineberger as CRC Lead. That job was regulated paperwork, hard deadlines and plain explanations for patients.</p>
+   <p>Now I own 5908 Logistics, a box truck freight, courier and moving company. I'm also in New Majority Capital's bETA acquisition accelerator with a family HVAC venture, and I write grant proposals, including one for a vocational rehabilitation provider.</p>
+  </div>
+ </div>
+</section>
+
+<section class="band case" id="ready-room" style="border-top:1px solid var(--line)">
+ <div class="wrap">
+  <div>
+   <span class="tag">Case study</span>
+   <h2>Ready Room</h2>
+   <p style="font-size:19px">One business profile and one document vault, reused for broker setups and grant applications.</p>
+   <p>When my trucking authority went active, every broker asked for the same paperwork, and my documents were spread across email, my phone and my insurance agent's inbox. My grant work had the same problem. So I built one tool for both.</p>
+   <p class="k">What it does</p>
+   <ul>
+    <li>Tracks every document and its expiry date, and links to where the file lives</li>
+    <li>Tracks each broker setup: onboarding platform, a COI naming that broker, the agreement, approval</li>
+    <li>Screens 64 verified grant programs down to the ones a business can actually apply for</li>
+    <li>Drafts applications from answers the owner already wrote, with word limits checked</li>
+    <li>Shows every client, deadline and expiring document in one view, with a calendar export</li>
+   </ul>
+   <p class="k">My role</p>
+   <p>Product owner and first user. I defined the problem, the workflow, the screening rules and the prompts, built it with Claude, and put each version through role-played reviews before changing it.</p>
+  </div>
+  <figure style="margin:0">
+   <div class="laptop"><img src="img/brokers.jpg" width="1100" height="773" alt="Ready Room's Broker setups screen: each broker card shows document status, a COI naming that broker, the onboarding platform and approval status"></div><div class="base"></div>
+   <figcaption class="cap muted">Broker setups: each broker needs its own COI and agreement, not just the shared documents. Sample data.</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="band dark" id="system">
+ <div class="wrap">
+  <h2>How it works</h2>
+  <p class="muted">Plain code handles the rules: who is eligible, what expired, what is missing. Claude handles reading, judging fit and writing. It never submits anything.</p>
+  <div class="map" role="img" aria-label="Inputs feed the profile and vault, which feed broker setups and grant applications">
+   <div class="node"><small>Inputs</small><h3>Three ways in</h3><p>Typed by hand, a PDF or photo read by Claude, or attachments found by scanning Gmail.</p></div>
+   <div class="arrow" aria-hidden="true">→</div>
+   <div class="node core"><small>Core</small><h3>Profile and document vault</h3><p>Entity, location, carrier details, focus areas. Every document with issuer, dates and a link. The files are never copied.</p></div>
+   <div class="arrow" aria-hidden="true">→</div>
+   <div class="stack2">
+    <div class="node"><small>Use 1</small><h3>Broker setups</h3><p>Checklist per broker, COI request to the agent, carrier info for portals.</p></div>
+    <div class="node"><small>Use 2</small><h3>Grants</h3><p>Screen, rank, track, budget and draft from the answer bank.</p></div>
+   </div>
+  </div>
+  <div class="ai-list">
+   <div><h3>Document reader</h3><p class="muted">Reads a PDF or a phone photo and fills in the type, issuer, dates and coverage limits for the owner to check.</p></div>
+   <div><h3>Gmail document finder</h3><p class="muted">Finds document attachments and onboarding invites already in the inbox, and skips sales pitches.</p></div>
+   <div><h3>Grant ranker</h3><p class="muted">Ranks only programs that passed the rules, with a reason and the biggest gap for each.</p></div>
+   <div><h3>Application drafter</h3><p class="muted">Answers each question from the owner's own words, within its word limit, and marks missing facts as [NEED: …].</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="band" id="rounds">
+ <div class="wrap">
+  <h2>How I built it: in rounds</h2>
+  <p>Each version went to reviewers who hadn't built it. So far these are AI reviewers, each given one role: a fact-checker, a new owner-operator, a grant writer managing 15 clients, a program reviewer, a QA engineer and a first-time user on a phone. The next version fixed what they found. Real users start in December, and their feedback goes in the same log.</p>
+  <div class="rounds">
+   <div class="round"><div><div class="who">Round 1</div><span class="muted small">First working version</span></div>
+    <table><tbody>
+     <tr><td>A carrier who isn't women-owned or a veteran was shown women-only and veteran-only grants</td><td>Added must-have rules to the catalog, checked in code before any AI call</td></tr>
+     <tr><td>My essay claimed results the tool didn't have yet</td><td>Rewrote it to describe only what had happened, plus what I'm measuring</td></tr>
+     <tr><td>North Carolina ended HUB certification in July 2026</td><td>Switched to NCSBE in the document types</td></tr>
+    </tbody></table></div>
+   <div class="round"><div><div class="who">Round 2</div><span class="muted small">Carrier, grant writer and program reviewer roles</span></div>
+    <table><tbody>
+     <tr><td>"Brokers onboard through portals, and each one needs its own COI"</td><td>Per-broker onboarding platform, COI status, an email to the agent, and the agreement</td></tr>
+     <tr><td>"The screen lets a one-truck LLC into SBIR, export and startup-tech grants"</td><td>Encoded excluded business types, R&amp;D, export, minimum age and size rules. The sample carrier went from 14 "eligible" to 6 real ones.</td></tr>
+     <tr><td>"With 15 clients I can't open each one to see what's due"</td><td>An all-businesses view and a calendar export with reminders</td></tr>
+     <tr><td>"Drafting is one text box with no word counts"</td><td>One answer per question, live counts against each limit, five saved versions</td></tr>
+    </tbody></table></div>
+   <div class="round"><div><div class="who">Round 3</div><span class="muted small">QA engineer and second-pass reviews</span></div>
+    <table><tbody>
+     <tr><td>Typing a deadline lost focus and could save the year as 0002</td><td>Fields redraw only after you leave them, checked in a real browser</td></tr>
+     <tr><td>An AI draft could save into the wrong client if you switched mid-run</td><td>Every AI result is tied to the business it started on</td></tr>
+     <tr><td>"Portals take one field at a time, and a policy renewal means new COIs for every broker"</td><td>A copy-per-field carrier panel and one COI request covering every broker</td></tr>
+     <tr><td>A one-truck carrier was still shown artist grants and a diesel-replacement grant</td><td>More rules encoded and 23 more Triad programs verified, 64 in all</td></tr>
+    </tbody></table></div>
+   <div class="round"><div><div class="who">Rounds 4 and 5</div><span class="muted small">First real data, first-time user on a phone</span></div>
+    <table><tbody>
+     <tr><td>Retyping my carrier details and ten broker sign-ups</td><td>A starter file loads 5908 Logistics in one step, with a setup checklist that names what is missing</td></tr>
+     <tr><td>Approvals arrive by email from RMIS, Highway and brokers</td><td>"Check Gmail for approvals": Claude suggests the status and carrier ID, and nothing changes until I accept</td></tr>
+     <tr><td>"There's nowhere to load my file on first open, and the COI request marks brokers before I've sent it"</td><td>File picker on the welcome screen, a preview where I pick brokers, marked only after I confirm. Seven phone layout fixes, 65 automated checks</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="shots">
+   <figure><img src="img/grants.jpg" width="1100" height="773" alt="Ready Room's Grant finder showing eligible programs with reasons and flags" loading="lazy"><figcaption>Grant finder: every card says why it passed, and what to check. Sample data.</figcaption></figure>
+   <figure style="max-width:300px"><img src="img/today_m.jpg" width="390" height="844" alt="Ready Room's Today screen on a phone" loading="lazy"><figcaption>Built for a phone, because that's where owners do this.</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="band" id="measures" style="background:var(--soft)">
+ <div class="wrap">
+  <h2>What I'll measure</h2>
+  <p>Starting December 2026, every 5908 Logistics broker setup and every grant application I write runs through Ready Room. I'll report these numbers after 60 days.</p>
+  <table class="measure"><thead><tr><th>Measure</th><th>Why it matters</th></tr></thead><tbody>
+   <tr><td>Minutes to complete a broker setup</td><td>Time to a first load with a new broker</td></tr>
+   <tr><td>Setups sent back for a missing or expired document</td><td>Each one delays revenue</td></tr>
+   <tr><td>Hours from finding a grant to a submitted draft</td><td>The cost that keeps owners from applying at all</td></tr>
+   <tr><td>Programs screened out before any writing</td><td>Time saved on grants an owner could never win</td></tr>
+  </tbody></table>
+  <div class="learn" style="margin-top:26px">
+   <div><h3>Rules first, AI second</h3><p>Eligibility is checked in code, so it gives the same answer every time and can be audited. Claude explains and ranks what passes.</p></div>
+   <div><h3>Keep files where they live</h3><p>Carrier and grant documents hold EINs and bank details. Ready Room keeps the record and the link, not another copy.</p></div>
+   <div><h3>Missing facts stay visible</h3><p>In clinical research an undocumented detail becomes an audit finding. In a grant it can cost the award.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="band why" id="openworks">
+ <div class="wrap">
+  <h2>Community plan</h2>
+  <p>I would start with the two groups I know from the inside, in Winston-Salem and the rest of the Triad. The tools come from Ready Room's own rules. I also wrote up its grant screener as a custom GPT configuration, because most owners I'd work with already use ChatGPT.</p>
+  <div class="days">
+   <div><b>New owner-operators and small carriers</b>First community day: three to five carriers each leave with a document vault, their expiry dates on a calendar, a COI request email for their agent, and carrier info they can paste into Highway or RMIS.</div>
+   <div><b>Small nonprofits and owners looking for grants</b>Screen the programs they can actually win, write an answer bank once, and draft their next application from it.</div>
+  </div>
+  <p class="k">Monthly workshop: "Grants you can actually win" (90 minutes)</p>
+  <ol class="agenda">
+   <li><b>0:00</b><span>Grants versus loans versus scams. Real examples, including "grants" that ask for a fee.</span></li>
+   <li><b>0:15</b><span>Screen first. Each owner runs their own business through the eligibility rules: entity type, location, focus and size.</span></li>
+   <li><b>0:35</b><span>Build an answer bank with AI: mission, need, use of funds and impact, from their own words, with gaps marked.</span></li>
+   <li><b>1:05</b><span>Draft one real application question within its word limit, then check every fact.</span></li>
+   <li><b>1:20</b><span>Take-home: their shortlist, their answer bank, and a document checklist with dates.</span></li>
+  </ol>
+ </div>
+</section>
+
+<section class="band end">
+ <div class="wrap">
+  <h2>Contact</h2>
+  <p><b>Jordan Hairston</b> · Winston-Salem, NC · dispatch@5908logistics.com</p>
+  <div class="links"><a class="btn f" href="https://claude.ai/artifact/9UHPzV1Xo3Mnzn5yM9GJq7">Open Ready Room</a><a class="btn" href="#rounds">See the build log</a></div>
+ </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,4 @@
+__pycache__/
+.DS_Store
+data/grants-gov.json
+node_modules/

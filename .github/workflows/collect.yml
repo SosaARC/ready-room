@@ -1,0 +1,72 @@
+name: Collect opportunities
+
+# Every night: pull Grants.gov, SBIR.gov and SAM.gov, fingerprint the curated official
+# pages, commit the results, rebuild the app and publish it to GitHub Pages.
+on:
+  schedule:
+    - cron: "17 9 * * *"   # 4:17 am Eastern
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run the collector
+        env:
+          SAM_API_KEY: ${{ secrets.SAM_API_KEY }}
+        run: python -m collector.run
+      - name: Funnel report for each business in profiles/
+        run: |
+          mkdir -p data/live/funnels
+          for f in profiles/*.json; do
+            [ -e "$f" ] || continue
+            python -m collector.funnel "$f" --md "data/live/funnels/$(basename "$f" .json).md" > /dev/null
+          done
+      - name: Build the app
+        run: python build.py
+      - name: Commit new data
+        run: |
+          git config user.name "ready-room-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/live dist/index.html
+          git diff --cached --quiet || git commit -m "Nightly collection: $(date -u +%F)"
+          git push
+      - name: Summary
+        run: cat data/live/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+
+  pages:
+    needs: collect
+    if: ${{ always() && needs.collect.result == 'success' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - run: git pull --ff-only
+      - name: Assemble site
+        run: |
+          mkdir -p site/app site/img
+          cp dist/index.html site/app/index.html
+          cp docs/portfolio.html site/index.html
+          cp docs/img/* site/img/ 2>/dev/null || true
+          sed -i 's#https://claude.ai/artifact/9UHPzV1Xo3Mnzn5yM9GJq7#app/#' site/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4

@@ -1,0 +1,2584 @@
+[
+ {
+  "id": "nc-idea-seed",
+  "name": "NC IDEA SEED Grant",
+  "funder": "NC IDEA",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "startup",
+   "tech",
+   "general"
+  ],
+  "amount_min": 50000,
+  "amount_max": 50000,
+  "amount_text": "$50,000, paid in milestone tranches over 6 to 12 months, plus mentorship",
+  "deadline": "2027-02-22",
+  "deadline_text": "Twice a year (spring and fall). Spring 2027: opens Jan 25, closes Feb 22, 5:00pm",
+  "requirements": [
+   "Headquartered in NC with most operations in NC for 12 months after grant",
+   "At least one full-time founder lives in NC",
+   "Revenue-generating or on a path to revenue; over $250K trailing revenue less likely to be selected",
+   "Over $250K equity raised or over $1M in grants less likely to be selected",
+   "Must be state-registered with a federal EIN",
+   "Apply to SEED or MICRO in a cycle, not both",
+   "Not for local service businesses, consulting or training firms, distributors, franchises, resellers or nonprofits"
+  ],
+  "documents_typically_needed": [
+   "business plan",
+   "financial statements",
+   "articles of incorporation"
+  ],
+  "is_loan": false,
+  "url": "https://ncidea.org/nc-idea-seed/",
+  "verified_on": "2026-11-26",
+  "notes": "Competitive startup grant; 130 to 180 applicants per cycle and usually 5 to 7 winners.",
+  "must_have_any": [],
+  "excludes_any": [
+   "local-service"
+  ],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-idea-micro",
+  "name": "NC IDEA MICRO Grant",
+  "funder": "NC IDEA",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "startup",
+   "tech",
+   "general"
+  ],
+  "amount_min": 10000,
+  "amount_max": 10000,
+  "amount_text": "$10,000 (75% at signing, 25% about two months later) plus an 8-week customer discovery program",
+  "deadline": "2027-02-22",
+  "deadline_text": "Twice a year. Spring 2027: opens Jan 25, closes Feb 22, 5:00pm",
+  "requirements": [
+   "Headquartered in NC; at least one founder lives in NC",
+   "Founder full-time within 6 to 12 months of applying",
+   "Already active (customer discovery, prototype, or early revenue); expect revenue within 12 months",
+   "Food and beverage companies need at least $5,000 annual revenue",
+   "High-capital, long-runway companies such as pharma are not eligible"
+  ],
+  "documents_typically_needed": [
+   "business plan",
+   "articles of incorporation"
+  ],
+  "is_loan": false,
+  "url": "https://ncidea.org/nc-idea-micro/",
+  "verified_on": "2026-11-26",
+  "notes": "Smaller, earlier-stage version of SEED; regional info sessions include Winston-Salem/Triad.",
+  "must_have_any": [],
+  "excludes_any": [
+   "local-service"
+  ],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "onc-sbp-incentive",
+  "name": "One North Carolina Small Business Program: Incentive Funds",
+  "funder": "NC Department of Commerce, Office of Science, Technology & Innovation (for NC Board of Science, Technology & Innovation)",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "tech",
+   "startup"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Reimburses part of the cost of preparing a federal Phase I SBIR/STTR proposal; about $210,000 total available for FY2027; per-award cap not stated on page (check site)",
+  "deadline": "2027-06-30",
+  "deadline_text": "Accepted until June 30, 2027 or until funds run out",
+  "requirements": [
+   "Technology-based small business based in North Carolina",
+   "Must be preparing or have submitted a federal Phase I SBIR/STTR proposal",
+   "See FY2027 solicitation for full criteria"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "DUNS/UEI + SAM registration",
+   "W-9"
+  ],
+  "is_loan": false,
+  "url": "https://www.commerce.nc.gov/grants-incentives/technology-funds/one-north-carolina-small-business-program",
+  "verified_on": "2026-11-26",
+  "notes": "Helps cover proposal-writing costs for a first federal SBIR/STTR attempt; apply through CyberGrants.",
+  "must_have_any": [
+   "research"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "onc-sbp-matching",
+  "name": "One North Carolina Small Business Program: SBIR/STTR Matching Funds",
+  "funder": "NC Department of Commerce, Office of Science, Technology & Innovation",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "tech",
+   "startup"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "State match for companies holding a federal Phase I SBIR/STTR award; about $1.92M total for FY2027, plus a $25,000 add-on for Hurricane Helene-impacted areas; per-award cap not stated on page (check site)",
+  "deadline": "2027-06-30",
+  "deadline_text": "FY2027 Matching solicitation released Dec 14, 2026; accepted until June 30, 2027 or until funds run out",
+  "requirements": [
+   "NC technology-based small business",
+   "Must already hold a federal Phase I SBIR or STTR award",
+   "See FY2027 solicitation for full criteria"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "DUNS/UEI + SAM registration",
+   "W-9"
+  ],
+  "is_loan": false,
+  "url": "https://www.commerce.nc.gov/news/press-releases/2026/10/08/north-carolina-makes-2-million-funding-available-support-innovative-small-businesses",
+  "verified_on": "2026-11-26",
+  "notes": "Bridges the gap between federal Phase I and Phase II; only useful after winning a federal SBIR/STTR award.",
+  "must_have_any": [
+   "research"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "golden-leaf-open-grants",
+  "name": "Golden LEAF Open Grants Program",
+  "funder": "Golden LEAF Foundation",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "rural",
+   "workforce",
+   "community-development",
+   "economic-development",
+   "agriculture"
+  ],
+  "amount_min": null,
+  "amount_max": 500000,
+  "amount_text": "Up to $500,000",
+  "deadline": "2026-12-24",
+  "deadline_text": "Rolling with bimonthly board review. Next Stage 1 deadlines: Dec 24, 2026; Feb 18, 2027; Apr 22, 2027 (12 PM)",
+  "requirements": [
+   "501(c)(3) nonprofits and government entities only; for-profits not listed as eligible",
+   "Project must fit job creation, workforce preparedness, agriculture, or community competitiveness",
+   "Two-stage application; Stage 2 needs prior-year audits and financials",
+   "Declined projects cannot resubmit for six months"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "financial statements",
+   "budget",
+   "letters of support"
+  ],
+  "is_loan": false,
+  "url": "https://goldenleaf.org/funding-opportunities/open-grants/",
+  "verified_on": "2026-11-26",
+  "notes": "Big statewide economic development funder; a business would partner with a county, town, college, or nonprofit.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-building-reuse",
+  "name": "NC Building Reuse Program",
+  "funder": "NC Department of Commerce, Rural Economic Development Division / Rural Infrastructure Authority",
+  "level": "state",
+  "region": "North Carolina (Tier 1 and 2 counties and rural census tracts in Tier 3 counties)",
+  "eligible_entities": [
+   "government"
+  ],
+  "focus": [
+   "rural",
+   "economic-development",
+   "community-development"
+  ],
+  "amount_min": 50000,
+  "amount_max": 500000,
+  "amount_text": "Recent awards $50,000 to $500,000 to local governments",
+  "deadline": null,
+  "deadline_text": "Periodic rounds reviewed by the Rural Infrastructure Authority; check site",
+  "requirements": [
+   "Local government applies on behalf of the business",
+   "Building must be vacant, or occupied by an existing NC company that is renovating or expanding",
+   "Tied to job creation commitments",
+   "Forsyth is not Tier 1/2, so only rural Tier 3 census tracts qualify"
+  ],
+  "documents_typically_needed": [
+   "letters of support",
+   "budget",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.commerce.nc.gov/news/press-releases/2026/10/15/governor-stein-announces-504-million-investment-and-78-new-jobs-rural-north-carolina",
+  "verified_on": "2026-11-26",
+  "notes": "Businesses benefit indirectly through their town or county; Oct 2026 round funded 6 Building Reuse projects.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "edpnc-step",
+  "name": "NC Passport to Export STEP (State Trade Expansion Program)",
+  "funder": "Economic Development Partnership of North Carolina (SBA STEP funds)",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "export",
+   "minority-owned",
+   "women-owned",
+   "veteran",
+   "rural",
+   "general"
+  ],
+  "amount_min": null,
+  "amount_max": 12000,
+  "amount_text": "Reimbursement up to $12,000 (up to $3,000 trade show travel; up to $8,000 for booth, export services, website localization, EXIM fees, etc.)",
+  "deadline": null,
+  "deadline_text": "STEP 13 runs June 30, 2026 to Sept 29, 2027; no application deadline posted, contact program manager",
+  "requirements": [
+   "500 or fewer employees",
+   "Registered to do business in NC",
+   "In business at least one year",
+   "Profitable based on US operations",
+   "Products or services with at least 51% US content",
+   "Not debarred from federal business"
+  ],
+  "documents_typically_needed": [
+   "financial statements",
+   "certificate of good standing",
+   "tax returns"
+  ],
+  "is_loan": false,
+  "url": "https://edpnc.com/STEP",
+  "verified_on": "2026-11-26",
+  "notes": "Real grant money for exporters; special consideration for women-, minority-, veteran-owned, and rural businesses.",
+  "must_have_any": [
+   "export"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-job-ready-grants",
+  "name": "NC Job Ready Grants (Workforce Investment Grants)",
+  "funder": "NC Department of Commerce, Division of Workforce Solutions via local Workforce Development Boards",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "workforce"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "No dollar figures on page; depends on new hires, county tier, and capital investment",
+  "deadline": null,
+  "deadline_text": "No deadlines posted; check site",
+  "requirements": [
+   "Local Workforce Development Board applies for the employer",
+   "For businesses locating or expanding in NC as part of an economic development project",
+   "Can fund on-the-job training and incumbent worker training"
+  ],
+  "documents_typically_needed": [
+   "business plan",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.commerce.nc.gov/grants-incentives/workforce-grants/job-ready-grants",
+  "verified_on": "2026-11-26",
+  "notes": "Contact NCWorks Business Services (800-562-6333) or your local board; tied to expansion projects.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-deq-mserg",
+  "name": "Mobile Sources Emissions Reductions Grant (MSERG)",
+  "funder": "NC Department of Environmental Quality, Division of Air Quality (EPA DERA funds, may add VW Mitigation funds)",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit",
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "transportation",
+   "energy",
+   "trucking"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "About $1.09M was available in the 2024 cycle; cost share set by EPA DERA rules (check DERA Eligibility Tool)",
+  "deadline": null,
+  "deadline_text": "2024 cycle closed Jan 31, 2025 (awards Oct 1, 2025); next cycle not posted, check site or join listserv",
+  "requirements": [
+   "Any private or public entity with a physical presence in NC",
+   "Replace, repower, or convert older diesel trucks and equipment",
+   "Old equipment must have run within the past two years",
+   "Replacement must operate at least 70% in NC for five years"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "W-9",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.deq.nc.gov/about/divisions/air-quality/motor-vehicles-and-air-quality/mobile-sources-emissions-reductions-grant",
+  "verified_on": "2026-11-26",
+  "notes": "One of the few grants a private trucking fleet can apply for directly; old truck must be scrapped.",
+  "must_have_any": [
+   "diesel-fleet"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-agventures",
+  "name": "NC AgVentures Farm Grant",
+  "funder": "NC Cooperative Extension (NC State) with NC Tobacco Trust Fund Commission",
+  "level": "state",
+  "region": "North Carolina (listed counties incl. Forsyth and Guilford)",
+  "eligible_entities": [
+   "for-profit",
+   "individual",
+   "nonprofit"
+  ],
+  "focus": [
+   "agriculture",
+   "rural"
+  ],
+  "amount_min": null,
+  "amount_max": 10000,
+  "amount_text": "Up to $10,000; about 190 farmer grants and 10 community grants",
+  "deadline": "2026-12-15",
+  "deadline_text": "Opens Oct 15, 2026; closes Dec 15, 2026 at 6pm or when 200 applications are received",
+  "requirements": [
+   "Farm must have at least one year of revenue",
+   "Farm in an eligible county",
+   "One application per farm per year",
+   "Total project budget at least 15% above the request",
+   "Finish project in 12 months; carry insurance; file two reports",
+   "Contact your Extension agent by Dec 1"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "business plan"
+  ],
+  "is_loan": false,
+  "url": "https://agventures.ces.ncsu.edu/application-for-ag-ventures-grant",
+  "verified_on": "2026-11-26",
+  "notes": "Good fit for small farms adding a new enterprise; portal caps at 200 applications so apply early.",
+  "must_have_any": [
+   "agriculture"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-eipd-crp",
+  "name": "Community Rehabilitation Program Partnership (Supported Employment / Work Adjustment)",
+  "funder": "NC DHHS Division of Employment and Independence for People with Disabilities (formerly Vocational Rehabilitation)",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "nonprofit",
+   "for-profit",
+   "government"
+  ],
+  "focus": [
+   "workforce",
+   "disability",
+   "vocational-rehabilitation"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Reimbursement contract (milestone or performance-based rates), not a lump-sum grant",
+  "deadline": null,
+  "deadline_text": "Last formal RFA (RACRP 1059) was issued Apr 30, 2024; applications considered on an ongoing basis for future award dates; check site",
+  "requirements": [
+   "Public or private, nonprofit or for-profit Community Rehabilitation Program",
+   "CARF, COA, or CQL accreditation in employment services (or evidence of application)",
+   "NC business registration and criminal background check policy",
+   "SAM registration and federal exclusion certification",
+   "Proof of insurance"
+  ],
+  "documents_typically_needed": [
+   "DUNS/UEI + SAM registration",
+   "certificate of good standing",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.ncdhhs.gov/request-applications-community-rehabilitation-partnership-racrp-1059/open",
+  "verified_on": "2026-11-26",
+  "notes": "Main state funding route for nonprofits doing job placement for people with disabilities; paid per milestone.",
+  "must_have_any": [
+   "disability-services"
+  ],
+  "excludes_any": [],
+  "kind": "contract",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "ptrc-wdb-iwt-ojt",
+  "name": "Incumbent Worker Training and On-the-Job Training (WIOA)",
+  "funder": "Piedmont Triad Regional Council Workforce Development Board (NCWorks)",
+  "level": "local",
+  "region": "Alamance, Caswell, Davie, Davidson, Forsyth, Randolph, Rockingham, Stokes, Surry, Yadkin counties, NC",
+  "eligible_entities": [
+   "for-profit",
+   "nonprofit"
+  ],
+  "focus": [
+   "workforce"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Amounts set by the local board; state rules require employer match of 10% (up to 50 employees), 25% (51 to 100), 50% (over 100)",
+  "deadline": null,
+  "deadline_text": "Rolling; contact Business Services team",
+  "requirements": [
+   "Employer current on all taxes",
+   "Operating in NC 12 or more months",
+   "Trainees are W-2 employees (IWT) or new hires (OJT)",
+   "Cannot use IWT to train new hires",
+   "Employer must cover the non-federal match"
+  ],
+  "documents_typically_needed": [
+   "W-9",
+   "certificate of good standing",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.ptrc.org/services/workforce-development/business-services",
+  "verified_on": "2026-11-26",
+  "notes": "Federal WIOA money that pays part of training costs for your staff; Forsyth employers go through PTRC.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "training-reimbursement",
+  "area_check": false,
+  "min_years": 1,
+  "employees_range": null
+ },
+ {
+  "id": "wsf-small-grants",
+  "name": "Winston-Salem Foundation Community Grants: Small Grants",
+  "funder": "The Winston-Salem Foundation",
+  "level": "local",
+  "region": "Forsyth County, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "community-development",
+   "general"
+  ],
+  "amount_min": null,
+  "amount_max": 2000,
+  "amount_text": "Up to $2,000 ($500 cap for youth athletic teams)",
+  "deadline": null,
+  "deadline_text": "Winter 2026 cycle closed Feb 16; Summer 2026 cycle cancelled; program to relaunch in 2027, check site",
+  "requirements": [
+   "Charitable organizations and groups serving Forsyth County",
+   "Annual income of $150,000 or less",
+   "No individuals, for-profits, or start-up/operating costs",
+   "Project must end after funding decision"
+  ],
+  "documents_typically_needed": [
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.wsfoundation.org/grant-seekers/small-grants",
+  "verified_on": "2026-11-26",
+  "notes": "Entry-level grant for very small community groups; does not need to be a large nonprofit.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "wsf-capacity-building",
+  "name": "Winston-Salem Foundation Capacity-Building Grants",
+  "funder": "The Winston-Salem Foundation",
+  "level": "local",
+  "region": "Forsyth County, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "capacity-building",
+   "general"
+  ],
+  "amount_min": null,
+  "amount_max": 25000,
+  "amount_text": "Up to $25,000",
+  "deadline": null,
+  "deadline_text": "No deadline listed; check site",
+  "requirements": [
+   "Nonprofits serving Forsyth County",
+   "Categories: governance/leadership, learning/evaluation, technical skills, diversity/equity/inclusion"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://wsfoundation.org/grants",
+  "verified_on": "2026-11-26",
+  "notes": "Funds strengthening the organization itself (training, systems, evaluation), not programs.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "wsf-womens-fund",
+  "name": "Women's Fund of Winston-Salem Grants",
+  "funder": "The Winston-Salem Foundation (Women's Fund)",
+  "level": "local",
+  "region": "Forsyth County, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "women-owned",
+   "economic-mobility"
+  ],
+  "amount_min": null,
+  "amount_max": 20000,
+  "amount_text": "Up to $20,000",
+  "deadline": null,
+  "deadline_text": "Annual; 2026 window was May 4 to June 15; check site for 2027",
+  "requirements": [
+   "Organizations building economic security for women and girls in Forsyth County"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://wsfoundation.org/grants",
+  "verified_on": "2026-11-26",
+  "notes": "Nonprofit grant for programs aimed at women's and girls' economic security.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "wsf-bpi-inclusive-economy",
+  "name": "BPI Building an Inclusive Economy Grants",
+  "funder": "The Winston-Salem Foundation (BPI)",
+  "level": "local",
+  "region": "Forsyth County, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "minority-owned",
+   "economic-mobility",
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Amount not listed (check site)",
+  "deadline": null,
+  "deadline_text": "Annual; 2026 window was Mar 30 to May 4; check site for 2027",
+  "requirements": [
+   "Organizations building economic security for Black households in Forsyth County"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://wsfoundation.org/grants",
+  "verified_on": "2026-11-26",
+  "notes": "For nonprofits (not businesses) doing Black wealth-building, small business support, and similar work.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "wsf-community-led-orgs",
+  "name": "Civic Engagement & Inclusion: Community-Led Organizations",
+  "funder": "The Winston-Salem Foundation",
+  "level": "local",
+  "region": "Forsyth County, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "community-development",
+   "capacity-building",
+   "immigrant-serving"
+  ],
+  "amount_min": null,
+  "amount_max": 30000,
+  "amount_text": "Up to $30,000",
+  "deadline": null,
+  "deadline_text": "Annual; 2026 window May 1 to June 12 (extended); decisions mid-September",
+  "requirements": [
+   "Organizations or fiscally sponsored groups led by impacted communities",
+   "Prioritizes fewer than 5 full-time staff, 10 years or less operating, budget up to $500,000",
+   "Priority to Latine-led and immigrant-serving organizations",
+   "One Civic Engagement or Housing grant per cycle"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "letters of support"
+  ],
+  "is_loan": false,
+  "url": "https://www.wsfoundation.org/grant-seekers/community-led-organizations",
+  "verified_on": "2026-11-26",
+  "notes": "Good fit for young grassroots groups; fiscal sponsorship appears acceptable (confirm with staff).",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "wsf-animal-welfare",
+  "name": "Winston-Salem Foundation Animal Welfare Grants",
+  "funder": "The Winston-Salem Foundation",
+  "level": "local",
+  "region": "Forsyth County, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "animal-welfare"
+  ],
+  "amount_min": null,
+  "amount_max": 25000,
+  "amount_text": "Up to $25,000",
+  "deadline": "2027-01-05",
+  "deadline_text": "Open Nov 16, 2026 to Jan 5, 2027",
+  "requirements": [
+   "Nonprofits serving animals in Forsyth County"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://wsfoundation.org/grants",
+  "verified_on": "2026-11-26",
+  "notes": "Currently open; narrow focus on animal welfare nonprofits.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "forsyth-community-grants",
+  "name": "Forsyth County Community Grants",
+  "funder": "Forsyth County Government",
+  "level": "local",
+  "region": "Forsyth County, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "community-development",
+   "general",
+   "workforce"
+  ],
+  "amount_min": 2500,
+  "amount_max": 376000,
+  "amount_text": "FY27 awards ranged $2,500 to $376,000 ($1.77M total); funding subject to Board approval",
+  "deadline": null,
+  "deadline_text": "FY28 window anticipated Jan 15 to Feb 15, 2027 (per county page); FY27 closed Nov 30, 2025",
+  "requirements": [
+   "Nonprofit agencies offering services to county residents",
+   "Must align with county goals: safety, health, education, cultural, economic opportunity",
+   "Apply through the Community Portal",
+   "One-year grant term, July 1 to June 30"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://forsyth.cc/communitygrants/",
+  "verified_on": "2026-11-26",
+  "notes": "County general fund grants to local nonprofits; watch for the January 2027 window.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "forsyth-small-business-ida",
+  "name": "Forsyth County Small Business Individual Development Account (IDA)",
+  "funder": "Forsyth County Community & Economic Development (with Experiment in Self Reliance and S.G. Atkins CDC)",
+  "level": "local",
+  "region": "Forsyth County, NC",
+  "eligible_entities": [
+   "for-profit",
+   "individual"
+  ],
+  "focus": [
+   "general",
+   "low-income",
+   "financial-literacy"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Matched savings; match rate not stated (program reports $35K owner savings matched with $136K)",
+  "deadline": null,
+  "deadline_text": "Applications closed for 2025 cohort; next cohort not posted, check site",
+  "requirements": [
+   "Existing small business at least one year old",
+   "Owner income below 120% of Forsyth County AMI",
+   "Save $100 to $200 per month and submit monthly budgets",
+   "Attend monthly financial literacy classes and small business courses; meet with coach"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "tax returns"
+  ],
+  "is_loan": false,
+  "url": "https://forsyth.cc/housing/SmallBusinessIDA.aspx",
+  "verified_on": "2026-11-26",
+  "notes": "Not a direct grant: the county matches money you save for business use. Contact the program to ask about the next cohort.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "matched-savings",
+  "area_check": false,
+  "min_years": 1,
+  "employees_range": null
+ },
+ {
+  "id": "ws-business-plan-contest",
+  "name": "City of Winston-Salem Small Business Plan Contest",
+  "funder": "City of Winston-Salem, Business Inclusion and Advancement",
+  "level": "local",
+  "region": "Winston-Salem, NC (Neighborhood Revitalization Strategy Area)",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "startup",
+   "low-income",
+   "community-development"
+  ],
+  "amount_min": 5000,
+  "amount_max": 5000,
+  "amount_text": "$5,000 grant for each of two winners, plus a potential $5,000 matching micro-loan",
+  "deadline": null,
+  "deadline_text": "Annual; 2026 contest proposals were due Mar 23, 2026, winners announced in fall; check site for 2027",
+  "requirements": [
+   "For-profit micro-business with 5 or fewer employees",
+   "Located in the NRSA",
+   "Must create low- to moderate-income jobs or benefit that community",
+   "2-page proposal, then full business plan for finalists"
+  ],
+  "documents_typically_needed": [
+   "business plan"
+  ],
+  "is_loan": false,
+  "url": "https://www.cityofws.org/411/Small-Business-Plan-Competition",
+  "verified_on": "2026-11-26",
+  "notes": "Small but local; check your address against the NRSA map first.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "cfgg-grants",
+  "name": "Community Foundation of Greater Greensboro Grants and Initiatives",
+  "funder": "Community Foundation of Greater Greensboro",
+  "level": "local",
+  "region": "Greensboro / Guilford County, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "health",
+   "economic-mobility",
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": 25000,
+  "amount_text": "Up to $25,000 (2025 cycle); no more than 30% of the operating budget",
+  "deadline": null,
+  "deadline_text": "2025 cycle ran June 1 to July 15; 2026/2027 dates not posted, check site",
+  "requirements": [
+   "501(c)(3) located in or serving Greensboro and/or Guilford County",
+   "Focus areas: health and wellness, cultural vibrancy, economic mobility",
+   "No outstanding grant reports"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://cfgg.org/grants-and-initiatives-faqs/",
+  "verified_on": "2026-11-26",
+  "notes": "Guilford-focused; organizations serving uninsured people may also serve Randolph and Rockingham.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "creative-greensboro-sustaining",
+  "name": "Sustaining Creativity: Community Partnerships Grant",
+  "funder": "City of Greensboro, Creative Greensboro",
+  "level": "local",
+  "region": "Greensboro, NC",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "arts",
+   "general-operating"
+  ],
+  "amount_min": 10000,
+  "amount_max": 30000,
+  "amount_text": "$10,000 to $25,000 tiered by budget (some awards reached $30,000 with bonuses); about $300,000 total",
+  "deadline": null,
+  "deadline_text": "Annual; 2025-26 cycle closed Aug 15, 2025; check site for next cycle",
+  "requirements": [
+   "Nonprofit with a primary focus on creative programming",
+   "Not already receiving significant City of Greensboro resources",
+   "Award tiers start at organizations with budgets of $20,000 to $100,000"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.greensboro-nc.gov/departments/creative-greensboro/creative-greensboro-partners/sustaining-creativity-community-partnerships-grant",
+  "verified_on": "2026-11-26",
+  "notes": "General operating support for arts nonprofits in Greensboro.",
+  "must_have_any": [
+   "arts"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "dgi-emergency-stabilization",
+  "name": "DGI Emergency Stabilization Fund",
+  "funder": "Downtown Greensboro Inc.",
+  "level": "local",
+  "region": "Downtown Greensboro, NC",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "general",
+   "disaster-recovery"
+  ],
+  "amount_min": null,
+  "amount_max": 2000,
+  "amount_text": "Reimbursable grant up to $2,000",
+  "deadline": null,
+  "deadline_text": "No deadline listed; check site",
+  "requirements": [
+   "Small business located in downtown Greensboro",
+   "Covers repairs or cleaning after vandalism, graffiti, or other damage outside the owner's control"
+  ],
+  "documents_typically_needed": [
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.downtowngreensboro.org/do-business/grants-incentives-and-business-resources",
+  "verified_on": "2026-11-26",
+  "notes": "Small reimbursement grant; DGI also has a $250 First Friday Activation Fund.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "kbr-forsyth",
+  "name": "Kate B. Reynolds Charitable Trust Funding Opportunities",
+  "funder": "Kate B. Reynolds Charitable Trust",
+  "level": "local",
+  "region": "Forsyth County and rural NC",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "health",
+   "economic-mobility",
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Varies; recent Oct 2026 Forsyth grants ranged about $308,000 to $963,000",
+  "deadline": null,
+  "deadline_text": "No open opportunities as of 2026-11-26; next not announced, check site",
+  "requirements": [
+   "Review each opportunity's eligibility",
+   "Contact grants assistant for a phone consultation before applying",
+   "Forsyth focus areas: economic mobility, youth reconnection, safety net, two-generation support"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget",
+   "financial statements",
+   "letters of support"
+  ],
+  "is_loan": false,
+  "url": "https://kbr.org/funding-opportunities/",
+  "verified_on": "2026-11-26",
+  "notes": "Major health funder; currently a watch-list item since all posted opportunities are closed.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "zsr-community-progress-fund",
+  "name": "Z. Smith Reynolds Foundation Community Progress Fund",
+  "funder": "Z. Smith Reynolds Foundation",
+  "level": "state",
+  "region": "North Carolina (emphasis on 78 rural counties)",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "rural",
+   "community-development"
+  ],
+  "amount_min": 20000,
+  "amount_max": 80000,
+  "amount_text": "$20,000 to $40,000 per year for one or two years (max $80,000)",
+  "deadline": null,
+  "deadline_text": "Annual; typically opens December and closes January or February; not currently accepting, check site",
+  "requirements": [
+   "501(c)(3), government, or religious entity in NC",
+   "Work must serve people in the applicant's community",
+   "Not eligible if funded by this program in the previous two years"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://zsr.org/grant/community-progress-fund/",
+  "verified_on": "2026-11-26",
+  "notes": "Winston-Salem-based funder; next cycle likely opens soon, so sign up for ZSR emails.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "sbir-sttr",
+  "name": "SBIR / STTR (America's Seed Fund)",
+  "funder": "US Small Business Administration with 11 federal agencies",
+  "level": "federal",
+  "region": "US",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "tech",
+   "startup",
+   "research"
+  ],
+  "amount_min": null,
+  "amount_max": 2239578,
+  "amount_text": "Agency ceilings without SBA waiver: Phase I up to $335,937; Phase II up to $2,239,578 (as of Oct 16, 2026)",
+  "deadline": null,
+  "deadline_text": "Rolling by agency solicitation; reauthorized through Sept 30, 2031",
+  "requirements": [
+   "For-profit, US-based",
+   "Fewer than 500 employees",
+   "Owned and controlled by US citizens or permanent residents (VC ownership limits apply)",
+   "STTR requires a formal research institution partner"
+  ],
+  "documents_typically_needed": [
+   "DUNS/UEI + SAM registration",
+   "budget",
+   "business plan",
+   "capability statement"
+  ],
+  "is_loan": false,
+  "url": "https://www.sbir.gov/apply",
+  "verified_on": "2026-11-26",
+  "notes": "The main federal R&D grant open to for-profits; pairs with NC One SBP Incentive and Matching funds.",
+  "must_have_any": [
+   "research"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "usda-rbdg",
+  "name": "USDA Rural Business Development Grants",
+  "funder": "USDA Rural Development",
+  "level": "federal",
+  "region": "US (rural areas outside cities of 50,000+)",
+  "eligible_entities": [
+   "nonprofit",
+   "government",
+   "tribal"
+  ],
+  "focus": [
+   "rural",
+   "community-development",
+   "startup"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "No maximum; smaller requests get priority; $27.7M national total in FY2026",
+  "deadline": null,
+  "deadline_text": "Annual; FY2026 closed June 30, 2026 (SECD June 15); check site for FY2027",
+  "requirements": [
+   "Public bodies, tribes, and nonprofits serving rural areas",
+   "For-profits and individuals are NOT eligible",
+   "Must benefit small and emerging rural businesses",
+   "Submit via Grants.gov by 4:30pm local time"
+  ],
+  "documents_typically_needed": [
+   "DUNS/UEI + SAM registration",
+   "501c3 letter",
+   "budget",
+   "letters of support"
+  ],
+  "is_loan": false,
+  "url": "https://www.rd.usda.gov/programs-services/business-programs/rural-business-development-grants",
+  "verified_on": "2026-11-26",
+  "notes": "Funds the groups that help rural businesses (training, incubators, feasibility studies), not businesses directly.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "usda-reap",
+  "name": "USDA Rural Energy for America Program (REAP) Grants",
+  "funder": "USDA Rural Development",
+  "level": "federal",
+  "region": "US (rural)",
+  "eligible_entities": [
+   "for-profit",
+   "individual"
+  ],
+  "focus": [
+   "rural",
+   "energy",
+   "agriculture"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Grant amounts and cost share to be set in annual notice; per-entity annual cap applies (check site)",
+  "deadline": null,
+  "deadline_text": "New final rule issued Oct 2026; application window to be announced in annual program notice",
+  "requirements": [
+   "Agricultural producers and rural small businesses",
+   "Under new rule, projects must be fully built and operating before applying",
+   "Solar and wind on cropland are disincentivized",
+   "Single national competition"
+  ],
+  "documents_typically_needed": [
+   "DUNS/UEI + SAM registration",
+   "financial statements",
+   "tax returns",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.usda.gov/about-usda/news/press-releases/2026/10/02/usda-issues-final-rule-comment-period-ahead-opening-application-window-rural-energy-america-program",
+  "verified_on": "2026-11-26",
+  "notes": "Rules changed in Oct 2026; rural trucking or service businesses may qualify for efficiency upgrades.",
+  "must_have_any": [
+   "rural",
+   "agriculture"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "usda-vapg",
+  "name": "USDA Value-Added Producer Grants",
+  "funder": "USDA Rural Development",
+  "level": "federal",
+  "region": "US",
+  "eligible_entities": [
+   "for-profit",
+   "individual"
+  ],
+  "focus": [
+   "agriculture",
+   "rural"
+  ],
+  "amount_min": null,
+  "amount_max": 200000,
+  "amount_text": "Planning grants up to $50,000; working capital up to $200,000; 1:1 match required",
+  "deadline": null,
+  "deadline_text": "Annual; FY2026 window Feb 17 to Apr 22, 2026 (closed); check site for FY2027",
+  "requirements": [
+   "Agricultural producers, producer groups, farmer cooperatives, or majority producer-controlled ventures",
+   "Must produce and own more than half of the raw commodity",
+   "Dollar-for-dollar match (cash or in-kind)"
+  ],
+  "documents_typically_needed": [
+   "business plan",
+   "budget",
+   "DUNS/UEI + SAM registration",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.rd.usda.gov/programs-services/business-programs/value-added-producer-grants",
+  "verified_on": "2026-11-26",
+  "notes": "For farmers turning raw products into processed or branded goods.",
+  "must_have_any": [
+   "agriculture"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "eda-pweaa",
+  "name": "EDA Public Works and Economic Adjustment Assistance",
+  "funder": "US Economic Development Administration",
+  "level": "federal",
+  "region": "US",
+  "eligible_entities": [
+   "nonprofit",
+   "government",
+   "tribal"
+  ],
+  "focus": [
+   "economic-development",
+   "community-development",
+   "infrastructure"
+  ],
+  "amount_min": 100000,
+  "amount_max": 30000000,
+  "amount_text": "$100,000 to $30,000,000",
+  "deadline": null,
+  "deadline_text": "Rolling until a new NOFO is published or funds run out",
+  "requirements": [
+   "Nonprofits, local and state governments, tribes, higher education",
+   "Individuals and for-profit entities are NOT eligible",
+   "Projects should align with a Comprehensive Economic Development Strategy (CEDS)"
+  ],
+  "documents_typically_needed": [
+   "DUNS/UEI + SAM registration",
+   "budget",
+   "letters of support",
+   "501c3 letter"
+  ],
+  "is_loan": false,
+  "url": "https://simpler.grants.gov/opportunity/b5365cea-b07c-4e8d-8313-e23ab0fd3766",
+  "verified_on": "2026-11-26",
+  "notes": "Large infrastructure and planning grants; PTRC is the regional CEDS body to talk to.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "sba-prime",
+  "name": "SBA Program for Investment in Microentrepreneurs (PRIME)",
+  "funder": "US Small Business Administration",
+  "level": "federal",
+  "region": "US",
+  "eligible_entities": [
+   "nonprofit",
+   "tribal"
+  ],
+  "focus": [
+   "microenterprise",
+   "low-income",
+   "capacity-building"
+  ],
+  "amount_min": 75000,
+  "amount_max": 400000,
+  "amount_text": "$75,000 to $400,000",
+  "deadline": null,
+  "deadline_text": "Annual; FY2026 closed Aug 12, 2026; check Grants.gov for FY2027",
+  "requirements": [
+   "Nonprofits (with or without 501(c)(3)), microenterprise development organizations, nonprofit CDFIs, tribal governments",
+   "Funds training and technical assistance for low-income microentrepreneurs"
+  ],
+  "documents_typically_needed": [
+   "DUNS/UEI + SAM registration",
+   "budget",
+   "501c3 letter",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://simpler.grants.gov/opportunity/c55857c6-55ef-453b-b9ce-37c31ba73a5b",
+  "verified_on": "2026-11-26",
+  "notes": "For nonprofits that run small business training programs, not for the businesses themselves.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "fmcsa-cmvost",
+  "name": "FMCSA Commercial Motor Vehicle Operator Safety Training (CMVOST) Grant",
+  "funder": "US DOT Federal Motor Carrier Safety Administration",
+  "level": "federal",
+  "region": "US",
+  "eligible_entities": [
+   "nonprofit",
+   "government",
+   "tribal"
+  ],
+  "focus": [
+   "transportation",
+   "trucking",
+   "veteran",
+   "workforce"
+  ],
+  "amount_min": null,
+  "amount_max": 200000,
+  "amount_text": "Up to $200,000; about $3.5M for about 25 awards in FY2026",
+  "deadline": null,
+  "deadline_text": "Annual NOFO; FY2026 closed June 17, 2026; check site for FY2027",
+  "requirements": [
+   "Accredited educational institutions, or non-accredited ones approved as DOL eligible training providers that accept WIOA and VA benefits",
+   "Government and education entities; nonprofits per Grants.gov listing",
+   "For-profit organizations and individuals are NOT eligible",
+   "Prioritizes training for veterans, Guard/Reserve, and military families"
+  ],
+  "documents_typically_needed": [
+   "DUNS/UEI + SAM registration",
+   "budget",
+   "letters of support"
+  ],
+  "is_loan": false,
+  "url": "https://www.fmcsa.dot.gov/mission/grants/commercial-motor-vehicle-operator-safety-training-grant",
+  "verified_on": "2026-11-26",
+  "notes": "Funds CDL schools training veterans; a carrier could partner with a community college applicant.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "fmcsa-hp-cmv",
+  "name": "FMCSA High Priority Commercial Motor Vehicle (HP-CMV) Grant",
+  "funder": "US DOT Federal Motor Carrier Safety Administration",
+  "level": "federal",
+  "region": "US",
+  "eligible_entities": [
+   "nonprofit",
+   "government",
+   "tribal"
+  ],
+  "focus": [
+   "transportation",
+   "trucking",
+   "safety"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Amount not stated on page (check NOFO)",
+  "deadline": null,
+  "deadline_text": "Annual NOFO; check Grants.gov",
+  "requirements": [
+   "State and local governments, tribes, higher education, 501(c)(3) nonprofits",
+   "For-profit organizations are NOT eligible"
+  ],
+  "documents_typically_needed": [
+   "DUNS/UEI + SAM registration",
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.fmcsa.dot.gov/fy26grantfundingopportunities",
+  "verified_on": "2026-11-26",
+  "notes": "Truck safety education and enforcement projects; not open to motor carriers directly.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "amber-grant",
+  "name": "Amber Grant",
+  "funder": "WomensNet",
+  "level": "national-private",
+  "region": "US and Canada",
+  "eligible_entities": [
+   "for-profit",
+   "nonprofit"
+  ],
+  "focus": [
+   "women-owned",
+   "startup",
+   "general"
+  ],
+  "amount_min": 15000,
+  "amount_max": 75000,
+  "amount_text": "Three $15,000 grants monthly (Monthly, Startup, Business Category); three $75,000 year-end grants to monthly winners",
+  "deadline": "2026-11-30",
+  "deadline_text": "Monthly; each period closes 11:59pm ET on the last day of the month",
+  "requirements": [
+   "Woman applicant age 18+",
+   "Business at least 50% women-owned",
+   "Based in US or Canada",
+   "Idea-stage and revenue-generating nonprofits allowed; charitable-giving nonprofits not allowed",
+   "$15 non-refundable application fee (hardship waiver available)"
+  ],
+  "documents_typically_needed": [
+   "business plan"
+  ],
+  "is_loan": false,
+  "url": "https://ambergrantsforwomen.com/grant-rules/",
+  "verified_on": "2026-11-26",
+  "notes": "Legit but has a $15 fee; one application can count for several monthly categories.",
+  "must_have_any": [
+   "women-owned"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nase-growth-grant",
+  "name": "NASE Growth Grant",
+  "funder": "National Association for the Self-Employed",
+  "level": "national-private",
+  "region": "US",
+  "eligible_entities": [
+   "for-profit",
+   "individual"
+  ],
+  "focus": [
+   "general",
+   "self-employed"
+  ],
+  "amount_min": null,
+  "amount_max": 4000,
+  "amount_text": "Up to $4,000",
+  "deadline": null,
+  "deadline_text": "Rolling; reviewed quarterly (Jan, Apr, Jul, Oct)",
+  "requirements": [
+   "Must be an NASE member in good standing (Annual, Veteran, Gold immediately; Monthly after 90 days)",
+   "Uses: marketing, part-time hires, equipment, website, training, etc.",
+   "Cannot pay existing debt or rent/mortgage"
+  ],
+  "documents_typically_needed": [
+   "business plan",
+   "tax returns",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.nase.org/become-a-member/member-benefits/expert-advice/growth-grants",
+  "verified_on": "2026-11-26",
+  "notes": "Requires paid NASE membership; good for solo operators needing equipment or marketing.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "freed-fellowship",
+  "name": "Freed Fellowship Grant",
+  "funder": "Freed Fellowship",
+  "level": "national-private",
+  "region": "US",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "general",
+   "minority-owned",
+   "women-owned",
+   "startup"
+  ],
+  "amount_min": 500,
+  "amount_max": 2500,
+  "amount_text": "$500 monthly to one Fellow; Fellows considered for an extra $2,500 at year-end",
+  "deadline": "2026-11-30",
+  "deadline_text": "Rolling monthly; must be in by midnight ET on the last day of the month",
+  "requirements": [
+   "Any US micro or small business owner",
+   "Nonprofits not supported",
+   "$19 application fee"
+  ],
+  "documents_typically_needed": [],
+  "is_loan": false,
+  "url": "https://freedfellowship.com/",
+  "verified_on": "2026-11-26",
+  "notes": "Small award with a $19 fee; one winner per month, so odds are long.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "hoh-small-business-grant",
+  "name": "Hiring Our Heroes Small Business Grant Program",
+  "funder": "U.S. Chamber of Commerce Foundation (Hiring Our Heroes), supported by FedEx",
+  "level": "national-private",
+  "region": "US",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "veteran",
+   "military-spouse",
+   "general"
+  ],
+  "amount_min": 10000,
+  "amount_max": 25000,
+  "amount_text": "Four $10,000 grants and one $25,000 grand prize",
+  "deadline": "2026-12-15",
+  "deadline_text": "Due 11:59pm ET Dec 15, 2026; winners notified by Mar 29, 2027",
+  "requirements": [
+   "At least 51% owned by a veteran (honorable discharge or current Guard/Reserve) or military spouse",
+   "For-profit with 3 to 20 workers including owner and 1099 contractors",
+   "Annual revenue under $5 million",
+   "In a distressed ZIP code (DCI score 40+) or able to show financial hardship"
+  ],
+  "documents_typically_needed": [
+   "business plan",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.hiringourheroes.org/small-business-grant/rules/",
+  "verified_on": "2026-11-26",
+  "notes": "Currently open; strong fit for veteran-owned small carriers that have a few drivers.",
+  "must_have_any": [
+   "veteran",
+   "military-spouse"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": [
+   3,
+   20
+  ]
+ },
+ {
+  "id": "tory-burch-fellows",
+  "name": "Tory Burch Foundation Fellows Program",
+  "funder": "Tory Burch Foundation",
+  "level": "national-private",
+  "region": "US",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "women-owned",
+   "general"
+  ],
+  "amount_min": 2000,
+  "amount_max": 2000,
+  "amount_text": "$2,000 education grant plus a year of coaching and advisors",
+  "deadline": null,
+  "deadline_text": "Annual; 2027 cohort window was Sept 22 to Nov 17, 2026 (closed); fellows chosen May 2027",
+  "requirements": [
+   "Woman 21+ who holds largest or equal-largest stake and a significant management role",
+   "Business at least 51% women-owned and controlled",
+   "Revenue of at least $75,000 a year",
+   "For-profit, US-formed and operating; legal US resident"
+  ],
+  "documents_typically_needed": [
+   "business plan",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.toryburchfoundation.org/fellows/",
+  "verified_on": "2026-11-26",
+  "notes": "Mostly a fellowship; cash part is small. Watch for the September 2027 window.",
+  "must_have_any": [
+   "women-owned"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "walmart-spark-good",
+  "name": "Walmart Spark Good Local Grants",
+  "funder": "Walmart Foundation / Walmart and Sam's Club stores",
+  "level": "national-private",
+  "region": "US (local store service areas)",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "community-development",
+   "general"
+  ],
+  "amount_min": 250,
+  "amount_max": 5000,
+  "amount_text": "$250 to $5,000",
+  "deadline": null,
+  "deadline_text": "Three cycles a year (Feb 1 to Apr 15; May 1 to Jul 15; Aug 1 to Dec 31); page also lists a Nov 30 last day, so confirm",
+  "requirements": [
+   "501(c)(3) public charities, government entities, schools, or faith groups with community-wide projects",
+   "Must serve the same area as the requesting store",
+   "Verified Spark Good account on Walmart.com",
+   "One grant per facility per fiscal year"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter"
+  ],
+  "is_loan": false,
+  "url": "https://walmart.org/how-we-give/program-guidelines/spark-good-local-grants-guidelines",
+  "verified_on": "2026-11-26",
+  "notes": "Easy small grant for local nonprofits; apply to each nearby store separately.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "lowes-community-impact",
+  "name": "Lowe's Hometowns Community Impact Grants",
+  "funder": "Lowe's",
+  "level": "national-private",
+  "region": "US",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "community-development",
+   "veteran",
+   "housing",
+   "skilled-trades"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "About 100 large renovation grants from a $10M pool (one 2026 award was $200,000); per-grant range not stated",
+  "deadline": null,
+  "deadline_text": "Annual nominations; 2026 window closed Mar 20, 2026; check site for 2027",
+  "requirements": [
+   "Project must benefit a nonprofit, school, city, or municipality",
+   "Eligible: community centers, housing and shelters, parks, veteran services, first responder facilities, skilled trades facilities"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://corporate.lowes.com/newsroom/press-releases/lowes-asks-communities-nationwide-what-projects-are-your-bucket-list-02-18-26",
+  "verified_on": "2026-11-26",
+  "notes": "Big building renovation grants; nominations usually open in winter.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "fhhp-small-grants",
+  "name": "Foundation for a Healthy High Point Small Grants",
+  "funder": "The Foundation for a Healthy High Point",
+  "level": "local",
+  "region": "Greater High Point, NC: High Point, Jamestown, Archdale, Trinity (Guilford, Randolph, Davidson, Forsyth counties)",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "health",
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": 10000,
+  "amount_text": "One-time awards up to $10,000; about $100,000 set aside per year",
+  "deadline": null,
+  "deadline_text": "Rolling, year-round; decision within about one month",
+  "requirements": [
+   "501(c)(3), public agency, or group with a tax-exempt fiscal sponsor",
+   "Located in or largely serving Greater High Point, or expanding services there",
+   "Time-limited, non-renewable project",
+   "No for-profits or individuals",
+   "No past-due grant reports"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "501c3 letter",
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://www.healthyhighpoint.org/grantmaking/small-grants/",
+  "verified_on": "2026-11-26",
+  "notes": "Rolling health and human services grants for Greater High Point nonprofits; needs audited financials and a staff/board roster.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "fhhp-impact-grants",
+  "name": "Foundation for a Healthy High Point Impact Grants",
+  "funder": "The Foundation for a Healthy High Point",
+  "level": "local",
+  "region": "Greater High Point, NC: High Point, Jamestown, Archdale, Trinity (Guilford, Randolph, Davidson, Forsyth counties)",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "health",
+   "community-development"
+  ],
+  "amount_min": 10001,
+  "amount_max": null,
+  "amount_text": "Requests over $10,000, no set maximum",
+  "deadline": "2026-10-01",
+  "deadline_text": "Annual fall cycle: Fall 2026 LOIs were due Aug 13 and invited applications Oct 1, 2026; awards Dec 10 for grants starting Jan 1, 2027",
+  "requirements": [
+   "501(c)(3), public agency, or fiscally sponsored group",
+   "Located in or largely serving Greater High Point",
+   "2 to 3 page LOI first; full application by invitation",
+   "No medical research, transportation or housing services, direct client aid, or fundraisers"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "501c3 letter"
+  ],
+  "is_loan": false,
+  "url": "https://www.healthyhighpoint.org/grantmaking/impact-grants/",
+  "verified_on": "2026-11-26",
+  "notes": "Larger health grants for High Point nonprofits; starts with an LOI in summer.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "davie-cf-community-grants",
+  "name": "Davie Community Foundation Community Grants",
+  "funder": "Davie Community Foundation",
+  "level": "local",
+  "region": "Davie County, NC (Mocksville, Cooleemee, Bermuda Run, Advance)",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "community-development",
+   "general"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "No set range; 2026 awards ran $600 to $36,000",
+  "deadline": "2027-02-01",
+  "deadline_text": "Twice a year: Feb 1 and Aug 1; next deadline Feb 1, 2027",
+  "requirements": [
+   "Nonprofit programs serving Davie County (recipients have also included schools and the county parks department)",
+   "No annual fund drives, religious, or political activities",
+   "Apply through the online portal; annual grant report required"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.daviefoundation.org/grants/community/",
+  "verified_on": "2026-11-26",
+  "notes": "Main open grant program for Davie County nonprofits; capacity-building requests are considered.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "dgi-first-friday-activation",
+  "name": "DGI First Friday Activation Fund",
+  "funder": "Downtown Greensboro Inc.",
+  "level": "local",
+  "region": "Greensboro, NC (Guilford County), Downtown Business Improvement District only",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "general",
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": 250,
+  "amount_text": "Reimbursement up to $250 per First Friday event; can repeat for multiple events",
+  "deadline": null,
+  "deadline_text": "Rolling, year-round; apply at least one week before the event",
+  "requirements": [
+   "Physical storefront inside the downtown Greensboro BID",
+   "Fewer than 50 employees",
+   "Submit photos of the event and receipts after"
+  ],
+  "documents_typically_needed": [
+   "W-9"
+  ],
+  "is_loan": false,
+  "url": "https://www.downtowngreensboro.org/do-business/grants-incentives-and-business-resources",
+  "verified_on": "2026-11-26",
+  "notes": "Tiny reimbursement for downtown storefronts that host First Friday activities.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": [
+   0,
+   49
+  ]
+ },
+ {
+  "id": "bdc-quick-fix-facade",
+  "name": "Burlington Downtown Quick Fix Facade and Signage Grant",
+  "funder": "Burlington Downtown Corporation (City of Burlington)",
+  "level": "local",
+  "region": "Burlington, NC (Alamance County), downtown Municipal Service District only",
+  "eligible_entities": [
+   "for-profit",
+   "individual"
+  ],
+  "focus": [
+   "community-development",
+   "general"
+  ],
+  "amount_min": null,
+  "amount_max": 2500,
+  "amount_text": "50/50 reimbursement up to $2,500 (project over $5,000 to get the max)",
+  "deadline": null,
+  "deadline_text": "Rolling (other BDC small grants are quarterly: Jul 15, Oct 1, Jan 1, Apr 1)",
+  "requirements": [
+   "Property or business owner inside the MSD (Webb Ave, Lexington Ave, Morehead St, Church St)",
+   "Exterior painting, windows, storefronts, awnings, signage",
+   "One grant per owner per year; cannot combine with other BDC grants",
+   "One-page application; no business plan required"
+  ],
+  "documents_typically_needed": [],
+  "is_loan": false,
+  "url": "https://www.burlingtondowntown.com/grants",
+  "verified_on": "2026-11-26",
+  "notes": "Fast facade/sign match for downtown Burlington; BDC's Up-Fit and Rehab programs are forgivable loans, not grants.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "graham-facade-grant",
+  "name": "City of Graham Facade Grant Program",
+  "funder": "City of Graham Historic Resources Commission and Planning Department",
+  "level": "local",
+  "region": "Graham, NC (Alamance County), Courthouse Square Historic District only",
+  "eligible_entities": [
+   "for-profit",
+   "nonprofit",
+   "individual"
+  ],
+  "focus": [
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": 5000,
+  "amount_text": "50/50 reimbursement, up to $5,000 per property per year",
+  "deadline": "2026-10-23",
+  "deadline_text": "Annual; 2026-27 packets were due Oct 23, 2026 (COA due Sept 25); work done by May 1, 2027",
+  "requirements": [
+   "Owner or tenant of a non-residential building in the district (tenants need owner letter)",
+   "Exterior work only, approved by the HRC before work starts",
+   "Two itemized cost estimates",
+   "Paid receipts and city inspection before reimbursement"
+  ],
+  "documents_typically_needed": [],
+  "is_loan": false,
+  "url": "https://www.cityofgraham.com/wp-content/uploads/2026/08/Facade-GrantApp_2026-27-updated.pdf",
+  "verified_on": "2026-11-26",
+  "notes": "Yearly facade match for downtown Graham; next round likely opens late summer 2027.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "elkin-facade-grant",
+  "name": "Town of Elkin Downtown Facade Grant",
+  "funder": "Town of Elkin Main Street Advisory Board",
+  "level": "local",
+  "region": "Elkin, NC (Surry County), downtown Municipal Service District only",
+  "eligible_entities": [
+   "for-profit",
+   "individual"
+  ],
+  "focus": [
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": 1500,
+  "amount_text": "50/50 match up to $1,500 per building; $5,000 total pool for FY2026-27",
+  "deadline": null,
+  "deadline_text": "Annual fiscal-year cycle; FY2026-27 applications by February 2027 (no exact day posted), reimbursement paperwork by May",
+  "requirements": [
+   "Downtown building owner in the MSD",
+   "Work by an insured contractor; no DIY reimbursement",
+   "Approval before work begins",
+   "Must meet historic preservation standards"
+  ],
+  "documents_typically_needed": [],
+  "is_loan": false,
+  "url": "https://www.elkinnc.org/departments/main_street/facade_grant_and_improvement_grants.php",
+  "verified_on": "2026-11-26",
+  "notes": "Small facade match for downtown Elkin; the town also offers free design help.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "thomasville-pace-facade",
+  "name": "Downtown Thomasville Facade Grant and Window Facade Grant",
+  "funder": "The PACE Group Inc. (Downtown Thomasville revitalization)",
+  "level": "local",
+  "region": "Thomasville, NC (Davidson County), Downtown Business Improvement District only",
+  "eligible_entities": [
+   "for-profit",
+   "nonprofit",
+   "individual"
+  ],
+  "focus": [
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Amount not posted on the page; see program guidelines PDF",
+  "deadline": null,
+  "deadline_text": "Rolling as funds allow until spent (2025 round listed as open)",
+  "requirements": [
+   "Owner or tenant of a building in the Thomasville Downtown BID",
+   "Check the district map first"
+  ],
+  "documents_typically_needed": [],
+  "is_loan": false,
+  "url": "https://douglas-elliott.squarespace.com/facade-grant",
+  "verified_on": "2026-11-26",
+  "notes": "Downtown Thomasville facade money; amount and current funding not confirmed, call before applying.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "guilford-county-cbo",
+  "name": "Guilford County Community-Based Organization Funding",
+  "funder": "Guilford County Government (Budget and Management)",
+  "level": "local",
+  "region": "Guilford County, NC (Greensboro, High Point)",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "community-development",
+   "general"
+  ],
+  "amount_min": 3000,
+  "amount_max": 75000,
+  "amount_text": "FY2026 awards ranged $3,000 to $75,000; typical $25,000 to $50,000",
+  "deadline": "2026-10-05",
+  "deadline_text": "Annual; FY2027 window was Sept 4 to Oct 5, 2026 (closed); board approves allocations in December",
+  "requirements": [
+   "Registered, active 501(c) with an office in or mostly serving Guilford County",
+   "Certificate of liability insurance naming Guilford County",
+   "Board roster; audit if requesting over $100,000",
+   "After award: notarized no-overdue-taxes, conflict of interest policy, E-Verify affidavit; quarterly reports"
+  ],
+  "documents_typically_needed": [
+   "W-9",
+   "501c3 letter",
+   "financial statements",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://guilfordcountync.gov/CBOs",
+  "verified_on": "2026-11-26",
+  "notes": "County general-fund grants to nonprofits; one-session online form, so prepare attachments first.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "cone-health-community-grants",
+  "name": "Cone Health Community Grant Requests",
+  "funder": "Cone Health",
+  "level": "local",
+  "region": "Cone Health service area: Greensboro and Guilford, Alamance, Rockingham counties, NC (page lists no counties)",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "health",
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "No amounts published",
+  "deadline": null,
+  "deadline_text": "Twice a year: submit by April 24 or October 25 (page shows no year); reviewed in June and November",
+  "requirements": [
+   "501(c)(3) with a record of financial stewardship",
+   "Fits a Cone Health giving value: prevention, access, patient outcomes, or support in hard times",
+   "One application per organization per calendar year",
+   "Not for individual schools, youth sports, scouting, churches, or political groups"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "W-9",
+   "tax returns"
+  ],
+  "is_loan": false,
+  "url": "https://conehealth.com/about-us/apply-for-a-grant-or-sponsorship/grant-requests",
+  "verified_on": "2026-11-26",
+  "notes": "Health system community grants; 990 on request and numbered invoice needed for payment. Service area inferred from hospital locations; confirm with the funder.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "united-way-greensboro-grants",
+  "name": "United Way of Greater Greensboro Community Impact and Bold Goal Grants",
+  "funder": "United Way of Greater Greensboro",
+  "level": "local",
+  "region": "Greensboro, NC (Guilford County)",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "community-development",
+   "economic-mobility",
+   "health"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Amounts not stated in the announcement",
+  "deadline": null,
+  "deadline_text": "2026-27 cycle opened Dec 2025 with required Grant Seeker Meetings Dec 16 and 17; check site for the next cycle",
+  "requirements": [
+   "Local nonprofit",
+   "Must attend a Grant Seeker Meeting before applying",
+   "Programs in youth opportunity, financial security, or healthy communities; Bold Goal track is for raising family income above poverty"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.unitedwaygso.org/?p=15127",
+  "verified_on": "2026-11-26",
+  "notes": "Multi-year style partner grants; the full guidelines page did not load, so deadlines are unconfirmed.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "ncac-artist-support-triad",
+  "name": "Artist Support Grants (Davidson, Davie, Forsyth, Guilford, Randolph consortium)",
+  "funder": "NC Arts Council, administered by Arts Council of Winston-Salem and Forsyth County and ArtsGreensboro",
+  "level": "local",
+  "region": "Davidson, Davie, Forsyth, Guilford, Randolph counties, NC",
+  "eligible_entities": [
+   "individual"
+  ],
+  "focus": [
+   "arts"
+  ],
+  "amount_min": 500,
+  "amount_max": 2000,
+  "amount_text": "$500 to $2,000",
+  "deadline": "2026-09-04",
+  "deadline_text": "Annual; 2026 round opened June 1 and closed Sept 4, 2026",
+  "requirements": [
+   "Individual artist or unincorporated artist collective living in one of the five counties",
+   "Spends a significant part of time on art work",
+   "For new work, equipment, business operations, training, or reaching new audiences"
+  ],
+  "documents_typically_needed": [
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.intothearts.org/post/artist-support-grants-application-open-monday-june-1-2026",
+  "verified_on": "2026-11-26",
+  "notes": "For working artists only; apply through intothearts.org (Davidson, Davie, Forsyth) or theacgg.org (Guilford, Randolph).",
+  "must_have_any": [
+   "arts"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "ncac-project-support",
+  "name": "NC Arts Council Project Support Grants",
+  "funder": "North Carolina Arts Council (NC Dept. of Natural and Cultural Resources)",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "nonprofit"
+  ],
+  "focus": [
+   "arts",
+   "community-development"
+  ],
+  "amount_min": 5000,
+  "amount_max": 15000,
+  "amount_text": "$5,000 to $15,000 ($5,000 cap if prior-year expenses $20K to $50K)",
+  "deadline": "2026-03-02",
+  "deadline_text": "Annual; FY2026-27 applications ran Jan 5 to Mar 2, 2026 for projects July 2026 to June 2027",
+  "requirements": [
+   "NC 501(c)(3) with at least 2 years of arts programming",
+   "Prior-year cash operating expenses of at least $20,000, or apply through a fiscal agent",
+   "One-third cash match in Tier 2 and 3 counties; waived in Tier 1",
+   "EIN and UEI in the OPAL grant portal"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget",
+   "DUNS/UEI + SAM registration",
+   "letters of support"
+  ],
+  "is_loan": false,
+  "url": "https://www.ncarts.org/grants-resources/grants-dashboard/project-support-grants",
+  "verified_on": "2026-11-26",
+  "notes": "State arts project grants; a UEI is needed even though this is a state program.",
+  "must_have_any": [
+   "arts"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": 2,
+  "employees_range": null
+ },
+ {
+  "id": "nc-adfp-trust-fund",
+  "name": "NC Agricultural Development and Farmland Preservation Trust Fund Grants",
+  "funder": "NC Department of Agriculture and Consumer Services, Farmland Preservation Division",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "agriculture",
+   "rural"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Varies by project; $51.2 million awarded statewide in Oct 2026",
+  "deadline": "2026-12-21",
+  "deadline_text": "Annual cycle; Cycle 20 Part 2 closes Dec 21, 2026 for non-easement projects, but Part 1 closed Aug 31, 2026, so new applicants wait for the next cycle",
+  "requirements": [
+   "Applicant must be a county or a nonprofit conservation organization",
+   "Farmers and landowners take part only through such a partner",
+   "Projects: conservation easements, agricultural development projects, agricultural plans, growth zones"
+  ],
+  "documents_typically_needed": [
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.ncagr.gov/divisions/farmland-preservation/applicants",
+  "verified_on": "2026-11-26",
+  "notes": "Farm-sector grants that flow through counties and land trusts; a farm business needs a county or nonprofit partner.",
+  "must_have_any": [
+   "agriculture"
+  ],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-seo-energy-efficiency-subgrant",
+  "name": "NC State Energy Program Energy Efficiency Subgrant",
+  "funder": "NC Department of Environmental Quality, State Energy Office (US DOE State Energy Program funds)",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit",
+   "nonprofit",
+   "government"
+  ],
+  "focus": [
+   "energy"
+  ],
+  "amount_min": 50000,
+  "amount_max": 200000,
+  "amount_text": "$50,000 to $200,000 per project; about $1.4 million total",
+  "deadline": "2026-11-24",
+  "deadline_text": "2026 RFP ran Oct 22 to Nov 24, 2026 (closed); awards expected early 2027",
+  "requirements": [
+   "Energy-efficiency building upgrades (audits optional)",
+   "Project finished by June 30, 2027",
+   "Priority to applicants with a prior energy audit",
+   "Federal rules may apply (NEPA, historic review)"
+  ],
+  "documents_typically_needed": [
+   "budget",
+   "DUNS/UEI + SAM registration"
+  ],
+  "is_loan": false,
+  "url": "https://www.deq.nc.gov/news/events/request-proposals-north-carolina-state-energy-program-energy-efficiency-subgrant",
+  "verified_on": "2026-11-26",
+  "notes": "Open to businesses, but sized for building upgrades of $50K or more; watch for a 2027 RFP.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "golden-leaf-economic-catalyst",
+  "name": "Golden LEAF Economic Catalyst",
+  "funder": "Golden LEAF Foundation",
+  "level": "state",
+  "region": "North Carolina (tobacco-dependent or economically distressed areas)",
+  "eligible_entities": [
+   "government",
+   "nonprofit"
+  ],
+  "focus": [
+   "workforce",
+   "community-development",
+   "rural"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "No cap published; sized to jobs, distress, and impact",
+  "deadline": null,
+  "deadline_text": "Rolling; board reviews at the next meeting at least six weeks after a complete proposal",
+  "requirements": [
+   "Applicant is a government or 501(c)(3) on behalf of a specific job-creating company",
+   "Company commits to full-time jobs (1,600+ hours/yr) that are at risk without the grant",
+   "Company pays at least half of employee-only health insurance",
+   "Must apply before the company announces its NC location decision"
+  ],
+  "documents_typically_needed": [
+   "letters of support",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://goldenleaf.org/funding-opportunities/economic-catalyst/",
+  "verified_on": "2026-11-26",
+  "notes": "Recruitment/expansion money a growing company can ask its county EDC to pursue; pro rata repayment if jobs fall short.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-rural-infrastructure",
+  "name": "NC Rural Infrastructure Grant",
+  "funder": "NC Department of Commerce, Rural Economic Development Division / Rural Infrastructure Authority",
+  "level": "state",
+  "region": "North Carolina (Tier 1 and 2 counties, rural census tracts in Tier 3)",
+  "eligible_entities": [
+   "government"
+  ],
+  "focus": [
+   "community-development",
+   "rural",
+   "workforce"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Set per project based on jobs and impact; 5% cash match",
+  "deadline": "2027-02-22",
+  "deadline_text": "Several rounds a year; next deadline Feb 22, 2027 (awards Apr 15, 2027)",
+  "requirements": [
+   "Local government applies",
+   "Tied to new full-time private-sector jobs",
+   "5% cash match, not from other state or federal grants",
+   "Repay if jobs are not created and kept six months"
+  ],
+  "documents_typically_needed": [
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.commerce.nc.gov/grants-incentives/public-infrastructure-funds/infrastructure-state-rural-grants",
+  "verified_on": "2026-11-26",
+  "notes": "Water, sewer or road money a town can seek for a business that is adding jobs; Guilford and Forsyth only qualify in rural tracts.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "nc-rural-downtown-econ-dev",
+  "name": "NC Rural Downtown Economic Development Grant",
+  "funder": "NC Department of Commerce, NC Main Street and Rural Planning Center / Rural Infrastructure Authority",
+  "level": "state",
+  "region": "North Carolina (rural-eligible local governments)",
+  "eligible_entities": [
+   "government"
+  ],
+  "focus": [
+   "community-development",
+   "rural"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "Amount not published; 5% local match",
+  "deadline": "2027-01-07",
+  "deadline_text": "Three rounds a year; next deadline Jan 7, 2027, then Apr 29, 2027",
+  "requirements": [
+   "Local government applies",
+   "Public infrastructure, publicly owned buildings, or mixed-use on public property downtown",
+   "Job creation/retention projection and environmental review"
+  ],
+  "documents_typically_needed": [
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://www.commerce.nc.gov/about-us/divisions-programs/rural-economic-development-division/rural-grant-programs",
+  "verified_on": "2026-11-26",
+  "notes": "Downtown public improvements; a business benefits indirectly through its town.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": true,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "ncedge-customized-training",
+  "name": "NCEdge Customized Training Program",
+  "funder": "NC Community College System with local community colleges (listed by NC Commerce)",
+  "level": "state",
+  "region": "North Carolina",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "workforce",
+   "transportation"
+  ],
+  "amount_min": null,
+  "amount_max": null,
+  "amount_text": "No-cost training designed and delivered by the local community college",
+  "deadline": null,
+  "deadline_text": "Ongoing; contact your local community college",
+  "requirements": [
+   "Industry: manufacturing, IT, life sciences, logistics or warehousing, customer support centers, air courier, or regional/national HQ",
+   "Meet two of: capital investment, new jobs, new technology, workforce expansion, productivity gains, skill upgrades"
+  ],
+  "documents_typically_needed": [],
+  "is_loan": false,
+  "url": "https://www.nccommunitycolleges.edu/news/ncedge-customized-training-driving-business-growth-and-building-a-world-class-workforce-in-north-carolina/",
+  "verified_on": "2026-11-26",
+  "notes": "Free employer training; local trucking is not a listed industry, but logistics and warehousing are.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "training-reimbursement",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "duke-energy-small-business-microgrants",
+  "name": "Duke Energy Foundation Small Business Impact Program (NC microgrants via local nonprofits)",
+  "funder": "Duke Energy Foundation",
+  "level": "state",
+  "region": "North Carolina (communities served by Duke Energy)",
+  "eligible_entities": [
+   "nonprofit",
+   "for-profit"
+  ],
+  "focus": [
+   "general",
+   "community-development"
+  ],
+  "amount_min": null,
+  "amount_max": 25000,
+  "amount_text": "Nonprofits get up to $25,000; they pass on Impact Awards up to $5,000 to small businesses with 50 or fewer workers",
+  "deadline": "2026-06-30",
+  "deadline_text": "Annual since 2020; 2026 nonprofit deadline June 30, 2026; businesses apply to the funded local nonprofit when it opens its microgrants",
+  "requirements": [
+   "Nonprofit applicant: 501(c)(3) serving Duke Energy communities",
+   "Business award: 50 or fewer employees",
+   "Business uses: renovations, equipment, technology, inventory; not payroll, rent, or utilities"
+  ],
+  "documents_typically_needed": [
+   "501c3 letter",
+   "budget"
+  ],
+  "is_loan": false,
+  "url": "https://foundation.duke-energy.com/grants/north-carolina/small-business-impact-program",
+  "verified_on": "2026-11-26",
+  "notes": "A for-profit cannot apply to Duke directly; watch local chambers and downtown groups for the microgrant round.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "verizon-digital-ready",
+  "name": "Verizon Small Business Digital Ready $10K Grants",
+  "funder": "Verizon, with LISC",
+  "level": "national-private",
+  "region": "United States",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "general"
+  ],
+  "amount_min": 10000,
+  "amount_max": 10000,
+  "amount_text": "$10,000; 10 businesses picked each month",
+  "deadline": "2026-12-07",
+  "deadline_text": "Monthly reviews June to December 2026; finish two free courses or events by Dec 7, 2026 to unlock the one application; decisions by Jan 12, 2027",
+  "requirements": [
+   "Owner 18+ of a US for-profit small business",
+   "Register on Digital Ready and complete any two eligible courses or events",
+   "One application per owner; no nonprofits",
+   "Finalists verify tax and bank info"
+  ],
+  "documents_typically_needed": [
+   "W-9"
+  ],
+  "is_loan": false,
+  "url": "https://digitalready.verizonwireless.com/funding/details",
+  "verified_on": "2026-11-26",
+  "notes": "Low-effort national grant; applications filed before Apr 15, 2026 had to be redone.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "allstate-main-street-grants",
+  "name": "Allstate Main Street Grants Program",
+  "funder": "Allstate with Hello Alice and Global Entrepreneurship Network",
+  "level": "national-private",
+  "region": "United States",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "general"
+  ],
+  "amount_min": 20000,
+  "amount_max": 20000,
+  "amount_text": "$20,000 to 100 of up to 250 Boost Camp participants ($2 million total)",
+  "deadline": "2026-06-23",
+  "deadline_text": "2026 round closed June 23, 2026; grant recipients announced Nov 28, 2026",
+  "requirements": [
+   "For-profit registered in a US state, DC, or Puerto Rico",
+   "At least $25,000 revenue in 2025",
+   "Applicant is the lead executive, 18+",
+   "Join a 12-week virtual Boost Camp; acceptance does not guarantee a grant"
+  ],
+  "documents_typically_needed": [
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://helloalice.com/grants/allstate-main-street-grants-program/",
+  "verified_on": "2026-11-26",
+  "notes": "Closed for 2026; listed so it can be watched for a 2027 round.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ },
+ {
+  "id": "pilot-small-business-growth-fund",
+  "name": "Pilot Small Business Growth Fund",
+  "funder": "Pilot.com with Hello Alice",
+  "level": "national-private",
+  "region": "United States",
+  "eligible_entities": [
+   "for-profit"
+  ],
+  "focus": [
+   "general"
+  ],
+  "amount_min": 10000,
+  "amount_max": 50000,
+  "amount_text": "18 grants: one $50,000, two $25,000, fifteen $10,000, plus a year of Pilot bookkeeping",
+  "deadline": "2026-03-31",
+  "deadline_text": "2026 round ran Feb 24 to Mar 31, 2026 (closed)",
+  "requirements": [
+   "For-profit registered and located in a US state, DC, or Puerto Rico",
+   "2025 gross revenue between $5,000 and $5,000,000",
+   "Applicant is the lead executive, 18+",
+   "Finalists may submit a short video"
+  ],
+  "documents_typically_needed": [
+   "financial statements"
+  ],
+  "is_loan": false,
+  "url": "https://helloalice.com/grants/pilot-small-business-growth-fund/",
+  "verified_on": "2026-11-26",
+  "notes": "Closed for 2026; listed so it can be watched for a 2027 round.",
+  "must_have_any": [],
+  "excludes_any": [],
+  "kind": "grant",
+  "area_check": false,
+  "min_years": null,
+  "employees_range": null
+ }
+]

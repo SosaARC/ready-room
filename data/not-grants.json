@@ -1,0 +1,62 @@
+[
+  {
+    "name": "SBA 'grants' to start or grow a business",
+    "why": "SBA says it does not give grants to start or expand a business; its grants go to nonprofits, resource partners, SBIR/STTR, and state STEP programs. Offers of an 'SBA grant' for your business are a red flag.",
+    "url": "https://www.sba.gov/funding-programs/grants"
+  },
+  {
+    "name": "Unsolicited 'government grant' offers that ask for a fee",
+    "why": "FTC warns that scammers trick small businesses into paying to apply for fake government grants.",
+    "url": "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+  },
+  {
+    "name": "'HHS (or other agency) free grant money' messages",
+    "why": "FTC alert: impostors posing as HHS or hacked friends promise grant money, then collect payments and personal data. Do not pay to get a grant.",
+    "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/no-hhs-didnt-reach-out-about-free-grant-money"
+  },
+  {
+    "name": "Paid grant-writing services that guarantee funding",
+    "why": "FTC and Florida sued 'Grant Bae' for taking thousands from minority-owned businesses with false guarantees of relief grants.",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2022/06/ftc-florida-act-shut-down-grant-bae-scam-preying-minority-owned-businesses-seeking-pandemic-relief"
+  },
+  {
+    "name": "COVID-19 EIDL and EIDL Advance",
+    "why": "EIDL loans must be repaid and are not forgivable; new applications closed Jan 1, 2022, so any current 'EIDL grant' offer is not real.",
+    "url": "https://legacy.sba.gov/funding-programs/loans/covid-19-relief-options/eidl"
+  },
+  {
+    "name": "SBA Microloans",
+    "why": "Loans up to $50,000 at roughly 8% to 13% with up to 6 years to repay, through nonprofit intermediaries; often listed alongside grants.",
+    "url": "https://www.sba.gov/funding-programs/loans/microloans"
+  },
+  {
+    "name": "Kiva US",
+    "why": "0% interest crowdfunded loans of $1,000 to $15,000 that must be repaid over 12 to 36 months; not a grant.",
+    "url": "https://www.kiva.org/borrow"
+  },
+  {
+    "name": "NC Rural Center small business financing (SSBCI programs, CornerSquare)",
+    "why": "The Rural Center's business funding is lending and loan support through banks and CDFIs; the page lists no grant programs.",
+    "url": "https://www.ncruralcenter.org/lending/"
+  },
+  {
+    "name": "NCBiotech company funding",
+    "why": "NCBiotech's company money is mainly business loans ($250K to $650K, quarterly deadlines); its grants mostly go to universities and nonprofits.",
+    "url": "https://www.ncbiotech.org/funding"
+  },
+  {
+    "name": "City of Winston-Salem Small Business Loan Program",
+    "why": "Loans of $5,000 to $100,000 at prime plus 1% in the NRSA; the city states grant funds are not available, though part may be forgiven (possibly taxable).",
+    "url": "https://www.cityofws.org/386/Loan-Program"
+  },
+  {
+    "name": "EDA Revolving Loan Funds",
+    "why": "EDA grants capitalize local revolving loan funds; what reaches the business is a loan, not a grant.",
+    "url": "https://www.eda.gov/funding/programs/economic-adjustment-assistance"
+  },
+  {
+    "name": "NC HUB certification",
+    "why": "Was a procurement certification, never funding, and the state ended HUB programs on July 7, 2026; replaced by the NC Small Business Enterprise (NCSBE) certification.",
+    "url": "https://www.doa.nc.gov/divisions/historically-underutilized-businesses-hub"
+  }
+]

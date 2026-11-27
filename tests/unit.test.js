@@ -1,0 +1,28 @@
+// unit checks on pure functions by evaluating the app script in jsdom and calling internals via a hook
+const {JSDOM}=require('jsdom');const fs=require('fs');
+let html=fs.readFileSync(process.argv[2],'utf8');
+html=html.replace("/* ---------- boot ---------- */","window.__t={limitOf,assess,capOf,blankBiz,migrate,attention,allDates,state,icsFile,normCounty};\n/* ---------- boot ---------- */");
+const dom=new JSDOM(html,{runScripts:'dangerously',url:'https://example.org/',beforeParse(w){w.scrollTo=()=>{}}});
+setTimeout(()=>{const t=dom.window.__t;const ok=(n,c)=>console.log((c?'PASS ':'FAIL ')+n);
+ ok('limit 2,000 characters',JSON.stringify(t.limitOf('Describe it (2,000-character limit)'))==='{"n":2000,"unit":"chars"}');
+ ok('limit up to 2,500 characters',t.limitOf('up to 2,500 characters').n===2500);
+ ok('limit 150 words',t.limitOf('Answer in 150 words').n===150);
+ const G=JSON.parse(dom.window.document.getElementById('grants-data').textContent);
+ const g=id=>G.find(x=>x.id===id);
+ const mk=(p)=>{const b=t.blankBiz('x');Object.assign(b.profile,p);return b};
+ const davidsonCity=mk({city:'Davidson',county:'Mecklenburg',state:'NC',entityType:'llc'});
+ ok('Davidson city not matched to Davidson County',!t.assess(g('ptrc-wdb-iwt-ojt'),davidsonCity).why.includes('Local to you'));
+ const forsythCo=mk({city:'Winston-Salem',county:'Forsyth County, NC',state:'NC',entityType:'np501c3'});
+ ok('"Forsyth County, NC" matches local',t.assess(G.find(x=>x.level==='local'&&/forsyth/i.test(x.region)&&x.eligible_entities.includes('nonprofit')),forsythCo).why.includes('Local to you'));
+ const c6=mk({city:'Greensboro',county:'Guilford',state:'NC',entityType:'np_other'});
+ const c3only=G.filter(x=>!x.eligible_entities.includes('for-profit')&&x.documents_typically_needed.map(s=>s.toLowerCase()).includes('501c3 letter'));
+ ok('501(c)(6) screened from 501(c)(3)-only ('+c3only.length+')',c3only.every(x=>!t.assess(x,c6).ok));
+ ok('cap only when "up to"',t.capOf({amount_max:376000,amount_text:'Past awards ranged to $376,000'})===null&&t.capOf({amount_max:10000,amount_text:'Up to $10,000'})===10000);
+ const blank=mk({city:'Winston-Salem',county:'Forsyth',state:'NC',entityType:'llc',industry:'box truck freight'});
+ const pt=t.assess(g('ptrc-wdb-iwt-ojt'),blank);ok('blank founded gives a note',pt.notes.some(n=>n.includes('year founded')));
+ ok('MSERG needs diesel fleet',!t.assess(g('nc-deq-mserg'),blank).ok);
+ const b=mk({});b.documents=[{id:'1',type:'med_card',expires:'2020-01-01'},{id:'2',type:'med_card',expires:'2099-01-01'}];
+ ok('renewed doc does not nag',!t.attention(b).some(i=>i.t.includes('expired')));
+ const m=t.migrate({id:'z',profile:{name:'z'},pipeline:[{id:'p',name:'g',status:'Applied'}],brokers:[{id:'q',name:'b',status:'Weird'}]});
+ ok('unknown statuses migrate',m.pipeline[0].status==='Prospect'&&m.brokers[0].status==='Not started');
+ process.exit(0)},300);
