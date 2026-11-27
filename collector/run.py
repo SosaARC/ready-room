@@ -15,7 +15,7 @@ import json
 import pathlib
 import sys
 
-from . import grants_gov, page_watch, sam_gov, sbir
+from . import details, grants_gov, page_watch, sam_gov, sbir
 from .common import TODAY
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -100,7 +100,7 @@ def main(argv=None):
     ap.add_argument("--only", nargs="*", help="grants.gov sbir.gov sam.gov-contracts sam.gov-listings")
     a = ap.parse_args(argv)
     sources = {
-        "grants.gov": grants_gov.collect,
+        "grants.gov": lambda log: details.enrich(grants_gov.collect(log=log), log=log),
         "sbir.gov": sbir.collect,
         "sam.gov contracts": sam_gov.contracts,
         "sam.gov assistance listings": sam_gov.assistance_listings,

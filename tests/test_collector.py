@@ -12,7 +12,7 @@ import unittest
 from unittest import mock
 
 import collector.run as runmod
-from collector import funnel, grants_gov, sam_gov, sbir
+from collector import details, funnel, grants_gov, sam_gov, sbir
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FUT = (dt.date.today() + dt.timedelta(days=60)).strftime("%m/%d/%Y")
@@ -63,6 +63,58 @@ class Tagging(unittest.TestCase):
         self.assertEqual(grants_gov.agency_name("", "HHS-NIH11"), "National Institutes of Health")
         self.assertEqual(grants_gov.agency_name("Department of Transportation", "DOT"), "Department of Transportation")
         self.assertEqual(grants_gov.agency_name("", "USDA-RBCS"), "Department of Agriculture")
+
+
+class Details(unittest.TestCase):
+    """Uses real fetchOpportunity responses saved from Grants.gov."""
+
+    def setUp(self):
+        self.raw = json.loads((ROOT / "tests" / "fixtures" / "gg_details.json").read_text())
+
+    def test_parse_real_records(self):
+        p = details.parse(self.raw["364043"])
+        self.assertEqual(p["applicant_types"], ["00"])
+        self.assertEqual(p["ceiling"], 2200000)
+        self.assertTrue(p["cost_share"])
+        self.assertEqual(p["response_date"], "2026-11-30")
+        self.assertEqual(details.parse(self.raw["364124"])["awards"], 40)
+        self.assertIsNone(details.parse(self.raw["353751"])["ceiling"])  # "none" means no stated ceiling
+
+    def test_apply_replaces_guessed_eligibility_and_adds_amounts(self):
+        rec = {"source": "grants.gov", "source_id": "364043", "eligible_entities": ["for-profit", "nonprofit"], "focus": ["other"], "requirements": [], "notes": "", "deadline": None}
+        details.apply(rec, details.parse(self.raw["364043"]))
+        self.assertEqual(rec["eligible_entities"], ["government"])
+        self.assertEqual(rec["amount_text"], "Up to $2,200,000")
+        self.assertIn("Cost share or match required", rec["requirements"])
+        self.assertEqual(rec["focus"], ["justice"])
+        self.assertEqual(rec["deadline"], "2026-11-30")
+
+    def test_enrich_uses_cache_and_only_fetches_new(self):
+        calls = []
+
+        def fake(url, data=None, **_):
+            calls.append(str(data["opportunityId"]))
+            return self.raw[str(data["opportunityId"])]
+        recs = [{"source": "grants.gov", "source_id": k, "focus": ["other"], "eligible_entities": [], "requirements": [], "notes": "", "deadline": None} for k in self.raw]
+        with tempfile.TemporaryDirectory() as d:
+            cache = pathlib.Path(d) / "c.json"
+            details.enrich([dict(r) for r in recs], fetch=fake, log=lambda *_: None, cache_path=cache, pause=0)
+            self.assertEqual(len(calls), 4)
+            details.enrich([dict(r) for r in recs], fetch=fake, log=lambda *_: None, cache_path=cache, pause=0)
+            self.assertEqual(len(calls), 4)  # second run reads the cache
+            changed = [dict(r) for r in recs]
+            changed[0]["deadline"] = "2027-01-01"
+            details.enrich(changed, fetch=fake, log=lambda *_: None, cache_path=cache, pause=0)
+            self.assertEqual(len(calls), 5)  # a changed close date triggers one re-fetch
+
+    def test_funnel_flags_match_and_award_size(self):
+        biz = json.loads((ROOT / "profiles" / "example-nonprofit.json").read_text())
+        g = {"id": "x", "name": "Youth literacy tutoring grant", "level": "federal", "source": "grants.gov", "type": "grant",
+             "eligible_entities": ["nonprofit"], "focus": ["youth-education"], "deadline": (dt.date.today() + dt.timedelta(days=90)).isoformat(),
+             "deadline_text": "", "documents_typically_needed": ["DUNS/UEI + SAM registration"], "cost_share": True, "amount_min": 2_000_000}
+        f = funnel.funnel(g, biz)
+        self.assertTrue(any("match" in w for w in f["why"]))
+        self.assertTrue(any("long shot" in w.lower() for w in f["why"]))
 
 
 class Sam(unittest.TestCase):

@@ -10,7 +10,6 @@ on:
     branches: [main]
     paths:
       - "collector/**"
-      - "!collector/probe.py"
       - ".github/workflows/collect.yml"
 
 permissions:
@@ -25,6 +24,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

@@ -282,6 +282,7 @@ function profileTags(p){
   if(/farm|agri/.test(ind))mine.add('agriculture');
   if(/software|saas|\bai\b|tech/.test(ind))mine.add('tech');
   if(mine.has('research'))mine.add('tech');
+  if(mine.has('youth-education'))mine.add('education');
   return mine;
 }
 const RECUR=/monthly|rolling|annual|twice a year|each year|quarterly|ongoing/i;
@@ -313,15 +314,17 @@ function assess(g,b){
 }
 
 /* ---------- funnel: apply now / prepare / skip ---------- */
-const BROAD_TAGS=new Set(['health','community-development','environment','rural','energy','research','low-income','economic-mobility']);
+const BROAD_TAGS=new Set(['education','justice','disaster','health','community-development','environment','rural','energy','research','low-income','economic-mobility']);
 const DOC_NEED={business_plan:'a business plan',financials:'financial statements',tax_returns:'tax returns',budget:'a project budget',articles:'articles of organization',irs_501c3:'a 501(c)(3) letter (or a fiscal sponsor)',w9:'a W-9',good_standing:'a certificate of good standing',capability:'a capability statement',support_letters:'letters of support',hub_cert:'a small business certification',sam_uei:'a SAM.gov registration'};
 function prepDays(g,b){let base={federal:21,state:14,local:10,'national-private':4}[g.level]??10;if(g.type==='contract')base=10;const need=[];
   const missing=grantDocs(g).filter(d=>d.key&&!usable(haveValid(b,d.key))).map(d=>d.key);
   if(g.level==='federal'&&!usable(haveValid(b,'sam_uei'))&&!String(b.profile.uei||'').trim()){base+=28;need.push('Register in SAM.gov and get a UEI (allow several weeks)')}
   const rest=missing.filter(m=>m!=='sam_uei');base+=3*rest.length;need.push(...rest.map(m=>'Get '+(DOC_NEED[m]||m)));
+  if(g.cost_share){base+=5;need.push('Plan your match: this program requires cost share')}
   if(g.type!=='contract'&&Object.values(b.answers).filter(v=>String(v||'').trim().length>40).length<4){base+=5;need.push('Write the core answers in the answer bank (need, use of funds, impact)')}
   return {days:base,need}}
-function oddsOf(g){const n=g.expected_awards;if(g.level==='national-private')return ['Long shot','national program, many applicants per award'];if(typeof n==='number'&&n>0&&n<=3)return ['Long shot',`only ${n} award${n>1?'s':''} expected`];if(g.level==='local'||g.level==='state')return ['Better','local or state pool, fewer applicants'];return ['Fair','competitive national pool']}
+function budgetOf(p){for(const k of ['budget','revenue']){const m=String(p[k]||'').match(/\$?\s*([\d,.]+)\s*([kKmM])?/);if(m){let n=parseFloat(m[1].replace(/,/g,''));if(isNaN(n))continue;n*=({k:1e3,m:1e6})[(m[2]||'').toLowerCase()]||1;if(n>=1000)return n}}return null}
+function oddsOf(g,b){const n=g.expected_awards;const size=b?budgetOf(b.profile):null;if(size&&g.amount_min&&g.amount_min>2*size)return ['Long shot','the smallest award is more than twice your annual budget'];if(g.level==='national-private')return ['Long shot','national program, many applicants per award'];if(typeof n==='number'&&n>0&&n<=3)return ['Long shot',`only ${n} award${n>1?'s':''} expected`];if(g.level==='local'||g.level==='state')return ['Better','local or state pool, fewer applicants'];return ['Fair','competitive national pool']}
 function funnel(g,b){const a=assess(g,b);if(!a.ok)return {bucket:'skip',why:a.flags,score:0,a};
   if(g.type==='program')return {bucket:'skip',why:['Program listing, not an open call'],score:0,a};
   if(g.type==='notice')return {bucket:'skip',why:['Notice or request for information, not a funding call'],score:0,a};
@@ -329,7 +332,7 @@ function funnel(g,b){const a=assess(g,b);if(!a.ok)return {bucket:'skip',why:a.fl
     if(g.level==='federal'&&g.type!=='contract'&&g.region&&g.region!=='US'&&!(String(b.profile.state||'').toUpperCase().startsWith('N')&&g.region==='North Carolina'))return {bucket:'skip',why:['For '+g.region+' only'],score:0,a};
     if(!hits.length)return {bucket:'skip',why:['No match to your focus areas'],score:0,a};
     if(hits.length<2&&BROAD_TAGS.has(hits[0])&&g.type!=='contract')return {bucket:'skip',why:['Weak match (only '+hits[0].replace(/-/g,' ')+')'],score:0,a}}
-  const {days,need}=prepDays(g,b),dd=daysUntil(g.deadline),recur=RECUR.test(g.deadline_text||'')||!g.deadline,[od,odWhy]=oddsOf(g);
+  const {days,need}=prepDays(g,b),dd=daysUntil(g.deadline),recur=RECUR.test(g.deadline_text||'')||!g.deadline,[od,odWhy]=oddsOf(g,b);
   const why=a.why.concat(a.notes.filter(n=>!n.startsWith('Needs')));const base={a,odds:od,oddsWhy:odWhy,need,days};
   if(a.score<50)return {...base,bucket:'skip',why:['Weak fit for this business'],score:a.score};
   if(dd!=null&&dd<days){if(recur)return {...base,bucket:'prepare',why:[dd<0?`Last round closed ${fmtDate(g.deadline)}. Get ready for the next one.`:`Due in ${dd} days, but you need about ${days}. Get ready for the next round.`].concat(why),score:a.score};return {...base,bucket:'skip',why:[`Not enough time: due in ${dd} days, about ${days} days of prep needed`],score:a.score}}
@@ -345,6 +348,7 @@ function viewShortlist(){
   const card=({g,f})=>{const url=safeUrl(g.url);return `<div class="card gcard"><div class="row between"><h3>${esc(g.name)}</h3><span class="chip ${f.odds==='Better'?'ok':f.odds==='Long shot'?'warn':''}">${esc(f.odds||'')}</span></div>
    <div class="muted small">${esc(g.funder)}${g.type==='contract'?' · federal contract':''}${g.amount_text?' · '+esc(g.amount_text):''}</div>
    <ul class="small" style="margin:8px 0">${f.why.slice(0,3).map(w=>`<li>${esc(w)}</li>`).join('')}</ul>
+   ${g.about?`<details class="small"><summary>About this ${g.type==='contract'?'contract':'grant'}</summary><p style="margin:6px 0">${esc(g.about)}${g.about.length>=399?'…':''}</p>${g.expected_awards?`<p class="muted" style="margin:0">${g.expected_awards} award${g.expected_awards>1?'s':''} expected</p>`:''}</details>`:''}
    ${f.need&&f.need.length?`<div class="ai"><b>To be ready (about ${f.days} days):</b><ul style="margin:4px 0;padding-left:18px">${f.need.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div>`:''}
    <div class="row" style="margin-top:10px">${inPipe.has(g.id)?'<span class="chip ink">Tracking</span>':`<button class="sm primary" data-act="grantSave" data-id="${esc(g.id)}">Track this</button>`}${url?`<a class="btn sm" href="${esc(url)}" target="_blank" rel="noopener">Official page</a>`:''}</div></div>`};
   const skipRows=Object.entries(F.skipWhy).sort((x,y)=>y[1]-x[1]).slice(0,10);
@@ -637,7 +641,7 @@ function viewGrants(){
    return `<div class="card gcard"><div class="row between"><h3>${esc(g.name)}</h3>${g.custom?'<span class="chip">Added by you</span>':`<span class="chip">${esc(g.type==='contract'?'Federal contract':({local:'Local',state:'State',federal:'Federal','national-private':'National'})[g.level]||g.level)}${g.source&&g.source!=='curated'&&g.type!=='contract'?' · '+esc(g.source):''}</span>`}</div>
    <div class="muted small">${esc(g.funder)}</div>
    <div class="kv"><div><b>Amount</b>${esc(g.amount_text||'See site')}</div><div><b>Deadline</b>${esc(g.deadline&&daysUntil(g.deadline)>=0?fmtDate(g.deadline):(g.deadline_text||(g.deadline?fmtDate(g.deadline):'See site')))}</div><div><b>Who can apply</b>${esc((g.eligible_entities||[]).join(', ')||'See site')}</div>${r?`<div><b>Your documents</b>${r.have} of ${r.total} on file</div>`:''}</div>
-   ${g.notes?`<p class="small">${esc(g.notes)}</p>`:''}
+   ${g.notes?`<p class="small">${esc(g.notes)}</p>`:''}${g.about?`<details class="small"><summary>About this ${g.type==='contract'?'contract':'grant'}</summary><p style="margin:6px 0">${esc(g.about)}</p>${g.expected_awards?`<p class="muted" style="margin:0">${g.expected_awards} award${g.expected_awards>1?'s':''} expected</p>`:''}</details>`:''}
    ${(g.requirements||[]).length?`<details class="small"><summary>Key rules (${g.requirements.length})</summary><ul style="margin:6px 0;padding-left:18px">${g.requirements.map(r=>`<li>${esc(r)}</li>`).join('')}</ul></details>`:''}
    <div class="row" style="gap:6px">${a.why.map(w=>`<span class="chip ok">${esc(w)}</span>`).join('')}${a.notes.map(w=>`<span class="chip warn">${esc(w)}</span>`).join('')}${a.flags.map(w=>`<span class="chip bad">${esc(w)}</span>`).join('')}</div>
    ${ai?`<div class="ai"><b>Claude: ${esc(ai.fit)} fit.</b> ${esc(ai.reason)}${ai.gap?`<br><span class="muted">Gap: ${esc(ai.gap)}</span>`:''}</div>`:''}

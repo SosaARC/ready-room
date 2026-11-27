@@ -27,7 +27,7 @@ DOC_MAP = {"business plan": "business_plan", "financial statements": "financials
            "articles of incorporation": "articles", "501c3 letter": "irs_501c3", "w-9": "w9", "certificate of good standing": "good_standing",
            "capability statement": "capability", "letters of support": "support_letters", "hub certification": "hub_cert",
            "duns/uei + sam registration": "sam_uei"}
-BROAD_TAGS = {"health", "community-development", "environment", "rural", "energy", "research", "low-income", "economic-mobility"}
+BROAD_TAGS = {"education", "justice", "disaster", "health", "community-development", "environment", "rural", "energy", "research", "low-income", "economic-mobility"}
 RECUR = re.compile(r"monthly|rolling|annual|twice a year|each year|quarterly|ongoing", re.I)
 DOC_LABEL = {"business_plan": "a business plan", "financials": "financial statements", "tax_returns": "tax returns", "budget": "a project budget", "articles": "articles of organization", "irs_501c3": "a 501(c)(3) letter (or a fiscal sponsor)", "w9": "a W-9", "good_standing": "a certificate of good standing", "capability": "a capability statement", "support_letters": "letters of support", "hub_cert": "a small business certification", "sam_uei": "a SAM.gov registration"}
 EXPIRING = {"coi", "ucr", "mcs150", "med_card", "license", "registration", "dot_inspection", "good_standing", "business_license", "hub_cert", "sam_uei"}
@@ -68,7 +68,24 @@ def tags(p):
         t.add("agriculture")
     if re.search(r"software|saas|\bai\b|tech", ind) or "research" in t:
         t.add("tech")
+    if "youth-education" in t:
+        t.add("education")
     return t
+
+
+def budget_of(p):
+    """Annual budget or revenue as a number, from text like '$420,000', 'Under $100K' or '1.2M'."""
+    for k in ("budget", "revenue"):
+        m = re.search(r"\$?\s*([\d,.]+)\s*([kKmM])?", str(p.get(k) or ""))
+        if m:
+            try:
+                n = float(m.group(1).replace(",", ""))
+            except ValueError:
+                continue
+            n *= {"k": 1e3, "m": 1e6}.get((m.group(2) or "").lower(), 1)
+            if n >= 1000:
+                return n
+    return None
 
 
 def screen(g, b):
@@ -150,6 +167,9 @@ def prep_days(g, b):
         need.append("Register in SAM.gov and get a UEI (allow several weeks)")
     base += 3 * len([m for m in missing if m != "sam_uei"])
     need += [f"Get {DOC_LABEL.get(m, m)}" for m in missing if m != "sam_uei"]
+    if g.get("cost_share"):
+        base += 5
+        need.append("Plan your match: this program requires cost share")
     answers = b.get("answers") or {}
     if sum(1 for v in answers.values() if len(str(v).strip()) > 40) < 4 and typ != "contract":
         base += 5
@@ -157,8 +177,11 @@ def prep_days(g, b):
     return base, need
 
 
-def odds(g):
+def odds(g, b=None):
     level, n = g.get("level"), g.get("expected_awards")
+    size = budget_of(b["profile"]) if b else None
+    if size and g.get("amount_min") and g["amount_min"] > 2 * size:
+        return "Long shot", "the smallest award is more than twice your annual budget"
     if level == "national-private":
         return "Long shot", "National program with many applicants per award"
     if isinstance(n, (int, float)) and n and n <= 3:
@@ -191,7 +214,7 @@ def funnel(g, b):
     need_days, need = prep_days(g, b)
     dd = days_until(g.get("deadline"))
     recur = bool(RECUR.search(g.get("deadline_text") or "")) or g.get("deadline") is None
-    od, od_why = odds(g)
+    od, od_why = odds(g, b)
     why = yes + ([f"Matches {', '.join(hits)}"] if hits else []) + notes + [f"Odds: {od.lower()} ({od_why})"]
     if score < 50:
         return {"bucket": "Skip", "why": [f"Weak fit (score {score})"] + why, "score": score}
