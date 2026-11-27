@@ -1,5 +1,7 @@
 # Ready Room
 
+[![Tests](https://github.com/SosaARC/ready-room/actions/workflows/test.yml/badge.svg)](https://github.com/SosaARC/ready-room/actions/workflows/test.yml) [![Collect opportunities](https://github.com/SosaARC/ready-room/actions/workflows/collect.yml/badge.svg)](https://github.com/SosaARC/ready-room/actions/workflows/collect.yml)
+
 **One business profile and one document vault, reused for broker setup packets and grant applications.**
 
 Built by Jordan Hairston for 5908 Logistics, a box truck carrier in Winston-Salem, NC, and for the small business owners he helps find and apply for grants.

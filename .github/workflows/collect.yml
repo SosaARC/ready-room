@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: "17 9 * * *"   # 4:17 am Eastern
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "collector/**"
+      - ".github/workflows/collect.yml"
 
 permissions:
   contents: write
@@ -51,6 +56,8 @@ jobs:
     needs: collect
     if: ${{ always() && needs.collect.result == 'success' }}
     runs-on: ubuntu-latest
+    # Fails harmlessly until Pages is turned on (Settings > Pages > Source: GitHub Actions).
+    continue-on-error: true
     environment:
       name: github-pages
     steps:
