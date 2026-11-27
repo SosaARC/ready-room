@@ -177,7 +177,7 @@ const COI_STATES = ['Not requested','Requested from agent','Received'];
 const ENTITY = [['llc','LLC','for-profit'],['corp','Corporation','for-profit'],['sole','Sole proprietor','for-profit'],['partnership','Partnership','for-profit'],['np501c3','Nonprofit, 501(c)(3)','nonprofit'],['np_pending','Nonprofit, 501(c)(3) pending or fiscally sponsored','nonprofit'],['np_other','Nonprofit, other (501(c)(4), (c)(6))','nonprofit'],['gov','Government or school','government']];
 const FOCUS_OPTS = [['minority-owned','Minority-owned'],['women-owned','Women-owned'],['veteran','Veteran or military spouse owned'],['rural','Located in a rural area'],['agriculture','Farm or agriculture'],['local-service','Local service business (trucking, trades, food, retail)'],['research','Developing a new product or technology (R&D)'],['export','Sell or plan to sell outside the US'],['transportation','Transportation / logistics'],['workforce','Workforce / job training'],['energy','Energy / efficiency'],['disability-services','Provide disability or vocational rehab services'],['diesel-fleet','Own an older diesel truck or equipment to replace'],['arts','Artist or arts organization'],['youth-education','Youth or education'],['health','Health'],['low-income','Serve low-income residents'],['economic-mobility','Economic mobility / jobs'],['community-development','Community development']];
 const VIEWS = [['today','Today'],['all','All businesses'],['sep'],['profile','Profile'],['vault','Document vault'],['brokers','Broker setups'],['sep'],['shortlist','Shortlist'],['grants','Grant finder'],['answers','Answer bank'],['pipeline','Grant applications'],['sep'],['data','Your data']];
-const VIEW_KEYS = VIEWS.filter(v=>v[0]!=='sep').map(v=>v[0]);
+const VIEW_KEYS = VIEWS.filter(v=>v[0]!=='sep').map(v=>v[0]).concat(['start']);
 
 /* ---------- helpers ---------- */
 function safeJSON(t,f){try{return JSON.parse(t)}catch(e){return f}}
@@ -254,7 +254,7 @@ async function saveFile(filename,data,type){
 
 /* ---------- state + migration ---------- */
 const state = {businesses:{},activeId:null,view:'today',ui:{grantQ:'',grantLevel:'all',showLoans:false,onlyEligible:true,aiRank:{},gmail:null,gmailBusy:false,open:{}}};
-function blankProfile(name){return {name:name||'My business',ownerName:'',legalName:'',dba:'',entityType:'llc',state:'NC',county:'',city:'',address:'',founded:'',employees:'',revenue:'',budget:'',industry:'',naics:'',usdot:'',mc:'',authorityDate:'',ein:'',email:'',phone:'',website:'',focus:[],certs:'',uei:'',fundingUse:'',fundingAmount:'',equipment:'',homeBase:'',lanes:'',eld:'',factoring:'',afterHours:'',agentName:'',agentEmail:'',agentPhone:''}}
+function blankProfile(name){return {name:name||'My business',ownerName:'',samRegistered:false,fundingWhen:'',legalName:'',dba:'',entityType:'llc',state:'NC',county:'',city:'',address:'',founded:'',employees:'',revenue:'',budget:'',industry:'',naics:'',usdot:'',mc:'',authorityDate:'',ein:'',email:'',phone:'',website:'',focus:[],certs:'',uei:'',fundingUse:'',fundingAmount:'',equipment:'',homeBase:'',lanes:'',eld:'',factoring:'',afterHours:'',agentName:'',agentEmail:'',agentPhone:''}}
 function blankBiz(name){return {v:2,id:uid(),created:todayStr(),profile:blankProfile(name),documents:[],brokers:[],answers:{},pipeline:[],customGrants:[]}}
 function migrate(b){
   b.profile={...blankProfile(b.profile&&b.profile.name),...(b.profile||{})};
@@ -318,7 +318,7 @@ const BROAD_TAGS=new Set(['education','justice','disaster','health','community-d
 const DOC_NEED={business_plan:'a business plan',financials:'financial statements',tax_returns:'tax returns',budget:'a project budget',articles:'articles of organization',irs_501c3:'a 501(c)(3) letter (or a fiscal sponsor)',w9:'a W-9',good_standing:'a certificate of good standing',capability:'a capability statement',support_letters:'letters of support',hub_cert:'a small business certification',sam_uei:'a SAM.gov registration'};
 function prepDays(g,b){let base={federal:21,state:14,local:10,'national-private':4}[g.level]??10;if(g.type==='contract')base=10;const need=[];
   const missing=grantDocs(g).filter(d=>d.key&&!usable(haveValid(b,d.key))).map(d=>d.key);
-  if(g.level==='federal'&&!usable(haveValid(b,'sam_uei'))&&!String(b.profile.uei||'').trim()){base+=28;need.push('Register in SAM.gov and get a UEI (allow several weeks)')}
+  if(g.level==='federal'&&!usable(haveValid(b,'sam_uei'))&&!String(b.profile.uei||'').trim()&&!b.profile.samRegistered){base+=28;need.push('Register in SAM.gov and get a UEI (allow several weeks)')}
   const rest=missing.filter(m=>m!=='sam_uei');base+=3*rest.length;need.push(...rest.map(m=>'Get '+(DOC_NEED[m]||m)));
   if(g.cost_share){base+=5;need.push('Plan your match: this program requires cost share')}
   if(g.type!=='contract'&&Object.values(b.answers).filter(v=>String(v||'').trim().length>40).length<4){base+=5;need.push('Write the core answers in the answer bank (need, use of funds, impact)')}
@@ -342,7 +342,7 @@ function funnel(g,b){const a=assess(g,b);if(!a.ok)return {bucket:'skip',why:a.fl
 let _fc={key:null,val:null};
 function funnelAll(b){const key=JSON.stringify([b.id,b.profile,b.documents.map(d=>[d.type,d.expires]),Object.keys(b.answers).filter(k=>(b.answers[k]||'').length>40),b.customGrants.length,todayStr()]);if(_fc.key===key)return _fc.val;
   const out={apply:[],prepare:[],skip:[],skipWhy:{}};for(const g of allGrants()){const f=funnel(g,b);out[f.bucket].push({g,f});if(f.bucket==='skip'){const k=String(f.why[0]||'Other').split(':')[0].replace(/\s*\(.*$/,'').replace(/\s+[A-Z][a-z]{2} \d{1,2}, \d{4}$/,'').replace(/^For .+ only$/,'For another state only');out.skipWhy[k]=(out.skipWhy[k]||0)+1}}
-  out.apply.sort((x,y)=>y.f.score-x.f.score);out.prepare.sort((x,y)=>y.f.score-x.f.score);_fc={key,val:out};return out}
+  if(b.profile.fundingWhen==='soon')out.apply.forEach(x=>{const dd=daysUntil(x.g.deadline);x.f.score+=(x.g.level==='local'||x.g.level==='national-private'?8:0)+(dd!=null&&dd<=60?6:0)});out.apply.sort((x,y)=>y.f.score-x.f.score);out.prepare.sort((x,y)=>y.f.score-x.f.score);_fc={key,val:out};return out}
 function viewShortlist(){
   const b=biz(),F=funnelAll(b),inPipe=new Set(b.pipeline.map(p=>p.grantId)),total=allGrants().length;
   const card=({g,f})=>{const url=safeUrl(g.url);return `<div class="card gcard"><div class="row between"><h3>${esc(g.name)}</h3><span class="chip ${f.odds==='Better'?'ok':f.odds==='Long shot'?'warn':''}">${esc(f.odds||'')}</span></div>
@@ -353,7 +353,8 @@ function viewShortlist(){
    <div class="row" style="margin-top:10px">${inPipe.has(g.id)?'<span class="chip ink">Tracking</span>':`<button class="sm primary" data-act="grantSave" data-id="${esc(g.id)}">Track this</button>`}${url?`<a class="btn sm" href="${esc(url)}" target="_blank" rel="noopener">Official page</a>`:''}</div></div>`};
   const skipRows=Object.entries(F.skipWhy).sort((x,y)=>y[1]-x[1]).slice(0,10);
   const upd=LIVE_STATUS.run_at?`Federal data updated ${esc(fmtDate(String(LIVE_STATUS.run_at).slice(0,10)))}.`:'';
-  return `<h1>Shortlist</h1><p class="lede">Every grant and contract Ready Room knows about, narrowed to the ones ${esc(b.profile.name)} can win: can you apply, does it fit, and is there time to prepare given your documents and registrations. ${upd}</p>
+  const whenNote=b.profile.fundingWhen==='soon'?`<p class="sample" style="background:var(--okbg);color:var(--ok)">You need funding within 3 months, so start at the top of Apply now. Most grants take 2 to 6 months from application to payment, so local and private programs with quick decisions are your best bet.</p>`:'';
+  return `<h1>Shortlist</h1>${whenNote}<p class="lede">Every grant and contract Ready Room knows about, narrowed to the ones ${esc(b.profile.name)} can win: can you apply, does it fit, and is there time to prepare given your documents and registrations. ${upd}</p>
   <section class="hero"><div class="num"><span class="small">Apply now</span><b>${F.apply.length}</b><p class="small">Eligible, a good fit, and enough time.</p></div><div class="num" style="background:var(--soft);color:var(--ink)"><span class="small">Prepare for</span><b>${F.prepare.length}</b><p class="small">Eligible, but you need time, a registration or a next round.</p></div>
   <div class="list"><div class="small muted" style="margin-bottom:6px">Checked ${total} opportunities. Skipped ${F.skip.length}:</div>${skipRows.map(([k,v])=>`<div class="row between small" style="padding:3px 0"><span>${esc(k)}</span><b>${v}</b></div>`).join('')}</div></section>
   <h2 style="margin:6px 0 10px">Apply now</h2><div class="grid g2">${F.apply.slice(0,30).map(card).join('')||'<div class="empty">Nothing is ready to apply for yet. Check "Prepare for" below.</div>'}</div>
@@ -370,13 +371,14 @@ function renderRail(){
 }
 function render(){
   renderRail();
+  if(state.view==='start'){$('#view').innerHTML=viewStart();return}
   if(!biz()){$('#view').innerHTML=viewWelcome();return}
   const fn={shortlist:viewShortlist,today:viewToday,all:viewAll,profile:viewProfile,vault:viewVault,brokers:viewBrokers,grants:viewGrants,answers:viewAnswers,pipeline:viewPipeline,data:viewData}[state.view]||viewToday;
   $('#view').innerHTML=fn();
 }
 function viewWelcome(){return `<h1>Keep your business ready to hand over.</h1>
 <p class="lede">Ready Room keeps one profile and one set of documents for each business, then reuses them for broker setups and grant applications. Start with your business, or load a sample to look around.</p>
-<div class="row"><button class="primary" data-act="newBiz">Add my business</button><button data-act="loadSample">Load sample business</button></div><div class="card soft" style="margin-top:18px;max-width:520px"><label for="restoreFile">Have a starter or backup file? Load it here</label><input type="file" id="restoreFile" accept=".json,application/json"></div>`}
+<div class="row"><a class="btn primary" href="#start">Find grants for my business (2 minutes)</a><button data-act="newBiz">Start with a blank profile</button><button class="ghost" data-act="loadSample">Load a sample</button></div><div class="card soft" style="margin-top:18px;max-width:520px"><label for="restoreFile">Have a starter or backup file? Load it here</label><input type="file" id="restoreFile" accept=".json,application/json"></div>`}
 
 /* ---------- attention items (one business) ---------- */
 function attention(b){
@@ -393,6 +395,51 @@ function attention(b){
   for(const k in missBy){const n=missBy[k];items.push({c:'warn',t:`${DT[k]?.l||k} ${haveValid(b,k)==='expired'?'expired':'missing'}: holds up ${n.length>2?n.length+' setups':n.join(' and ')}`,go:'vault'})}
   for(const g of b.pipeline){if(!ACTIVE.has(g.status))continue;for(const [k,l] of [['deadline','due'],['docsDue','client documents due'],['draftDue','draft due'],['reportDue','report due']]){const n=daysUntil(g[k]);if(n!=null&&n>=0&&n<=30)items.push({c:n<=7?'bad':'warn',t:`${g.name}: ${l} in ${n} days`,go:'pipeline',date:g[k]})}}
   return items;
+}
+
+/* ---------- Quick start ---------- */
+const COUNTIES_NC=['Alamance','Alexander','Alleghany','Anson','Ashe','Avery','Beaufort','Bertie','Bladen','Brunswick','Buncombe','Burke','Cabarrus','Caldwell','Camden','Carteret','Caswell','Catawba','Chatham','Cherokee','Chowan','Clay','Cleveland','Columbus','Craven','Cumberland','Currituck','Dare','Davidson','Davie','Duplin','Durham','Edgecombe','Forsyth','Franklin','Gaston','Gates','Graham','Granville','Greene','Guilford','Halifax','Harnett','Haywood','Henderson','Hertford','Hoke','Hyde','Iredell','Jackson','Johnston','Jones','Lee','Lenoir','Lincoln','Macon','Madison','Martin','McDowell','Mecklenburg','Mitchell','Montgomery','Moore','Nash','New Hanover','Northampton','Onslow','Orange','Pamlico','Pasquotank','Pender','Perquimans','Person','Pitt','Polk','Randolph','Richmond','Robeson','Rockingham','Rowan','Rutherford','Sampson','Scotland','Stanly','Stokes','Surry','Swain','Transylvania','Tyrrell','Union','Vance','Wake','Warren','Washington','Watauga','Wayne','Wilkes','Wilson','Yadkin','Yancey'];
+function viewStart(){
+  const quickFocus=FOCUS_OPTS.filter(f=>['minority-owned','women-owned','veteran','rural','local-service','transportation','youth-education','health','arts','agriculture','research','community-development','workforce','low-income'].includes(f[0]));
+  return `<h1>Find grants you can actually win</h1><p class="lede">Answer a few questions. Ready Room checks every grant it knows about, local, North Carolina, federal and national, and shows the ones you can apply for now, the ones to prepare for, and why the rest don't fit. Your answers stay in this browser${store.mode==='cloud'?' and your private Claude account':''}.</p>
+  <form id="startForm" class="grid" style="max-width:760px">
+   <div class="card"><h2 style="margin-bottom:10px">1. Who you are</h2>
+    <div class="field"><label for="s_name">Business or organization name</label><input id="s_name" name="name" required autocomplete="organization"></div>
+    <div class="field"><label for="s_et">Type</label><select id="s_et" name="et">${ENTITY.map(([v,l])=>`<option value="${v}">${esc(l)}</option>`).join('')}</select></div></div>
+   <div class="card"><h2 style="margin-bottom:10px">2. Where you are</h2>
+    <div class="grid g3"><div class="field"><label for="s_city">City</label><input id="s_city" name="city" required autocomplete="address-level2"></div>
+    <div class="field"><label for="s_county">County</label><input id="s_county" name="county" list="ncCounties" placeholder="Forsyth"><datalist id="ncCounties">${COUNTIES_NC.map(c=>`<option value="${c}">`).join('')}</datalist></div>
+    <div class="field"><label for="s_state">State</label><input id="s_state" name="state" value="NC" required></div></div></div>
+   <div class="card"><h2 style="margin-bottom:10px">3. What you do</h2>
+    <div class="field"><label for="s_ind">In a few words</label><input id="s_ind" name="industry" required placeholder="After-school tutoring, box truck freight, home health care…"></div>
+    <fieldset style="border:0;padding:0;margin:0"><legend class="small" style="font-weight:500;margin-bottom:4px">Check everything that's true</legend><div class="grid g2" style="gap:0 14px">${quickFocus.map(([k,l])=>`<label class="check"><input type="checkbox" name="focus" value="${k}"> ${esc(l)}</label>`).join('')}</div></fieldset></div>
+   <div class="card"><h2 style="margin-bottom:10px">4. Size</h2>
+    <div class="grid g3"><div class="field"><label for="s_founded">Year started</label><input id="s_founded" name="founded" type="number" min="1800" max="2100" inputmode="numeric"></div>
+    <div class="field"><label for="s_emp">People working, including you</label><input id="s_emp" name="employees" type="number" min="0" inputmode="numeric"></div>
+    <div class="field"><label for="s_rev">Annual revenue or budget</label><input id="s_rev" name="revenue" placeholder="$120,000"></div></div></div>
+   <div class="card"><h2 style="margin-bottom:10px">5. What the money is for</h2>
+    <div class="field"><label for="s_use">What would you do with a grant?</label><textarea id="s_use" name="fundingUse" style="min-height:80px" placeholder="Buy a second truck, expand tutoring to two schools, hire a part-time nurse…"></textarea></div>
+    <div class="grid g2"><div class="field"><label for="s_amt">About how much?</label><input id="s_amt" name="fundingAmount" placeholder="$25,000"></div>
+    <div class="field"><label for="s_when">When do you need it?</label><select id="s_when" name="when"><option value="">No set timeline</option><option value="soon">Within 3 months</option><option value="year">In the next year</option></select></div></div></div>
+   <div class="card"><h2 style="margin-bottom:10px">6. What you already have</h2><p class="small muted" style="margin-top:0">These decide which grants you can apply for in time.</p>
+    <label class="check"><input type="checkbox" name="sam"> Registered in SAM.gov (have a UEI). Needed for every federal grant or contract.</label>
+    <label class="check"><input type="checkbox" name="has" value="irs_501c3"> IRS 501(c)(3) letter</label>
+    <label class="check"><input type="checkbox" name="has" value="business_plan"> A written business plan</label>
+    <label class="check"><input type="checkbox" name="has" value="financials"> Recent financial statements</label>
+    <label class="check"><input type="checkbox" name="has" value="budget"> A budget for what you want to fund</label>
+    <label class="check"><input type="checkbox" name="has" value="hub_cert"> A certification (NCSBE, MBE, WBE, DBE, 8(a))</label></div>
+   <div class="row"><button class="primary" type="submit">Show my grants</button><a class="btn ghost" href="#today">Cancel</a></div>
+  </form>`;
+}
+function startSubmit(fd){
+  const nb=blankBiz(String(fd.get('name')||'').trim()||'My business');const p=nb.profile;
+  const et=String(fd.get('et')||'llc');if(ENTITY.some(e=>e[0]===et))p.entityType=et;
+  for(const k of ['city','county','state','industry','founded','employees','fundingUse','fundingAmount'])p[k]=String(fd.get(k)||'').trim();
+  const rev=String(fd.get('revenue')||'').trim();if(entClass(p)==='nonprofit')p.budget=rev;else p.revenue=rev;
+  p.focus=fd.getAll('focus').filter(f=>FOCUS_OPTS.some(x=>x[0]===f));p.fundingWhen=String(fd.get('when')||'');p.samRegistered=!!fd.get('sam');
+  for(const k of fd.getAll('has'))if(isDT(k))nb.documents.push({id:uid(),type:k,title:'From quick start: confirm details',issuer:'',issued:'',expires:k==='hub_cert'?'':'',link:'',where:'',notes:'Added from quick start. Add the date and where the file is.'});
+  if(p.samRegistered)nb.documents.push({id:uid(),type:'sam_uei',title:'SAM.gov registration (from quick start)',issuer:'GSA',issued:'',expires:'',link:'',where:'SAM.gov',notes:'Add the expiration date. Registrations renew every year.'});
+  state.businesses[nb.id]=nb;setActive(nb.id);store.save(nb);go('shortlist');render();
 }
 
 /* ---------- Today ---------- */
@@ -496,6 +543,7 @@ function viewProfile(){
    ${f('agentName','Agent and agency')}<div class="grid g2">${f('agentEmail','Agent email','email')}${f('agentPhone','Agent phone','tel')}</div>
   </details>
   <div class="card" style="margin-top:14px"><h2 style="margin-bottom:12px">Grant matching</h2>
+   <label class="check"><input type="checkbox" data-pfc="samRegistered" ${p.samRegistered?'checked':''}> Registered in SAM.gov (have a UEI)</label>
    ${f('certs','Certifications','text','NCSBE, MBE, DBE, 8(a)…')}
    ${FOCUS_OPTS.map(([k,l])=>`<label class="check"><input type="checkbox" data-focus="${k}" ${p.focus.includes(k)?'checked':''}> ${esc(l)}</label>`).join('')}
    <div class="field" style="margin-top:10px"><label for="p_fundingUse">What would you use funding for?</label><textarea id="p_fundingUse" data-pf="fundingUse" placeholder="Second box truck, driver hiring, equipment, training…">${esc(p.fundingUse)}</textarea></div>
@@ -871,7 +919,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDlg()});
 document.addEventListener('toggle',e=>{const d=e.target;if(d.dataset&&d.dataset.open)state.ui.open[d.dataset.open]=d.open},true);
 const P=id=>biz().pipeline.find(x=>x.id===id);
 const actions={
-  newBiz(){openDlg(`<h2 style="margin-bottom:12px">New business</h2><form id="newBizForm"><div class="field"><label for="nb">Name</label><input id="nb" name="name" required placeholder="5908 Logistics"></div><div class="field"><label for="nbt">Type</label><select id="nbt" name="et">${ENTITY.map(([v,l])=>`<option value="${v}">${esc(l)}</option>`).join('')}</select></div><div class="row"><button class="primary" type="submit">Create</button><button type="button" data-act="closeDlg">Cancel</button></div></form>`)},
+  newBiz(){openDlg(`<h2 style="margin-bottom:12px">New business</h2><form id="newBizForm"><p class="small"><a href="#start" data-act="closeDlg">Or answer a few quick questions instead</a> and go straight to matching grants.</p><div class="field"><label for="nb">Name</label><input id="nb" name="name" required placeholder="5908 Logistics"></div><div class="field"><label for="nbt">Type</label><select id="nbt" name="et">${ENTITY.map(([v,l])=>`<option value="${v}">${esc(l)}</option>`).join('')}</select></div><div class="row"><button class="primary" type="submit">Create</button><button type="button" data-act="closeDlg">Cancel</button></div></form>`)},
   loadSample(){const b=sampleBiz();state.businesses[b.id]=b;setActive(b.id);store.save(b);go('today');render();toast('Sample business loaded')},
   pickBiz(el){setActive(el.dataset.id);render()},
   closeDlg,
@@ -939,6 +987,7 @@ document.addEventListener('submit',e=>{
   if(f.id==='brokerDocs'){const br=b.brokers.find(x=>x.id===f.dataset.id);if(br){br.required=fd.getAll('req');br.kind=String(fd.get('kind'))}touch();closeDlg();render();return}
   if(f.id==='grantForm'){b.customGrants.push({id:'c_'+uid(),custom:true,name:String(fd.get('name')),funder:String(fd.get('funder')||''),level:'custom',region:'',eligible_entities:String(fd.get('ent')).split(','),focus:[],must_have_any:[],excludes_any:[],amount_text:String(fd.get('amount_text')||''),deadline:String(fd.get('deadline')||'')||null,deadline_text:'',requirements:[],documents_typically_needed:[],is_loan:!!fd.get('is_loan'),kind:'grant',url:String(fd.get('url')||''),notes:String(fd.get('notes')||'')});touch();closeDlg();render();toast('Added');return}
   if(f.id==='coiAllForm'){const ids=fd.getAll('br');if(!ids.length){toast('Pick at least one broker');return}state.ui.coiIds=ids;const t=coiAllEmail(ids);const miss=biz().brokers.filter(x=>ids.includes(x.id)&&!x.holder).length;openDlg(`<h2 style="margin-bottom:6px">Email to your agent</h2>${miss?`<p class="small"><span class="chip warn">${miss} without a holder address</span> Add them to the email before you send.</p>`:''}<textarea style="min-height:280px" aria-label="Email text" id="coiText">${esc(t)}</textarea><div class="row" style="margin-top:10px"><button class="primary" data-act="coiCopy">Copy email</button><button data-act="coiMark">I sent it: mark as requested</button><button class="ghost" data-act="closeDlg">Close</button></div>`,{focus:false});return}
+  if(f.id==='startForm'){startSubmit(fd);return}
   if(f.id==='intakeForm'){intakeFill(String(fd.get('t')||''));return}
   if(f.classList.contains('ckAdd')){const p=P(f.dataset.id);const l=String(fd.get('label')||'').trim();if(p&&l){p.checklist.push({label:l,key:null,done:false});state.ui.open['c'+p.id]=true;touch();render()}return}
   if(f.id==='importForm'){restoreJSON(String(fd.get('json')));return}
@@ -958,6 +1007,7 @@ document.addEventListener('change',e=>{
   const el=e.target,b=biz();
   if(el.id==='restoreFile'&&el.files[0]){el.files[0].text().then(t=>restoreJSON(t)).catch(()=>toast('That file could not be read'));return}
   if(!b)return;
+  if(el.dataset.pfc){b.profile[el.dataset.pfc]=el.checked;touch();return}
   if(el.dataset.focus){const s=new Set(b.profile.focus);el.checked?s.add(el.dataset.focus):s.delete(el.dataset.focus);b.profile.focus=[...s];touch();return}
   if(el.dataset.pf==='entityType'||el.dataset.pf==='authorityDate'){b.profile[el.dataset.pf]=el.value;touch();if(el.dataset.pf==='entityType')render();return}
   if(el.dataset.bf==='agreement'){const br=b.brokers.find(x=>x.id===el.dataset.id);if(br){br.agreement=el.checked;touch()}return}

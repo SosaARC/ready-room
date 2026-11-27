@@ -4,7 +4,7 @@
   "description": "One business profile and document vault, reused for broker setups and grant applications.",
   "scripts": {
     "build": "python3 build.py",
-    "test": "python3 build.py && node tests/app.test.js dist/index.html && node tests/unit.test.js dist/index.html && node tests/round4.test.js dist/index.html tests/fixtures/starter.json && node tests/round5.test.js dist/index.html tests/fixtures/starter.json && node tests/shortlist.test.js dist/index.html tests/fixtures/live_sample.json && python3 -m unittest tests/test_collector.py",
+    "test": "python3 build.py && node tests/app.test.js dist/index.html && node tests/unit.test.js dist/index.html && node tests/round4.test.js dist/index.html tests/fixtures/starter.json && node tests/round5.test.js dist/index.html tests/fixtures/starter.json && node tests/quickstart.test.js dist/index.html && node tests/shortlist.test.js dist/index.html tests/fixtures/live_sample.json && python3 -m unittest tests/test_collector.py",
     "test:browser": "node tests/browser-focus.js $PWD/dist/index.html && node tests/browser-mobile-width.js $PWD/dist/index.html"
   },
   "devDependencies": {

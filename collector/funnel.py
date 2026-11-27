@@ -162,7 +162,7 @@ def prep_days(g, b):
     need = []
     docs = [DOC_MAP.get(d.lower()) for d in g.get("documents_typically_needed") or []]
     missing = [d for d in docs if d and not has_doc(b, d)]
-    if level == "federal" and not has_doc(b, "sam_uei") and not b["profile"].get("uei"):
+    if level == "federal" and not has_doc(b, "sam_uei") and not b["profile"].get("uei") and not b["profile"].get("samRegistered"):
         base += 28
         need.append("Register in SAM.gov and get a UEI (allow several weeks)")
     base += 3 * len([m for m in missing if m != "sam_uei"])
