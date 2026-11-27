@@ -1,0 +1,27 @@
+{
+ "run_at": "2026-11-27T02:27:03+00:00",
+ "sources": {
+  "grants.gov": {
+   "ok": true,
+   "count": 997
+  },
+  "sbir.gov": {
+   "ok": false,
+   "error": "unavailable",
+   "kept_from_last_run": 0
+  },
+  "sam.gov contracts": {
+   "ok": true,
+   "count": 0
+  },
+  "sam.gov assistance listings": {
+   "ok": true,
+   "count": 0
+  }
+ },
+ "total": 997,
+ "new": 997,
+ "removed": 0,
+ "pages_changed": 0,
+ "pages_unchecked": 26
+}
