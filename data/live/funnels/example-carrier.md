@@ -1,6 +1,6 @@
 # Funnel for 5908 Logistics, 2026-11-27
 
-Checked **1061** opportunities: **4** apply now, **765** prepare for, **292** skipped.
+Checked **1061** opportunities: **4** apply now, **5** prepare for, **1052** skipped.
 
 ## Apply now
 
@@ -60,74 +60,16 @@ Checked **1061** opportunities: **4** apply now, **765** prepare for, **292** sk
   - Write the core answers (need, use of funds, impact)
   - Open to for-profit applicants
   - Odds: long shot (National program with many applicants per award)
-- **Medical Scientist Training Program (MSTP) (T32)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/352810)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **HEAL Initiative: Integrative Management of Chronic Pain and OUD for Whole Recovery (IMPOWR): Research Centers (RM1 Clinical Trial Required)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/360048)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **HEAL Initiative: Integrative Management of chronic Pain and OUD for Whole Recovery (IMPOWR) - Building Engagement, Assistance, Capacity, Outreach, and Networks (BEACON) Center (U2C Clinical Trial Not Allowed)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/360366)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **National Centers for Cryo-electron Tomography (cryoET) (R24 -Clinical Trial Not Allowed)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/359656)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **Diabetes Research Centers (P30 Clinical Trial Optional)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/359145)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **Specialized Alcohol Research Centers (P50 Clinical trial Optional)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/361216)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **BRAIN Initiative: Preclinical Proof of Concept for Novel Recording and Modulation Technologies in the Human CNS (R18 - Clinical Trial Not Allowed)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/353055)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **Translational Neural Devices (R61/R33 - Clinical Trial Optional)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/356903)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **Immune Tolerance Network (UM1 Clinical Trial Required)** (HHS-NIH11, grant) [grants.gov](https://www.grants.gov/search-results-detail/362946)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
-- **Minor Use Minor Species Development of Drugs (R01)** (HHS-FDA, grant) [grants.gov](https://www.grants.gov/search-results-detail/354573)
-  - Register in SAM.gov and get a UEI (allow several weeks)
-  - Get a project budget
-  - Write the core answers (need, use of funds, impact)
-  - Open to for-profit applicants
-  - Odds: fair (Competitive national pool)
 
 ## Why the rest were skipped
 
 | Reason | Count |
 | --- | ---: |
+| Only for | 695 |
 | Nonprofits or governments only | 212 |
-| Not enough time | 56 |
-| Only for | 13 |
+| No match to your focus areas | 126 |
 | Outside your area | 6 |
+| Notice or request for information, not a funding call | 5 |
 | Closed | 3 |
+| For Alaska only | 3 |
 | Excludes | 2 |
