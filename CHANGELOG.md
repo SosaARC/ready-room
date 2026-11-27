@@ -118,3 +118,29 @@ The goal changed from "a curated catalog" to "every grant we can find, narrowed 
 - **Scale.** The grant finder now pages 60 at a time. A simulated nightly run of 1,500 federal records renders the Shortlist in about 65 ms in tests.
 - **First real result (curated catalog only, before the first nightly run):** 5908 Logistics has 4 to apply for now, 5 to prepare for, and 55 skipped. Most skips were nonprofit-only programs (31). The funnel's clearest finding: without a SAM.gov registration, a one-truck carrier can't meet a typical 30-day federal contract deadline. Registering early is what opens up federal work.
 - Tests: 12 offline collector and funnel tests using recorded-shape API responses, and 8 Shortlist checks. 73 app checks in all.
+
+## Round 7: the first real collection (Nov 27, 2026)
+
+The collector ran on GitHub for the first time and pulled 997 open and forecasted federal grants from Grants.gov. SBIR.gov was down, as its site warns, and the run kept going. SAM.gov returned nothing yet because the key isn't set.
+
+**What the real data showed, and what changed**
+- *Most of the 997 were NIH and other medical research. Title-only matching let research grants into a trucking company's list:* "Career Transition" matched transport, molecular "transporters" matched transport, and NIH small-business research awards matched small business. Fixes:
+  - The collector tags every grant by topic from its title and agency.
+  - Anything from NIH or NSF, or with a research award code (R01, K22, R41/R42...), now requires a research focus.
+  - "Transport" and "transit" must be whole words.
+- *Collected grants with no topic overlap still reached the Shortlist.* A collected grant now needs at least one match to the business's focus areas. Broad topics like health, environment or community development need two.
+- *A youth nonprofit was matched to health programs that mention "education" or "children."* The youth and education tag now requires youth-specific words: school, student, youth, literacy, tutoring, teacher, Head Start.
+- *Grants named for one state (Alaska, Hawaii, Puerto Rico...) showed up for NC businesses.* They now say "For Alaska only" and are skipped.
+- *Notices of intent and requests for information looked like funding.* They're labeled and skipped.
+- *Funders showed as codes like HHS-NIH11.* They now show the agency name, and stray HTML codes in titles are cleaned up.
+
+**Results against the real data (1,061 opportunities):**
+
+| Business | Apply now | Prepare for | Skipped |
+| --- | ---: | ---: | ---: |
+| 5908 Logistics (one-truck carrier, Forsyth County) | 4 | 5 | 1,052 |
+| Example youth literacy nonprofit (Greensboro, 501(c)(3), SAM-registered) | 21 | 3 | 1,037 |
+
+The carrier gets no federal grants, which is the right answer: nearly all federal grants are for nonprofits, governments or researchers. For a small carrier, the federal opportunity is contracts, and those arrive once the SAM.gov key is added.
+
+**The limit of this approach:** title matching still lets through stretches, like an HIV program for the literacy nonprofit. The next step is reading each grant's full description and eligibility section, not just its title.

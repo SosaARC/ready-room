@@ -48,6 +48,23 @@ class GrantsGov(unittest.TestCase):
             grants_gov.collect(fetch=lambda *a, **k: {"errorcode": 1, "msg": "bad"}, log=lambda *_: None)
 
 
+class Tagging(unittest.TestCase):
+    def test_topics_and_research_filters(self):
+        from collector.common import MECHANISM, RESEARCH_AGENCY, tag_text
+        import re
+        self.assertIn("transportation", tag_text("Commercial Motor Vehicle Operator Safety Training Grant", "DOT-FMCSA"))
+        self.assertNotIn("transportation", tag_text("Career Transition Award (K22)"))
+        self.assertNotIn("transportation", tag_text("Role of Transporters in the Placenta"))
+        self.assertTrue(re.search(MECHANISM, "Small Business Transition Grant (Parent R41/R42 Clinical Trial Optional)", re.I))
+        self.assertFalse(re.search(MECHANISM, "Rural Business Development Grants", re.I))
+        self.assertTrue(re.search(RESEARCH_AGENCY, "National Science Foundation"))
+
+    def test_agency_codes_become_names(self):
+        self.assertEqual(grants_gov.agency_name("", "HHS-NIH11"), "National Institutes of Health")
+        self.assertEqual(grants_gov.agency_name("Department of Transportation", "DOT"), "Department of Transportation")
+        self.assertEqual(grants_gov.agency_name("", "USDA-RBCS"), "Department of Agriculture")
+
+
 class Sam(unittest.TestCase):
     def test_skips_without_key(self):
         with mock.patch.dict(os.environ, {"SAM_API_KEY": ""}):

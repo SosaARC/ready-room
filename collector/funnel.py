@@ -27,6 +27,7 @@ DOC_MAP = {"business plan": "business_plan", "financial statements": "financials
            "articles of incorporation": "articles", "501c3 letter": "irs_501c3", "w-9": "w9", "certificate of good standing": "good_standing",
            "capability statement": "capability", "letters of support": "support_letters", "hub certification": "hub_cert",
            "duns/uei + sam registration": "sam_uei"}
+BROAD_TAGS = {"health", "community-development", "environment", "rural", "energy", "research", "low-income", "economic-mobility"}
 RECUR = re.compile(r"monthly|rolling|annual|twice a year|each year|quarterly|ongoing", re.I)
 DOC_LABEL = {"business_plan": "a business plan", "financials": "financial statements", "tax_returns": "tax returns", "budget": "a project budget", "articles": "articles of organization", "irs_501c3": "a 501(c)(3) letter (or a fiscal sponsor)", "w9": "a W-9", "good_standing": "a certificate of good standing", "capability": "a capability statement", "support_letters": "letters of support", "hub_cert": "a small business certification", "sam_uei": "a SAM.gov registration"}
 EXPIRING = {"coi", "ucr", "mcs150", "med_card", "license", "registration", "dot_inspection", "good_standing", "business_license", "hub_cert", "sam_uei"}
@@ -173,7 +174,20 @@ def funnel(g, b):
         return {"bucket": "Skip", "why": no, "score": 0}
     if g.get("type") == "program":
         return {"bucket": "Skip", "why": ["Program listing, not an open call: watch for its next notice"], "score": 0}
+    if g.get("type") == "notice":
+        return {"bucket": "Skip", "why": ["Notice or request for information, not a funding call"], "score": 0}
     score, hits = fit(g, b)
+    if g.get("source", "curated") not in ("curated", ""):
+        reg = str(g.get("region") or "US")
+        st = str(b["profile"].get("state") or "").upper()
+        if reg != "US" and g.get("level") == "federal" and g.get("type") != "contract":
+            from .common import US_STATES
+            if reg in US_STATES and not (st in ("NC", "NORTH CAROLINA") and reg == "North Carolina"):
+                return {"bucket": "Skip", "why": [f"For {reg} only"], "score": 0}
+        if not hits:
+            return {"bucket": "Skip", "why": ["No match to your focus areas"], "score": 0}
+        if len(hits) < 2 and hits[0] in BROAD_TAGS and g.get("type") != "contract":
+            return {"bucket": "Skip", "why": [f"Weak match (only {hits[0]})"], "score": 0}
     need_days, need = prep_days(g, b)
     dd = days_until(g.get("deadline"))
     recur = bool(RECUR.search(g.get("deadline_text") or "")) or g.get("deadline") is None

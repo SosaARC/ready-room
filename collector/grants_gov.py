@@ -4,7 +4,11 @@ Uses the public search2 API (POST https://api.grants.gov/v1/api/search2, no key)
 search2 returns ids, titles, agencies and dates, but not eligibility, so we run one
 search per applicant group and record which groups each opportunity appeared under.
 """
-from .common import http, mdy_to_iso, record
+import re
+
+import html
+
+from .common import MECHANISM, NOT_FUNDING, RESEARCH_AGENCY, http, mdy_to_iso, record, state_in_title, tag_text
 
 API = "https://api.grants.gov/v1/api/search2"
 
@@ -17,6 +21,26 @@ GROUPS = {
     "tribal": ["07", "11"],
     "any": ["99"],                          # unrestricted
 }
+AGENCY_NAMES = {"HHS": "Department of Health and Human Services", "NIH": "National Institutes of Health", "NSF": "National Science Foundation",
+    "DOT": "Department of Transportation", "USDA": "Department of Agriculture", "DOE": "Department of Energy", "EPA": "Environmental Protection Agency",
+    "DOJ": "Department of Justice", "ED": "Department of Education", "DOL": "Department of Labor", "HUD": "Department of Housing and Urban Development",
+    "DOC": "Department of Commerce", "SBA": "Small Business Administration", "NEA": "National Endowment for the Arts", "NEH": "National Endowment for the Humanities",
+    "IMLS": "Institute of Museum and Library Services", "DOI": "Department of the Interior", "DHS": "Department of Homeland Security", "VA": "Department of Veterans Affairs",
+    "DOD": "Department of Defense", "DOS": "Department of State", "USAID": "U.S. Agency for International Development", "NASA": "NASA", "CNCS": "AmeriCorps"}
+
+
+def agency_name(name, code):
+    """Grants.gov sometimes returns only a code like HHS-NIH11. Turn it into a readable name."""
+    if name and not __import__("re").fullmatch(r"[A-Z0-9-]+", name.strip()):
+        return name.strip()
+    c = (code or name or "").upper()
+    parts = [p for p in __import__("re").split(r"[-\d]+", c) if p]
+    names = [AGENCY_NAMES[p] for p in parts if p in AGENCY_NAMES]
+    if not names:
+        return code or name or "Federal agency"
+    return names[-1] if len(names) > 1 and names[0].startswith("Department of Health") else names[0]
+
+
 PAGE = 250
 MAX_PER_GROUP = 3000
 
@@ -46,11 +70,17 @@ def collect(fetch=http, log=print):
                 rec = seen.get(oid)
                 if rec is None:
                     status = h.get("oppStatus", "")
+                    title = re.sub(r"[\u200b\ufeff]", "", html.unescape(h.get("title") or "")).strip()
+                    only_state = state_in_title(title)
+                    agency = agency_name(h.get("agencyName") or h.get("agency") or "", h.get("agencyCode", ""))
+                    focus = tag_text(title, agency, h.get("agencyCode", ""))
+                    research_only = bool(re.search(MECHANISM, title, re.I)) or bool(re.search(RESEARCH_AGENCY, f"{agency} {h.get('agencyCode', '')}")) or ("research" in focus and not any(t in focus for t in ("small-business", "transportation", "workforce", "community-development")))
                     close = mdy_to_iso(h.get("closeDate"))
                     rec = record(
                         id=f"gg-{oid}", source="grants.gov", source_id=oid,
-                        name=h.get("title", "").strip(), funder=h.get("agencyName") or h.get("agencyCode", ""),
-                        level="federal", region="US", type="grant",
+                        name=title, funder=agency,
+                        level="federal", region=only_state or "US", type="notice" if re.search(NOT_FUNDING, title, re.I) else "grant",
+                        focus=focus, must_have_any=["research"] if research_only else [],
                         deadline=close,
                         deadline_text="Forecasted; dates not set yet" if status == "forecasted" else ("" if close else "See notice"),
                         url=f"https://www.grants.gov/search-results-detail/{oid}",

@@ -1,0 +1,102 @@
+{
+ "v": 3,
+ "id": "examplenp",
+ "created": "2026-11-27",
+ "profile": {
+  "name": "Example Youth Literacy Nonprofit",
+  "legalName": "Example Youth Literacy Inc.",
+  "dba": "",
+  "ownerName": "Executive Director",
+  "entityType": "np501c3",
+  "state": "NC",
+  "county": "Guilford",
+  "city": "Greensboro",
+  "address": "",
+  "founded": "2016",
+  "employees": "6",
+  "revenue": "",
+  "budget": "$420,000",
+  "industry": "After-school literacy and tutoring",
+  "naics": "",
+  "usdot": "",
+  "mc": "",
+  "authorityDate": "",
+  "ein": "",
+  "email": "",
+  "phone": "",
+  "website": "",
+  "focus": [
+   "youth-education",
+   "low-income",
+   "community-development"
+  ],
+  "certs": "",
+  "uei": "EXAMPLEUEI12",
+  "fundingUse": "Expand tutoring to two more schools and train volunteer tutors.",
+  "fundingAmount": "$50,000",
+  "equipment": "",
+  "homeBase": "",
+  "lanes": "",
+  "eld": "",
+  "factoring": "",
+  "afterHours": "",
+  "agentName": "",
+  "agentEmail": "",
+  "agentPhone": ""
+ },
+ "documents": [
+  {
+   "id": "n1",
+   "type": "irs_501c3",
+   "title": "IRS determination letter",
+   "issuer": "IRS",
+   "issued": "2016-05-01",
+   "expires": "",
+   "link": "",
+   "where": "",
+   "notes": ""
+  },
+  {
+   "id": "n2",
+   "type": "budget",
+   "title": "FY27 budget",
+   "issuer": "",
+   "issued": "2026-07-01",
+   "expires": "",
+   "link": "",
+   "where": "",
+   "notes": ""
+  },
+  {
+   "id": "n3",
+   "type": "financials",
+   "title": "FY26 audit",
+   "issuer": "",
+   "issued": "2026-10-01",
+   "expires": "",
+   "link": "",
+   "where": "",
+   "notes": ""
+  },
+  {
+   "id": "n4",
+   "type": "sam_uei",
+   "title": "SAM.gov registration",
+   "issuer": "GSA",
+   "issued": "2026-03-01",
+   "expires": "2027-03-01",
+   "link": "",
+   "where": "",
+   "notes": ""
+  }
+ ],
+ "brokers": [],
+ "answers": {
+  "mission": "We help Greensboro students in grades 2 to 5 read on grade level through free after-school tutoring.",
+  "need": "Fewer than half of third graders in our partner schools read on grade level, and families cannot afford private tutoring.",
+  "use_of_funds": "Tutor stipends, books and volunteer training for two new school sites.",
+  "impact": "We measure reading levels each fall and spring and report gains by school."
+ },
+ "pipeline": [],
+ "customGrants": []
+}

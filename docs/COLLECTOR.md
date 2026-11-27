@@ -18,12 +18,16 @@ Ready Room finds every grant it can, then narrows the list to the few a business
 
 **Output:** `data/live/opportunities.json` (every source in one schema), `status.json` (per-source health), `REPORT.md` (new, closing soon, pages that changed). The build step bakes these into the app, and the run publishes it to GitHub Pages.
 
+### Topic tags
+
+Grants.gov returns titles and agencies, not descriptions. The collector tags each grant by topic (transportation, trucking, small business, workforce, youth and education, health, research and more) using the rules in `collector/common.py`. Anything from NIH or NSF, or with a research award code such as R01 or K22, requires a research focus. Notices of intent and requests for information are labeled as notices, and grants that name one state in their title are limited to that state.
+
 ## 2. Funnel (in the app and in `collector/funnel.py`)
 
 | Stage | Question | How |
 | --- | --- | --- |
 | Can you apply? | Hard rules | Entity type, place, restricted groups, excluded business types, minimum age and size, loans, closed one-time deadlines |
-| Should you? | Fit | Focus areas, industry, local and state bonus, share of the usual documents already on file |
+| Should you? | Fit | Focus areas, industry, local and state bonus, share of the usual documents already on file. Collected grants need a focus match: one specific match (trucking, small business, youth and education, veterans...) or two broad ones (health, environment, community development...). |
 | Can you win it in time? | Timeline, credentials, competition | Prep time: about 10 days local, 14 state, 21 federal, 10 for a contract, plus 28 for a first SAM.gov registration, 3 per missing document and 5 if the core answers aren't written. Competition: local and state pools beat national lotteries, and programs with 3 or fewer awards are long shots. |
 
 Every opportunity lands in **Apply now**, **Prepare for**, or **Skip**, with the reasons. A recurring program whose deadline is too close moves to Prepare (for the next round). A one-time deadline that's too close is skipped.

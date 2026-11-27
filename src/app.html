@@ -313,6 +313,7 @@ function assess(g,b){
 }
 
 /* ---------- funnel: apply now / prepare / skip ---------- */
+const BROAD_TAGS=new Set(['health','community-development','environment','rural','energy','research','low-income','economic-mobility']);
 const DOC_NEED={business_plan:'a business plan',financials:'financial statements',tax_returns:'tax returns',budget:'a project budget',articles:'articles of organization',irs_501c3:'a 501(c)(3) letter (or a fiscal sponsor)',w9:'a W-9',good_standing:'a certificate of good standing',capability:'a capability statement',support_letters:'letters of support',hub_cert:'a small business certification',sam_uei:'a SAM.gov registration'};
 function prepDays(g,b){let base={federal:21,state:14,local:10,'national-private':4}[g.level]??10;if(g.type==='contract')base=10;const need=[];
   const missing=grantDocs(g).filter(d=>d.key&&!usable(haveValid(b,d.key))).map(d=>d.key);
@@ -323,6 +324,11 @@ function prepDays(g,b){let base={federal:21,state:14,local:10,'national-private'
 function oddsOf(g){const n=g.expected_awards;if(g.level==='national-private')return ['Long shot','national program, many applicants per award'];if(typeof n==='number'&&n>0&&n<=3)return ['Long shot',`only ${n} award${n>1?'s':''} expected`];if(g.level==='local'||g.level==='state')return ['Better','local or state pool, fewer applicants'];return ['Fair','competitive national pool']}
 function funnel(g,b){const a=assess(g,b);if(!a.ok)return {bucket:'skip',why:a.flags,score:0,a};
   if(g.type==='program')return {bucket:'skip',why:['Program listing, not an open call'],score:0,a};
+  if(g.type==='notice')return {bucket:'skip',why:['Notice or request for information, not a funding call'],score:0,a};
+  if(g.source&&g.source!=='curated'){const mine=profileTags(b.profile),hits=[...new Set((g.focus||[]).filter(t=>t!=='general'&&mine.has(t)))];
+    if(g.level==='federal'&&g.type!=='contract'&&g.region&&g.region!=='US'&&!(String(b.profile.state||'').toUpperCase().startsWith('N')&&g.region==='North Carolina'))return {bucket:'skip',why:['For '+g.region+' only'],score:0,a};
+    if(!hits.length)return {bucket:'skip',why:['No match to your focus areas'],score:0,a};
+    if(hits.length<2&&BROAD_TAGS.has(hits[0])&&g.type!=='contract')return {bucket:'skip',why:['Weak match (only '+hits[0].replace(/-/g,' ')+')'],score:0,a}}
   const {days,need}=prepDays(g,b),dd=daysUntil(g.deadline),recur=RECUR.test(g.deadline_text||'')||!g.deadline,[od,odWhy]=oddsOf(g);
   const why=a.why.concat(a.notes.filter(n=>!n.startsWith('Needs')));const base={a,odds:od,oddsWhy:odWhy,need,days};
   if(a.score<50)return {...base,bucket:'skip',why:['Weak fit for this business'],score:a.score};
@@ -332,7 +338,7 @@ function funnel(g,b){const a=assess(g,b);if(!a.ok)return {bucket:'skip',why:a.fl
   return {...base,bucket:'apply',why:[dd!=null?`Due ${fmtDate(g.deadline)} (${dd} days)`:'Open or rolling'].concat(why),score:a.score+(od==='Better'?10:od==='Long shot'?-10:0)+(dd!=null&&dd<=45?5:0)}}
 let _fc={key:null,val:null};
 function funnelAll(b){const key=JSON.stringify([b.id,b.profile,b.documents.map(d=>[d.type,d.expires]),Object.keys(b.answers).filter(k=>(b.answers[k]||'').length>40),b.customGrants.length,todayStr()]);if(_fc.key===key)return _fc.val;
-  const out={apply:[],prepare:[],skip:[],skipWhy:{}};for(const g of allGrants()){const f=funnel(g,b);out[f.bucket].push({g,f});if(f.bucket==='skip'){const k=String(f.why[0]||'Other').split(':')[0].replace(/\s*\(.*$/,'');out.skipWhy[k]=(out.skipWhy[k]||0)+1}}
+  const out={apply:[],prepare:[],skip:[],skipWhy:{}};for(const g of allGrants()){const f=funnel(g,b);out[f.bucket].push({g,f});if(f.bucket==='skip'){const k=String(f.why[0]||'Other').split(':')[0].replace(/\s*\(.*$/,'').replace(/\s+[A-Z][a-z]{2} \d{1,2}, \d{4}$/,'').replace(/^For .+ only$/,'For another state only');out.skipWhy[k]=(out.skipWhy[k]||0)+1}}
   out.apply.sort((x,y)=>y.f.score-x.f.score);out.prepare.sort((x,y)=>y.f.score-x.f.score);_fc={key,val:out};return out}
 function viewShortlist(){
   const b=biz(),F=funnelAll(b),inPipe=new Set(b.pipeline.map(p=>p.grantId)),total=allGrants().length;
@@ -341,7 +347,7 @@ function viewShortlist(){
    <ul class="small" style="margin:8px 0">${f.why.slice(0,3).map(w=>`<li>${esc(w)}</li>`).join('')}</ul>
    ${f.need&&f.need.length?`<div class="ai"><b>To be ready (about ${f.days} days):</b><ul style="margin:4px 0;padding-left:18px">${f.need.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div>`:''}
    <div class="row" style="margin-top:10px">${inPipe.has(g.id)?'<span class="chip ink">Tracking</span>':`<button class="sm primary" data-act="grantSave" data-id="${esc(g.id)}">Track this</button>`}${url?`<a class="btn sm" href="${esc(url)}" target="_blank" rel="noopener">Official page</a>`:''}</div></div>`};
-  const skipRows=Object.entries(F.skipWhy).sort((x,y)=>y[1]-x[1]).slice(0,8);
+  const skipRows=Object.entries(F.skipWhy).sort((x,y)=>y[1]-x[1]).slice(0,10);
   const upd=LIVE_STATUS.run_at?`Federal data updated ${esc(fmtDate(String(LIVE_STATUS.run_at).slice(0,10)))}.`:'';
   return `<h1>Shortlist</h1><p class="lede">Every grant and contract Ready Room knows about, narrowed to the ones ${esc(b.profile.name)} can win: can you apply, does it fit, and is there time to prepare given your documents and registrations. ${upd}</p>
   <section class="hero"><div class="num"><span class="small">Apply now</span><b>${F.apply.length}</b><p class="small">Eligible, a good fit, and enough time.</p></div><div class="num" style="background:var(--soft);color:var(--ink)"><span class="small">Prepare for</span><b>${F.prepare.length}</b><p class="small">Eligible, but you need time, a registration or a next round.</p></div>
