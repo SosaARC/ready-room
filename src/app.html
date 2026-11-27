@@ -483,6 +483,7 @@ function viewToday(){
     <div class="field"><div class="row between"><span>Core grant documents</span><b>${gHave} of ${gset.length}</b></div>${bar(gHave,gset.length)}</div>
     <div class="field"><div class="row between"><span>Answer bank sections written</span><b>${answered} of ${ANSWER_SECTIONS.length}</b></div>${bar(answered,ANSWER_SECTIONS.length)}</div>
     <div class="row between small"><span class="muted">Grants to apply for now</span><a href="#shortlist" style="padding:6px 4px"><b>${funnelAll(b).apply.length}</b></a></div>
+    ${(()=>{const nx=calItems(b,new Date().getFullYear()).concat(calItems(b,new Date().getFullYear()+1)).filter(i=>i.inPlan&&daysUntil(i.date)>=0)[0];return `<div class="row between small"><span class="muted">Next in your plan</span><a href="#calendar" style="padding:6px 4px">${nx?`<b>${esc(fmtDate(nx.date))}</b> ${esc(nx.title.length>48?nx.title.slice(0,46)+'…':nx.title)}`:'<b>Build your calendar</b>'}</a></div>`})()}
    </div></section>
   <div class="grid g2">${setupDone(b)?'':setupCard(b)}<div class="card"><h2>Needs attention</h2>${items.length?items.slice(0,14).map(i=>`<div class="todo"><span class="chip ${i.c}">${i.c==='bad'?'Now':i.c==='warn'?'Soon':'Ready'}</span><a href="#${i.go}">${esc(i.t)}</a></div>`).join(''):'<p class="muted">Nothing urgent. Add documents, brokers and grant applications to see reminders here.</p>'}</div>
   <div class="card soft" style="${setupDone(b)?'':'display:none'}"><h2>Next steps</h2>
