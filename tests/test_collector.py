@@ -111,10 +111,24 @@ class Details(unittest.TestCase):
         biz = json.loads((ROOT / "profiles" / "example-nonprofit.json").read_text())
         g = {"id": "x", "name": "Youth literacy tutoring grant", "level": "federal", "source": "grants.gov", "type": "grant",
              "eligible_entities": ["nonprofit"], "focus": ["youth-education"], "deadline": (dt.date.today() + dt.timedelta(days=90)).isoformat(),
-             "deadline_text": "", "documents_typically_needed": ["DUNS/UEI + SAM registration"], "cost_share": True, "amount_min": 2_000_000}
+             "deadline_text": "", "documents_typically_needed": ["DUNS/UEI + SAM registration"], "cost_share": True, "amount_min": 1_000_000}
         f = funnel.funnel(g, biz)
         self.assertTrue(any("match" in w for w in f["why"]))
         self.assertTrue(any("long shot" in w.lower() for w in f["why"]))
+        g["amount_min"] = 2_000_000  # over 4x a $420,000 budget
+        self.assertTrue(funnel.funnel(g, biz)["why"][0].startswith("Too big for your budget"))
+
+    def test_details_catch_research_supplements_and_universities(self):
+        base = {"applicant_types": ["12"], "desc": "", "elig_desc": ""}
+        r = details.apply({"name": "Youth Violence Prevention Centers", "focus": ["youth-education"]}, {**base, "desc": "CDC seeks investigator-initiated research proposals to expand the evidence base."})
+        self.assertIn("research", r["must_have_any"])
+        r = details.apply({"name": "Ryan White Part D Grant Supplemental Funding", "focus": ["health"]}, {**base, "desc": "The purpose of this supplemental funding is to strengthen infrastructure."})
+        self.assertIn("current-grantee", r["must_have_any"])
+        r = details.apply({"name": "Providers Clinical Support System \u2013 Universities", "focus": ["health"]}, base)
+        self.assertIn("higher-ed", r["must_have_any"])
+        r = details.apply({"name": "Family support centers", "focus": ["health"]}, {**base, "desc": "Support for families of children and youth with special health care needs."})
+        self.assertNotIn("youth-education", r["focus"])
+        self.assertFalse(r.get("must_have_any"))
 
 
 class Sam(unittest.TestCase):

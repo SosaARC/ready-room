@@ -86,6 +86,13 @@ def parse(payload):
     }
 
 
+RESEARCH_TEXT = re.compile(r"investigator.initiated|research proposals|research projects? (that|to)|rigorous(ly)? evaluat|gold standard research|clinical trials?\b|research and development of", re.I)
+SUPPLEMENT_TITLE = re.compile(r"\bsupplement(al|s)?\b|\bcontinuation\b|\bnon-?competing\b", re.I)
+SUPPLEMENT_TEXT = re.compile(r"supplemental funding|current(ly funded)? (recipients|grantees|award recipients)|existing (recipients|grantees)|only (current|existing) .{0,40}(recipients|grantees)|limited to (current|existing)", re.I)
+HIGHER_ED_TITLE = re.compile(r"\buniversit(y|ies)\b|\bcolleges?\b|\bgraduate\b|\bfellowships?\b|\binternships?\b", re.I)
+HIGHER_ED_TEXT = re.compile(r"graduate.level|health professions? (students|schools)|schools of (medicine|nursing|public health)|institutions of higher education only|limited to institutions of higher education", re.I)
+
+
 def apply(rec, det):
     """Overwrite a collected record's guesses with the facts from its full record."""
     if not det:
@@ -122,9 +129,24 @@ def apply(rec, det):
             rec["deadline_text"] = "Forecast: expected due date"
     cat_tags = [t for c in det.get("categories") or [] for t in CATEGORY_TAGS.get(c, [])]
     title_tags = [t for t in rec.get("focus") or [] if t != "other"]
-    desc_tags = [t for t in tag_text(det.get("desc", "")[:300]) if t in ("trucking", "small-business", "veteran", "women-owned", "youth-education")]
+    desc_tags = [t for t in tag_text(det.get("desc", "")[:300]) if t in ("trucking", "small-business", "veteran", "women-owned")]
     rec["focus"] = sorted(set(title_tags + cat_tags + desc_tags)) or ["other"]
     rec["about"] = det.get("desc", "")[:400]
+    title, desc, elig = rec.get("name", ""), det.get("desc", ""), det.get("elig_desc", "") or ""
+    musts = set(rec.get("must_have_any") or [])
+    reqs = rec.setdefault("requirements", [])
+    if RESEARCH_TEXT.search(desc[:1500]):
+        musts.add("research")
+        if "Research proposals: needs a research team" not in reqs:
+            reqs.append("Research proposals: needs a research team")
+    if SUPPLEMENT_TITLE.search(title) or SUPPLEMENT_TEXT.search(desc[:1500] + " " + elig):
+        musts.add("current-grantee")
+        if "Only for organizations this program already funds" not in reqs:
+            reqs.append("Only for organizations this program already funds")
+    if HIGHER_ED_TITLE.search(title) or HIGHER_ED_TEXT.search(desc[:1500] + " " + elig):
+        musts.add("higher-ed")
+    if musts:
+        rec["must_have_any"] = sorted(musts)
     if det.get("elig_desc"):
         rec["notes"] = (rec.get("notes", "") + " Eligibility: " + det["elig_desc"][:200]).strip()
     if any("loan" in (i or "").lower() for i in det.get("instruments") or []) and not any("grant" in (i or "").lower() for i in det.get("instruments") or []):

@@ -333,7 +333,7 @@ function assess(g,b){
 }
 
 /* ---------- funnel: apply now / prepare / skip ---------- */
-const BROAD_TAGS=new Set(['education','justice','disaster','health','community-development','environment','rural','energy','research','low-income','economic-mobility']);
+const BROAD_TAGS=new Set(['small-business','service-business','capital-access','nonprofit-capacity','education','justice','disaster','health','community-development','environment','rural','energy','research','low-income','economic-mobility']);
 const DOC_NEED={business_plan:'a business plan',financials:'financial statements',tax_returns:'tax returns',budget:'a project budget',articles:'articles of organization',irs_501c3:'a 501(c)(3) letter (or a fiscal sponsor)',w9:'a W-9',good_standing:'a certificate of good standing',capability:'a capability statement',support_letters:'letters of support',hub_cert:'a small business certification',sam_uei:'a SAM.gov registration'};
 function prepDays(g,b){let base={federal:21,state:14,local:10,'national-private':4}[g.level]??10;if(g.type==='contract')base=10;const need=[];
   const missing=grantDocs(g).filter(d=>d.key&&!usable(haveValid(b,d.key))).map(d=>d.key);
@@ -351,6 +351,8 @@ function funnel(g,b){const a=assess(g,b);if(!a.ok)return {bucket:'skip',why:a.fl
     if(g.level==='federal'&&g.type!=='contract'&&g.region&&g.region!=='US'&&!(String(b.profile.state||'').toUpperCase().startsWith('N')&&g.region==='North Carolina'))return {bucket:'skip',why:['For '+g.region+' only'],score:0,a};
     if(!hits.length)return {bucket:'skip',why:['No match to your focus areas'],score:0,a};
     if(hits.length<2&&BROAD_TAGS.has(hits[0])&&g.type!=='contract')return {bucket:'skip',why:['Weak match (only '+hits[0].replace(/-/g,' ')+')'],score:0,a}}
+  else if(!(g.focus||[]).includes('general')&&(g.level==='federal'||g.level==='national-private')){const mine=profileTags(b.profile);if(!(g.focus||[]).some(t=>mine.has(t)&&t!=='local-service'))return {bucket:'skip',why:['No match to your focus areas'],score:0,a}}
+  {const size=budgetOf(b.profile);if(size&&g.type!=='contract'){if(g.amount_min&&g.amount_min>4*size)return {bucket:'skip',why:['Too big for your budget: smallest award is over 4 times your annual budget'],score:0,a};if(g.expected_awards===1&&g.amount_max&&g.amount_max>2*size)return {bucket:'skip',why:['Too big for your budget: one award, larger than your annual budget'],score:0,a}}}
   const {days,need}=prepDays(g,b),dd=daysUntil(g.deadline),recur=RECUR.test(g.deadline_text||'')||!g.deadline,[od,odWhy]=oddsOf(g,b);
   const why=a.why.concat(a.notes.filter(n=>!n.startsWith('Needs')));const base={a,odds:od,oddsWhy:odWhy,need,days};
   if(a.score<50)return {...base,bucket:'skip',why:['Weak fit for this business'],score:a.score};

@@ -27,7 +27,7 @@ DOC_MAP = {"business plan": "business_plan", "financial statements": "financials
            "articles of incorporation": "articles", "501c3 letter": "irs_501c3", "w-9": "w9", "certificate of good standing": "good_standing",
            "capability statement": "capability", "letters of support": "support_letters", "hub certification": "hub_cert",
            "duns/uei + sam registration": "sam_uei"}
-BROAD_TAGS = {"education", "justice", "disaster", "health", "community-development", "environment", "rural", "energy", "research", "low-income", "economic-mobility"}
+BROAD_TAGS = {"small-business", "service-business", "capital-access", "nonprofit-capacity", "education", "justice", "disaster", "health", "community-development", "environment", "rural", "energy", "research", "low-income", "economic-mobility"}
 RECUR = re.compile(r"monthly|rolling|annual|twice a year|each year|quarterly|ongoing", re.I)
 DOC_LABEL = {"business_plan": "a business plan", "financials": "financial statements", "tax_returns": "tax returns", "budget": "a project budget", "articles": "articles of organization", "irs_501c3": "a 501(c)(3) letter (or a fiscal sponsor)", "w9": "a W-9", "good_standing": "a certificate of good standing", "capability": "a capability statement", "support_letters": "letters of support", "hub_cert": "a small business certification", "sam_uei": "a SAM.gov registration"}
 EXPIRING = {"coi", "ucr", "mcs150", "med_card", "license", "registration", "dot_inspection", "good_standing", "business_license", "hub_cert", "sam_uei"}
@@ -70,6 +70,21 @@ def tags(p):
         t.add("tech")
     if "youth-education" in t:
         t.add("education")
+    if re.search(r"hvac|heating|air condition|plumb|electric|roof|landscap|clean|pest|home service", ind):
+        t |= {"hvac", "local-service"}
+    if "hvac" in t:
+        t |= {"home-services", "skilled-trades", "service-business"}
+    if "local-service" in t:
+        t.add("service-business")
+    if "independent-sponsor" in t:
+        t.add("acquisition")
+    if "acquisition" in t:
+        t.add("search-fund")
+    if "real-estate-development" in t:
+        t.add("housing")
+    if t & {"minority-owned", "women-owned", "veteran"}:
+        t.add("capital-access")
+    t.add("nonprofit-capacity" if ENTITY_CLASS.get(p.get("entityType"), "for-profit") == "nonprofit" else "small-business")
     return t
 
 
@@ -211,6 +226,15 @@ def funnel(g, b):
             return {"bucket": "Skip", "why": ["No match to your focus areas"], "score": 0}
         if len(hits) < 2 and hits[0] in BROAD_TAGS and g.get("type") != "contract":
             return {"bucket": "Skip", "why": [f"Weak match (only {hits[0]})"], "score": 0}
+    elif not set(g.get("focus") or []) & {"general"} and g.get("level") in ("federal", "national-private") and not hits:
+        return {"bucket": "Skip", "why": ["No match to your focus areas"], "score": 0}
+    size = budget_of(b["profile"])
+    if size and g.get("type") != "contract":
+        lo, hi, n = g.get("amount_min"), g.get("amount_max"), g.get("expected_awards")
+        if lo and lo > 4 * size:
+            return {"bucket": "Skip", "why": [f"Too big for your budget: smallest award ${lo:,.0f} is over 4 times your annual budget"], "score": 0}
+        if n == 1 and hi and hi > 2 * size:
+            return {"bucket": "Skip", "why": ["Too big for your budget: one award, larger than your annual budget"], "score": 0}
     need_days, need = prep_days(g, b)
     dd = days_until(g.get("deadline"))
     recur = bool(RECUR.search(g.get("deadline_text") or "")) or g.get("deadline") is None
