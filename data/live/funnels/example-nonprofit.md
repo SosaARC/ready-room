@@ -1,4 +1,4 @@
-# Funnel for Example Youth Literacy Nonprofit, 2026-11-27
+# Funnel for Example Youth Literacy Nonprofit, 2026-11-28
 
 Checked **1061** opportunities: **14** apply now, **3** prepare for, **1044** skipped.
 
@@ -23,7 +23,7 @@ Checked **1061** opportunities: **14** apply now, **3** prepare for, **1044** sk
   - Matches community-development
   - Odds: better (Local or state pool: fewer applicants)
 - **Golden LEAF Open Grants Program** (Golden LEAF Foundation, grant) [curated](https://goldenleaf.org/funding-opportunities/open-grants/)
-  - Due in 27 days
+  - Due in 26 days
   - Get letters of support
   - Open to nonprofit applicants
   - Matches community-development
@@ -34,7 +34,7 @@ Checked **1061** opportunities: **14** apply now, **3** prepare for, **1044** sk
   - Matches community-development
   - Odds: better (Local or state pool: fewer applicants)
 - **Resident Opportunity and Self-Sufficiency Service Coordinator (ROSS-SC) Program – Fiscal Year 2026** (Department of Housing and Urban Development, grant) [grants.gov](https://www.grants.gov/search-results-detail/361994)
-  - Due in 39 days
+  - Due in 38 days
   - Plan your match: this program requires cost share
   - Open to nonprofit applicants
   - Matches community-development, education
@@ -52,7 +52,7 @@ Checked **1061** opportunities: **14** apply now, **3** prepare for, **1044** sk
   - Matches community-development
   - Only part of the area qualifies: check the address
 - **Fiscal Year (FY) 2027 AmeriCorps State and National Competitive Grants** (AmeriCorps, grant) [grants.gov](https://www.grants.gov/search-results-detail/363696)
-  - Due in 47 days
+  - Due in 46 days
   - Plan your match: this program requires cost share
   - Open to nonprofit applicants
   - Matches community-development, education

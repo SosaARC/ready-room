@@ -1,4 +1,4 @@
-# Funnel for 5908 Logistics, 2026-11-27
+# Funnel for 5908 Logistics, 2026-11-28
 
 Checked **1061** opportunities: **4** apply now, **5** prepare for, **1052** skipped.
 
@@ -50,12 +50,12 @@ Checked **1061** opportunities: **4** apply now, **5** prepare for, **1052** ski
   - Get a project budget
   - Write the core answers (need, use of funds, impact)
 - **Freed Fellowship Grant** (Freed Fellowship, grant) [curated](https://freedfellowship.com/)
-  - Due in 3 days, but you need about 9. Get ready for the next round.
+  - Due in 2 days, but you need about 9. Get ready for the next round.
   - Write the core answers (need, use of funds, impact)
   - Open to for-profit applicants
   - Odds: long shot (National program with many applicants per award)
 - **Verizon Small Business Digital Ready $10K Grants** (Verizon, with LISC, grant) [curated](https://digitalready.verizonwireless.com/funding/details)
-  - Due in 10 days, but you need about 12. Get ready for the next round.
+  - Due in 9 days, but you need about 12. Get ready for the next round.
   - Get a W-9
   - Write the core answers (need, use of funds, impact)
   - Open to for-profit applicants

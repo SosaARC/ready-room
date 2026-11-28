@@ -1,4 +1,4 @@
-# Collector report, 2026-11-27
+# Collector report, 2026-11-28
 
 | Source | Records | Status |
 | --- | ---: | --- |
@@ -14,6 +14,7 @@
 - [NC IDEA SEED Grant](https://ncidea.org/nc-idea-seed/) (`nc-idea-seed`)
 - [NC IDEA MICRO Grant](https://ncidea.org/nc-idea-micro/) (`nc-idea-micro`)
 - [Forsyth County Community Grants](https://forsyth.cc/communitygrants/) (`forsyth-community-grants`)
+- [Davie Community Foundation Community Grants](https://www.daviefoundation.org/grants/community/) (`davie-cf-community-grants`)
 
 ## Closing in the next 3 weeks
 
@@ -70,6 +71,7 @@
 - 2026-12-16: Small Business Innovation Research (SBIR) program, Phase I (Administration for Community Living)
 - 2026-12-17: Fiscal Years 2025 and 2026 Congestion Relief Program (DOT Federal Highway Administration)
 - 2026-12-17: The Genesis Mission:  Transforming Science and Energy with AI (Office of Science)
+- 2026-12-19: Family-to-Family Health Information Centers (F2F HIC) (Health Resources and Services Administration)
 
 ## Pages the watcher could not check
 
